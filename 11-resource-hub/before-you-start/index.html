@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Before you start — the 11+ explained | Tom Sanderson Tutoring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#1E647C;--teal-deep:#174E61;--sky:#9FD3E8;--sky-soft:#E4F1F7;--amber:#F5BA18;--white:#FFFFFF;
+  --paper:#F1F7FA;--surface:#FFFFFF;--ink:#15323D;--muted:#5E7A84;--line:#D8E7EE;--line-soft:#E8F1F5;
+  --radius:18px;--radius-s:12px;
+  --shadow:0 1px 2px rgba(21,50,61,.05), 0 10px 30px rgba(21,50,61,.07);
+  --shadow-lift:0 4px 10px rgba(21,50,61,.08), 0 20px 44px rgba(21,50,61,.12);
+  --maxw:900px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Raleway",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+body.comfort{letter-spacing:.02em;word-spacing:.06em;line-height:1.9}
+body.comfort p,body.comfort li{margin-bottom:1.1em}
+h1,h2,h3{font-family:"Montserrat",sans-serif;margin:0;line-height:1.2;letter-spacing:-.01em;color:var(--teal-deep)}
+p{margin:0 0 1em}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+button{font-family:inherit}
+
+.top{position:sticky;top:0;z-index:30;background:rgba(241,247,250,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1080px;margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{display:inline-flex;align-items:stretch;border-radius:8px;overflow:hidden;text-decoration:none;box-shadow:0 1px 2px rgba(21,50,61,.12);flex:0 0 auto}
+.logo .a{background:#1E647C;color:#F5BA18;font-family:"Montserrat";font-weight:800;font-size:.9rem;padding:8px 11px;display:flex;align-items:center;line-height:1}
+.logo .b{background:#FFFFFF;color:#1E647C;font-family:"Montserrat";font-weight:600;font-size:.9rem;padding:8px 12px;display:flex;align-items:center;line-height:1;border:1px solid #D8E7EE;border-left:0}
+.back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--muted);font-weight:600;font-size:.88rem}
+.back:hover{color:var(--teal)}
+.back svg{width:16px;height:16px}
+.top-right{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.free-pill{font-family:"Montserrat";font-weight:700;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#1E647C;background:#FFFFFF;border:1px solid #D8E7EE;padding:6px 11px;border-radius:999px}
+.comfort-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid #D8E7EE;background:#FFFFFF;color:#5E7A84;border-radius:999px;padding:6px 12px;font-weight:600;font-size:.82rem;cursor:pointer;transition:.14s}
+.comfort-btn:hover{border-color:#1E647C;color:#1E647C}
+.comfort-btn[aria-pressed="true"]{background:#1E647C;border-color:#1E647C;color:#fff}
+.comfort-btn svg{width:15px;height:15px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px 90px}
+
+.hero{padding:46px 0 8px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:"Montserrat";font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#1E647C;background:#E4F1F7;border:1px solid #9FD3E8;padding:6px 13px;border-radius:999px;margin-bottom:18px}
+.hero h1{font-size:clamp(1.9rem,4.6vw,2.7rem);font-weight:800}
+.hero .sub{font-size:clamp(1.05rem,2.2vw,1.2rem);margin-top:14px;max-width:60ch}
+
+.guide-nav{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px;margin:26px 0 8px;box-shadow:var(--shadow)}
+.guide-nav h2{font-family:"Montserrat";font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:12px}
+.guide-nav ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;counter-reset:g}
+.guide-nav li{counter-increment:g}
+.guide-nav a{display:flex;gap:11px;align-items:baseline;text-decoration:none;color:var(--ink);padding:5px 0;border-radius:6px}
+.guide-nav a:hover{color:var(--teal)}
+.guide-nav a::before{content:counter(g);font-family:"Montserrat";font-weight:700;color:#9FD3E8;font-size:.85rem;flex:0 0 auto;width:1.4em}
+
+.section{padding:34px 0 6px;scroll-margin-top:80px;border-top:1px solid var(--line-soft);margin-top:30px}
+.section:first-of-type{border-top:0;margin-top:18px}
+.section .k{font-family:"Montserrat";font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#1E647C;margin-bottom:8px}
+.section h2{font-size:1.55rem;font-weight:700;margin-bottom:12px}
+.section h3{font-size:1.1rem;font-weight:700;margin:20px 0 6px;color:var(--ink)}
+.section p,.section li{max-width:66ch}
+.section ul{margin:0 0 1em;padding-left:1.1em}
+.section li{margin-bottom:.4em}
+.section li::marker{color:#9FD3E8}
+
+.callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:0 var(--radius-s) var(--radius-s) 0;padding:16px 20px;margin:18px 0;box-shadow:var(--shadow)}
+.callout.calm{border-left-color:var(--teal)}
+.callout p{margin:0;color:var(--ink)}
+.callout p+p{margin-top:.7em}
+.callout b{font-weight:700}
+
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+.defcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-s);padding:18px 20px;box-shadow:var(--shadow)}
+.defcard h3{margin:0 0 6px;font-size:1.05rem}
+.defcard p{margin:0;color:var(--muted);font-size:.96rem;max-width:none}
+.defcard .tagline{font-family:"Montserrat";font-weight:700;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:#1E647C;margin-bottom:4px}
+
+.bands{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-s);overflow:hidden;box-shadow:var(--shadow)}
+.bands th,.bands td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+.bands thead th{font-family:"Montserrat";font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:#E4F1F7}
+.bands tbody tr:last-child td{border-bottom:0}
+.bands .score{font-family:"Montserrat";font-weight:700;color:var(--teal-deep);white-space:nowrap}
+
+.timeline{margin:18px 0 6px;padding:0;list-style:none;position:relative}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:#9FD3E8}
+.timeline li{position:relative;padding:0 0 18px 34px;max-width:64ch}
+.timeline li::before{content:"";position:absolute;left:2px;top:4px;width:14px;height:14px;border-radius:50%;background:#FFFFFF;border:3px solid #1E647C}
+.timeline .when{font-family:"Montserrat";font-weight:700;font-size:.92rem;color:var(--teal-deep);display:block}
+.timeline .what{color:var(--muted);font-size:.96rem}
+
+.subjects-out{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:18px 0 4px}
+.subjects-out a{text-decoration:none;text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-s);padding:16px 10px;color:var(--teal-deep);font-family:"Montserrat";font-weight:700;font-size:.88rem;box-shadow:var(--shadow);transition:.15s}
+.subjects-out a:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift);border-color:#9FD3E8}
+
+.next-cta{margin-top:30px;background:linear-gradient(135deg,#1E647C,#174E61);border-radius:var(--radius);padding:26px 28px;color:#fff;box-shadow:var(--shadow)}
+.next-cta h2{color:#fff;font-size:1.3rem;margin-bottom:6px}
+.next-cta p{color:#D9ECF3;margin:0 0 16px;max-width:56ch}
+.next-cta a{display:inline-flex;align-items:center;gap:9px;background:var(--amber);color:#3A2D05;text-decoration:none;font-family:"Montserrat";font-weight:700;padding:13px 20px;border-radius:12px;transition:.15s}
+.next-cta a:hover{transform:translateY(-2px)}
+.next-cta a svg{width:18px;height:18px}
+
+.foot{border-top:1px solid var(--line);margin-top:54px;padding-top:24px;color:var(--muted);font-size:.9rem}
+.foot b{color:var(--ink);font-family:"Montserrat";font-weight:700}
+.foot a{color:#1E647C;font-weight:600;text-decoration:none}
+.foot a:hover{text-decoration:underline}
+
+@media(max-width:760px){body{font-size:17px}.guide-nav ol,.twocol{grid-template-columns:1fr}.subjects-out{grid-template-columns:1fr 1fr}.hero{padding:34px 0 6px}}
+@media(prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/" aria-label="Tom Sanderson Tutoring home"><span class="a">Tom&nbsp;Sanderson</span><span class="b">Tutoring</span></a>
+    <a class="back" href="/11-resource-hub/">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      All resources
+    </a>
+    <div class="top-right">
+      <span class="free-pill">Free &middot; no sign-up</span>
+      <button class="comfort-btn" id="comfort" aria-pressed="false" onclick="toggleComfort()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg>
+        Reading comfort
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <span class="eyebrow">Start here</span>
+    <h1>Before you start</h1>
+    <p class="sub">If the 11+ feels confusing, you&rsquo;re in the right place. This page explains what it is, how it works, and how to get ready without the stress. No jargon, and nothing you need to know already.</p>
+  </section>
+
+  <nav class="guide-nav" aria-label="In this guide">
+    <h2>In this guide</h2>
+    <ol>
+      <li><a href="#what">What the 11+ is</a></li>
+      <li><a href="#schools">Grammar and independent schools</a></li>
+      <li><a href="#whats-on">What&rsquo;s on the test</a></li>
+      <li><a href="#styles">The different test styles</a></li>
+      <li><a href="#scores">What the scores mean</a></li>
+      <li><a href="#timeline">The rough timeline</a></li>
+      <li><a href="#calm">Getting ready calmly</a></li>
+      <li><a href="#day">On the day</a></li>
+    </ol>
+  </nav>
+
+  <section class="section" id="what">
+    <div class="k">The basics</div>
+    <h2>What the 11+ is</h2>
+    <p>The 11+ is a test some children take in Year 6 to apply for a place at a selective secondary school. It&rsquo;s called the 11+ because children are usually around eleven when they sit it.</p>
+    <p>It isn&rsquo;t part of the normal school curriculum, and most primary schools don&rsquo;t teach it directly. That&rsquo;s often what makes it feel unfamiliar to families: it&rsquo;s a separate thing, sat outside of normal lessons, for entry the following September into Year 7.</p>
+    <div class="callout calm">
+      <p>Taking the 11+ is a <b>choice</b>, not something every child does. It&rsquo;s one route into one type of school. Plenty of children never sit it, and that&rsquo;s completely normal.</p>
+    </div>
+  </section>
+
+  <section class="section" id="schools">
+    <div class="k">Where it leads</div>
+    <h2>Grammar schools and independent schools</h2>
+    <p>The 11+ is mostly linked to two kinds of school. They&rsquo;re easy to mix up, so here&rsquo;s the difference in plain terms.</p>
+    <div class="twocol">
+      <div class="defcard">
+        <div class="tagline">State &middot; free</div>
+        <h3>Grammar schools</h3>
+        <p>Funded by the government, so there are no fees. They select pupils by ability, and the 11+ is how they decide who gets a place. This guide is mainly about these.</p>
+      </div>
+      <div class="defcard">
+        <div class="tagline">Private &middot; fee-paying</div>
+        <h3>Independent schools</h3>
+        <p>Charge fees and set their own entrance exams, and these vary a lot. Different schools use different tests, with different fees, and some have more than one stage. Always check directly with each school you&rsquo;re considering. The skills overlap a lot with the grammar-school 11+, so this resource still helps either way.</p>
+      </div>
+    </div>
+    <p>Not every part of the country has grammar schools. Whether they exist near you, and which ones, depends on your area, so that&rsquo;s the first thing worth checking.</p>
+  </section>
+
+  <section class="section" id="whats-on">
+    <div class="k">The content</div>
+    <h2>What&rsquo;s on the test</h2>
+    <p>The 11+ usually draws on five areas. Not every area tests all five, and the mix is set locally, but these are the building blocks:</p>
+    <ul>
+      <li><b>Verbal Reasoning</b> &mdash; word and language puzzles.</li>
+      <li><b>Non-Verbal Reasoning</b> &mdash; shape and pattern puzzles.</li>
+      <li><b>Maths</b> &mdash; number, shape, data and problem solving.</li>
+      <li><b>English</b> &mdash; reading, comprehension, spelling, punctuation and grammar.</li>
+      <li><b>Spatial Reasoning</b> &mdash; 3D shapes, nets, cubes and reading objects from different views.</li>
+    </ul>
+    <p>Each of those has its own area in this resource, broken into small topics with a plain explanation, a worked example and a go yourself. You can look up exactly which subjects your area tests on your local council&rsquo;s admissions pages.</p>
+  </section>
+
+  <section class="section" id="styles">
+    <div class="k">How it&rsquo;s set</div>
+    <h2>The different test styles</h2>
+    <p>The papers your child sits are written by an exam provider, and different areas use different ones. You don&rsquo;t need to memorise the names, but it helps to know two things.</p>
+    <p>First, some styles are quite <b>predictable</b>, using familiar question types that come up again and again. Others deliberately mix things up and lean harder on a wide vocabulary, so they feel less predictable. The most widely used provider is GL Assessment, with some areas using their own or other tests.</p>
+    <p>Second, and more importantly: the <b>thinking skills are the same either way</b>. Knowing how to break a word into parts, or turn a shape in your head, helps whatever the paper looks like. That&rsquo;s what this resource builds.</p>
+    <div class="callout">
+      <p>To find out which test your area uses, check the admissions pages for your council and the specific schools you&rsquo;re interested in. They&rsquo;ll usually say which provider they use and often link to a familiarisation paper.</p>
+    </div>
+  </section>
+
+  <section class="section" id="scores">
+    <div class="k">The marking</div>
+    <h2>What the scores mean</h2>
+    <p>11+ results aren&rsquo;t given as a simple mark out of a hundred. Your child&rsquo;s raw score (the number of questions they get right) is converted into a <b>standardised score</b>, which adjusts for how old they were on the test day. This is so a summer-born child isn&rsquo;t at a disadvantage against an older classmate sitting the same paper.</p>
+    <p>Standardised scores usually run from around <b>69 to 141</b>, with <b>100 being exactly average</b> for a child&rsquo;s age. As a rough guide:</p>
+    <table class="bands">
+      <thead><tr><th>Standardised score</th><th>Roughly what it means</th></tr></thead>
+      <tbody>
+        <tr><td class="score">Below 100</td><td>Below the average for their age</td></tr>
+        <tr><td class="score">100&ndash;109</td><td>Around average</td></tr>
+        <tr><td class="score">110&ndash;119</td><td>Above average</td></tr>
+        <tr><td class="score">120&ndash;129</td><td>Strong, and competitive for many grammar schools</td></tr>
+        <tr><td class="score">130+</td><td>Excellent, roughly the top tenth nationally</td></tr>
+      </tbody>
+    </table>
+    <p>Whether a score is high enough for a place depends on your area and the year. In competitive counties the qualifying mark often sits around <b>121 or so</b>, but each school sets its own bar depending on how many places are available. Some areas use a fixed pass mark, others rank children for the spaces, and a few combine or weight the papers differently.</p>
+    <div class="callout calm">
+      <p>Two things worth holding onto. A score below 120 is not a failure, it&rsquo;s simply how one morning went, and plenty of children go on to thrive elsewhere. And try not to fixate on a single target number: aim for steady, confident understanding, then check how your own area allocates places so you know what you&rsquo;re working towards.</p>
+    </div>
+  </section>
+
+  <section class="section" id="timeline">
+    <div class="k">When things happen</div>
+    <h2>The rough timeline</h2>
+    <p>Exact dates are set by your area, but the shape of the year is fairly consistent. Here&rsquo;s the usual order of things.</p>
+    <ul class="timeline">
+      <li><span class="when">Year 5, often spring to summer</span><span class="what">Registration for the test usually opens. You sign up in advance, and there&rsquo;s normally a deadline well before the test itself, so this is the one not to miss.</span></li>
+      <li><span class="when">Start of Year 6, usually early autumn</span><span class="what">The test is sat, often in September. Some areas test over one day, others across two.</span></li>
+      <li><span class="when">Autumn, Year 6</span><span class="what">Results come back, usually in October, before secondary school applications are due.</span></li>
+      <li><span class="when">31 October</span><span class="what">The national deadline to apply for a secondary school place. You list your choices with your council by this date.</span></li>
+      <li><span class="when">1 March (or the next working day)</span><span class="what">National offer day, when families find out which secondary place they&rsquo;ve been offered.</span></li>
+    </ul>
+    <div class="callout">
+      <p><b>Always confirm your own area&rsquo;s dates</b> on your council&rsquo;s admissions pages. Registration deadlines in particular vary, and they come round earlier than most families expect.</p>
+    </div>
+  </section>
+
+  <section class="section" id="calm">
+    <div class="k">Preparation</div>
+    <h2>Getting ready calmly</h2>
+    <p>The biggest difference you can make isn&rsquo;t hours of drilling. It&rsquo;s simply making sure the questions aren&rsquo;t a surprise. A child who has seen the question types before walks in far calmer than one meeting them for the first time, which is exactly why this resource exists.</p>
+    <p>A few things that tend to help:</p>
+    <ul>
+      <li><b>Little and often</b> beats long, tiring sessions. Short regular practice sticks better.</li>
+      <li><b>Understanding over speed</b>, at least to begin with. Getting the method right comes first; pace comes later.</li>
+      <li><b>Mix the subjects up</b> rather than grinding one for weeks. A bit of each keeps it fresh.</li>
+      <li><b>Protect their confidence.</b> A wrong answer is information, not failure. Keep it light.</li>
+    </ul>
+    <div class="callout calm">
+      <p>It&rsquo;s also worth saying plainly: the 11+ is one path, and a result either way doesn&rsquo;t define a child. Plenty of brilliant futures don&rsquo;t go through a grammar school. Keeping that in view takes the pressure down for everyone.</p>
+    </div>
+  </section>
+
+  <section class="section" id="day">
+    <div class="k">The exam itself</div>
+    <h2>On the day</h2>
+    <p>By the time the test comes, the preparation is done, and the job is just to turn up steady. A calm morning, a decent breakfast and a reminder that they only have to do their best goes a long way.</p>
+    <p>In the room, children are usually told how the test works before it begins, and the questions are timed. If your area offers a familiarisation paper, doing one beforehand means the format holds no surprises, which is the single most settling thing on the day.</p>
+  </section>
+
+  <section class="section" style="border-top:0">
+    <div class="k">Next</div>
+    <h2>Now you know the shape of it</h2>
+    <p>That&rsquo;s the whole picture. From here, the practice lives in the five subjects. Start wherever you like, dip in and out, and remember nothing is being marked or counted.</p>
+    <div class="subjects-out">
+      <a href="/11-resource-hub/verbal-reasoning/">Verbal Reasoning</a>
+      <a href="#">Non-Verbal Reasoning</a>
+      <a href="#">Maths</a>
+      <a href="#">English</a>
+      <a href="#">Spatial Reasoning</a>
+    </div>
+  </section>
+
+  <div class="next-cta">
+    <h2>Still unsure where to begin?</h2>
+    <p>If the five subjects feel like a lot, Verbal and Non-Verbal Reasoning are a friendly place to start, since they rely less on what&rsquo;s been taught at school.</p>
+    <a href="/11-resource-hub/verbal-reasoning/">Go to Verbal Reasoning
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+
+  <footer class="foot">
+    <p style="margin:0 0 6px"><b>Tom Sanderson Tutoring</b> &middot; Milton Keynes</p>
+    <p style="margin:0;max-width:62ch">This guide covers the national picture. Your exact dates, test provider and which subjects are tested are set locally, so always check your council&rsquo;s admissions pages and the schools you&rsquo;re aiming for. If you&rsquo;d like a hand beyond the page, you can <a href="https://tomsandersontutoring.com">find out about tutoring here</a>.</p>
+    <p style="margin:.9em 0 0;font-size:.84rem;color:var(--muted)">All information on this page was correct at the time of writing (21st June 2026). The 11+ changes over time and varies by area, so always confirm current details with your local authority and chosen schools.</p>
+  </footer>
+
+</main>
+
+<script>
+function toggleComfort(){
+  var on=document.body.classList.toggle('comfort');
+  document.getElementById('comfort').setAttribute('aria-pressed',on?'true':'false');
+}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var id=a.getAttribute('href');
+    if(id.length>1){var el=document.querySelector(id);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}}
+  });
+});
+</script>
+</body>
+</html>
