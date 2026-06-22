@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Making &amp; changing words — Verbal Reasoning | Tom Sanderson Tutoring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#1E647C;--teal-deep:#174E61;--sky:#9FD3E8;--sky-soft:#E4F1F7;--amber:#F5BA18;--white:#FFFFFF;
+  --paper:#F1F7FA;--surface:#FFFFFF;--ink:#15323D;--muted:#5E7A84;--line:#D8E7EE;--line-soft:#E8F1F5;
+  --ok:#1B8A5A;--ok-bg:#E6F5EE;--no:#C24A3D;--no-bg:#FBECE9;
+  --radius:18px;--radius-s:12px;
+  --shadow:0 1px 2px rgba(21,50,61,.05), 0 10px 30px rgba(21,50,61,.07);
+  --shadow-lift:0 4px 10px rgba(21,50,61,.08), 0 20px 44px rgba(21,50,61,.12);
+  --maxw:860px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Raleway",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+body.comfort{letter-spacing:.02em;word-spacing:.06em;line-height:1.9}
+body.comfort p{margin-bottom:1.1em}
+h1,h2,h3,h4{font-family:"Montserrat",sans-serif;margin:0;line-height:1.2;letter-spacing:-.01em;color:var(--teal-deep)}
+p{margin:0 0 1em}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+button{font-family:inherit}
+.hidden{display:none !important}
+
+.top{position:sticky;top:0;z-index:30;background:rgba(241,247,250,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{display:inline-flex;align-items:stretch;border-radius:8px;overflow:hidden;text-decoration:none;box-shadow:0 1px 2px rgba(21,50,61,.12);flex:0 0 auto}
+.logo .a{background:var(--teal);color:var(--amber);font-family:"Montserrat";font-weight:800;font-size:.9rem;padding:8px 11px;display:flex;align-items:center;line-height:1}
+.logo .b{background:var(--white);color:var(--teal);font-family:"Montserrat";font-weight:600;font-size:.9rem;padding:8px 12px;display:flex;align-items:center;line-height:1;border:1px solid var(--line);border-left:0}
+.back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--muted);font-weight:600;font-size:.88rem}
+.back:hover{color:var(--teal)}
+.back svg{width:16px;height:16px}
+.top-right{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.free-pill{font-family:"Montserrat";font-weight:700;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--white);border:1px solid var(--line);padding:6px 11px;border-radius:999px}
+.comfort-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--white);color:var(--muted);border-radius:999px;padding:6px 12px;font-weight:600;font-size:.82rem;cursor:pointer;transition:.14s}
+.comfort-btn:hover{border-color:var(--teal);color:var(--teal)}
+.comfort-btn[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.comfort-btn svg{width:15px;height:15px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px 90px}
+.crumb{font-size:.82rem;color:var(--muted);margin:22px 0 0}
+.crumb a{color:var(--teal);text-decoration:none;font-weight:600}
+.hero{padding:14px 0 6px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:"Montserrat";font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:var(--sky-soft);border:1px solid var(--sky);padding:6px 13px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:clamp(1.9rem,4.6vw,2.6rem);font-weight:800}
+.hero .sub{font-size:clamp(1.05rem,2.2vw,1.18rem);margin-top:14px;max-width:62ch}
+.pagenav{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0}
+.pagenav a{font-size:.85rem;text-decoration:none;color:var(--teal-deep);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-weight:600}
+.pagenav a:hover{border-color:var(--sky);background:var(--sky-soft)}
+
+.section{padding:30px 0 0;scroll-margin-top:80px}
+.section h2{font-size:1.45rem;font-weight:700;margin-bottom:12px}
+.section p,.section li{max-width:66ch}
+.types-list{margin:0 0 1em;padding-left:0;list-style:none}
+.types-list li{position:relative;padding:8px 0 8px 30px;border-bottom:1px solid var(--line-soft);max-width:66ch}
+.types-list li:last-child{border-bottom:0}
+.types-list li::before{content:"";position:absolute;left:6px;top:15px;width:9px;height:9px;border-radius:3px;background:var(--sky)}
+.types-list b{color:var(--ink)}
+
+.callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:0 var(--radius-s) var(--radius-s) 0;padding:16px 19px;margin:16px 0 0;box-shadow:var(--shadow)}
+.callout h4{font-family:"Montserrat";font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#9A6B16;margin-bottom:7px}
+.callout ul{margin:0;padding-left:18px}
+.callout li{margin:4px 0;font-size:.95rem}
+.callout li::marker{color:var(--amber)}
+
+.worked{background:linear-gradient(135deg,#F2F8FB,#FFFFFF);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;margin-top:14px;box-shadow:var(--shadow)}
+.worked .q{background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);padding:14px 16px;margin-bottom:14px;font-size:1.1rem}
+.worked .q .gap{color:var(--teal);font-weight:700}
+.steps{counter-reset:s;margin:0;padding:0;list-style:none}
+.steps li{position:relative;padding:0 0 12px 38px;max-width:64ch}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;font-family:"Montserrat";font-weight:700;font-size:.85rem;display:grid;place-items:center}
+.steps b{color:var(--ink)}
+.answer-line{margin-top:14px;background:var(--ok-bg);border:1px solid #BFE6D2;border-radius:var(--radius-s);padding:11px 15px;font-weight:600;color:#15623f}
+
+.act{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow);margin-top:16px}
+.act-head{display:flex;align-items:center;gap:11px;margin-bottom:3px}
+.act-head .num{flex:0 0 auto;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--teal);color:#fff;font-family:"Montserrat";font-weight:700;font-size:.9rem}
+.act-head h3{font-size:1.1rem;font-weight:700}
+.act .instr{color:var(--muted);font-size:.93rem;margin:2px 0 14px}
+.qbox{font-size:1.1rem;margin-bottom:12px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:8px;padding:12px 15px}
+.pairs2{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;font-size:1.08rem}
+.pairs2 .pl{background:var(--sky-soft);border:1px solid var(--sky);border-radius:8px;padding:7px 12px}
+.pairs2 .pl b{color:var(--teal-deep)}
+
+.optgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:2px 0 4px}
+.letterrow{display:flex;flex-wrap:wrap;gap:9px;margin:2px 0 4px}
+.word{border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:10px 14px;font-size:1rem;cursor:pointer;text-align:center;transition:transform .07s,border-color .12s,background .12s;color:var(--ink)}
+.word:hover{border-color:var(--teal)}
+.word.right{background:var(--ok-bg);border-color:var(--ok);color:#15623f;font-weight:600}
+.word.bad{background:var(--no-bg);border-color:var(--no);color:#8f2a20;font-weight:600}
+.word[disabled]{cursor:default}
+.lett-opt{width:48px;height:48px;border:1.5px solid var(--line);background:#fff;border-radius:10px;font-size:1.2rem;font-weight:700;cursor:pointer;font-family:"Montserrat";color:var(--ink)}
+.lett-opt:hover{border-color:var(--teal)}
+.lett-opt.right{background:var(--ok-bg);border-color:var(--ok);color:#15623f}
+.lett-opt.bad{background:var(--no-bg);border-color:var(--no);color:#8f2a20}
+.lett-opt[disabled]{cursor:default}
+
+/* move a letter */
+.mv-row{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin:2px 0 10px;font-size:1.1rem}
+.mv-w1{display:flex;gap:5px}
+.lett{width:40px;height:46px;border:1.5px solid var(--line);background:#fff;border-radius:9px;font-size:1.18rem;font-weight:700;cursor:pointer;font-family:"Montserrat";color:var(--ink)}
+.lett:hover{border-color:var(--teal)}
+.lett.right{background:var(--ok-bg);border-color:var(--ok);color:#15623f}
+.lett.bad{background:var(--no-bg);border-color:var(--no);color:#8f2a20}
+.lett[disabled]{cursor:default}
+.mv-w2{font-family:"Montserrat";font-weight:700;color:var(--teal-deep);background:var(--sky-soft);border:1px solid var(--sky);border-radius:8px;padding:9px 13px}
+.mv-arrow{color:var(--muted);font-weight:600}
+.result{margin:0 0 4px;font-size:1.05rem}
+.result b{color:var(--teal-deep)}
+
+.groups{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 14px}
+.groupbox{background:var(--sky-soft);border:1px solid var(--line);border-radius:var(--radius-s);padding:12px 13px}
+.groupbox .gl{font-family:"Montserrat";font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:9px}
+.wordcol{display:flex;flex-direction:column;gap:8px}
+
+.btn{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:10px;padding:10px 16px;font-family:"Montserrat";font-weight:700;font-size:.9rem;cursor:pointer;transition:.12s}
+.btn:hover{background:var(--sky-soft)}
+.btn:disabled{opacity:.5;cursor:default}
+.btn-primary{background:var(--teal);border-color:var(--teal);color:#fff}
+.btn-primary:hover:not(:disabled){background:var(--teal-deep)}
+.btn-ghost{background:transparent;border-color:transparent;color:var(--muted)}
+.btn-ghost:hover:not(:disabled){color:var(--ink);background:var(--sky-soft)}
+.row{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:10px}
+.prog{margin-left:auto;font-family:"Montserrat";font-size:.8rem;color:var(--muted)}
+.feedback{font-size:.95rem;font-weight:600;min-height:1.3em;margin-top:11px}
+.feedback.ok{color:var(--ok)}
+.feedback.no{color:var(--no)}
+
+.endcard{margin-top:30px;background:linear-gradient(135deg,var(--teal),var(--teal-deep));border-radius:var(--radius);padding:24px 28px;color:#fff;box-shadow:var(--shadow)}
+.endcard h2{color:#fff;font-size:1.2rem;margin-bottom:6px}
+.endcard p{color:#D9ECF3;margin:0 0 14px;max-width:54ch}
+.endcard a{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:#3A2D05;text-decoration:none;font-family:"Montserrat";font-weight:700;padding:12px 18px;border-radius:11px}
+.endcard a svg{width:17px;height:17px}
+
+.foot{border-top:1px solid var(--line);margin-top:40px;padding-top:24px;color:var(--muted);font-size:.9rem}
+.foot b{color:var(--ink);font-family:"Montserrat";font-weight:700}
+.foot a{color:var(--teal);font-weight:600;text-decoration:none}
+
+@media (max-width:680px){
+  body{font-size:17px}
+  .groups,.optgrid{grid-template-columns:1fr}
+  .worked,.act{padding:20px 18px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="#" aria-label="Tom Sanderson Tutoring home"><span class="a">Tom&nbsp;Sanderson</span><span class="b">Tutoring</span></a>
+    <a class="back" href="/11-resource-hub/verbal-reasoning/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Verbal Reasoning</a>
+    <div class="top-right">
+      <span class="free-pill">Free &middot; no sign-up</span>
+      <button class="comfort-btn" id="comfort" aria-pressed="false" onclick="toggleComfort()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg>
+        Reading comfort
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="crumb"><a href="#">Verbal Reasoning</a> &nbsp;&rsaquo;&nbsp; Making &amp; changing words</p>
+
+  <section class="hero">
+    <span class="eyebrow">Verbal Reasoning &middot; Topic 2</span>
+    <h1>Making &amp; changing words</h1>
+    <p class="sub">These puzzles are about how words are built and spelled, not what they mean. You add, take away, move and join letters to make new words.</p>
+    <nav class="pagenav" aria-label="On this page">
+      <a href="#about">What it is</a>
+      <a href="#example">Worked example</a>
+      <a href="#a1">Hidden words</a>
+      <a href="#a2">Insert a letter</a>
+      <a href="#a3">Missing word</a>
+      <a href="#a4">Move a letter</a>
+      <a href="#a5">Compound words</a>
+      <a href="#a6">Make a word</a>
+      <a href="#a7">Complete the word</a>
+    </nav>
+  </section>
+
+  <section class="section" id="about">
+    <h2>What these questions are</h2>
+    <p>This group is all about letters and spelling. You are not asked what words mean. Instead you look closely at the letters and find a way to build, change or join words. There are seven kinds here:</p>
+    <ul class="types-list">
+      <li><b>Hidden words</b> &mdash; a small word hiding across two others.</li>
+      <li><b>Insert a letter</b> &mdash; one letter that finishes one word and starts the next.</li>
+      <li><b>Missing word</b> &mdash; three letters taken out of a word.</li>
+      <li><b>Move a letter</b> &mdash; shift a letter from one word into another.</li>
+      <li><b>Compound words</b> &mdash; join two words into one.</li>
+      <li><b>Make a word</b> &mdash; build a word using a rule you work out.</li>
+      <li><b>Complete the word</b> &mdash; finish a pattern across word pairs.</li>
+    </ul>
+    <div class="callout">
+      <h4>How to crack them</h4>
+      <ul>
+        <li>These are about <b>spelling and letters</b>, not meaning. Look at the letters, not the picture in your head.</li>
+        <li>Say the words <b>aloud</b>. Hearing them helps you spot a hidden word or a missing letter.</li>
+        <li>For the rule puzzles, <b>number the letters</b> 1, 2, 3 to see the pattern clearly.</li>
+        <li>Always check your new word is a <b>real word</b>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="example">
+    <h2>A worked example</h2>
+    <p>Here is a &ldquo;hidden word&rdquo; question, taken slowly.</p>
+    <div class="worked">
+      <div class="q">Find the four-letter word hidden across two of these words:<br><br>The big old dog barked.</div>
+      <ol class="steps">
+        <li><b>Look at the gaps between words.</b> A hidden word sits across a gap, using the end of one word and the start of the next.</li>
+        <li><b>Try each gap.</b> Look at &ldquo;big old&rdquo;. Take the last letter of <b>big</b> and join it to <b>old</b>.</li>
+        <li><b>Read it across the gap.</b> bi<span class="gap">g old</span> gives g-o-l-d.</li>
+      </ol>
+      <div class="answer-line">Answer: gold &mdash; hidden across &ldquo;big old&rdquo;.</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Now your go</h2>
+    <p>Seven short sets, one for each kind. Nothing is timed or saved, so take your time and get it wrong as often as you like.</p>
+    <div class="callout"><p style="margin:0;font-size:.95rem"><b>A little tip:</b> these puzzles are about letters, not meaning. Saying the words out loud often helps you hear the answer.</p></div>
+  </section>
+
+  <!-- A1 hidden words -->
+  <div class="act" id="a1">
+    <div class="act-head"><span class="num">1</span><h3>Hidden words</h3></div>
+    <p class="instr">A four-letter word is hiding across two of the words. Pick the word that is hidden.</p>
+    <div class="qbox" id="hid-q"></div>
+    <div class="optgrid" id="hid-opts"></div>
+    <div class="row"><button class="btn btn-ghost" id="hid-next" disabled>Next &rarr;</button><span class="prog" id="hid-prog"></span></div>
+    <div class="feedback" id="hid-fb" aria-live="polite"></div>
+  </div>
+
+  <!-- A2 insert a letter -->
+  <div class="act" id="a2">
+    <div class="act-head"><span class="num">2</span><h3>Insert a letter</h3></div>
+    <p class="instr">One letter finishes the word before the brackets and starts the word after. Find the letter that works for <b>both</b> lines.</p>
+    <div class="qbox" id="ins-q"></div>
+    <div class="letterrow" id="ins-opts"></div>
+    <div class="row"><button class="btn btn-ghost" id="ins-next" disabled>Next &rarr;</button><span class="prog" id="ins-prog"></span></div>
+    <div class="feedback" id="ins-fb" aria-live="polite"></div>
+  </div>
+
+  <!-- A3 missing word -->
+  <div class="act" id="a3">
+    <div class="act-head"><span class="num">3</span><h3>Missing word</h3></div>
+    <p class="instr">Three letters have been taken out of the word in capitals. Pick the three that put it back so the sentence makes sense.</p>
+    <div class="qbox" id="mis-q"></div>
+    <div class="optgrid" id="mis-opts"></div>
+    <div class="row"><button class="btn btn-ghost" id="mis-next" disabled>Next &rarr;</button><span class="prog" id="mis-prog"></span></div>
+    <div class="feedback" id="mis-fb" aria-live="polite"></div>
+  </div>
+
+  <!-- A4 move a letter -->
+  <div class="act" id="a4">
+    <div class="act-head"><span class="num">4</span><h3>Move a letter</h3></div>
+    <p class="instr">Move one letter from the first word into the second word, so both become new real words. Tap the letter that moves.</p>
+    <div class="mv-row">
+      <span class="mv-w1" id="mov-w1"></span>
+      <span class="mv-arrow">&rarr; into &rarr;</span>
+      <span class="mv-w2" id="mov-w2"></span>
+    </div>
+    <div class="result hidden" id="mov-result"></div>
+    <div class="row"><button class="btn btn-ghost" id="mov-next" disabled>Next &rarr;</button><span class="prog" id="mov-prog"></span></div>
+    <div class="feedback" id="mov-fb" aria-live="polite"></div>
+  </div>
+
+  <!-- A5 compound words -->
+  <div class="act" id="a5">
+    <div class="act-head"><span class="num">5</span><h3>Compound words</h3></div>
+    <p class="instr">Pick one word from each group that join to make a single word. The first word always comes first. Then press Check.</p>
+    <div class="groups">
+      <div class="groupbox"><div class="gl">Group 1</div><div class="wordcol" id="cmp-g1"></div></div>
+      <div class="groupbox"><div class="gl">Group 2</div><div class="wordcol" id="cmp-g2"></div></div>
+    </div>
+    <div class="row"><button class="btn btn-primary" id="cmp-check" disabled>Check</button><button class="btn btn-ghost" id="cmp-next" disabled>Next &rarr;</button><span class="prog" id="cmp-prog"></span></div>
+    <div class="feedback" id="cmp-fb" aria-live="polite"></div>
+  </div>
+
+  <!-- A6 make a word -->
+  <div class="act" id="a6">
+    <div class="act-head"><span class="num">6</span><h3>Make a word</h3></div>
+    <p class="instr">The word in brackets is built from the two words beside it. Work out the rule from the first line, then finish the second line the same way.</p>
+    <div class="qbox" id="mak-q"></div>
+    <div class="optgrid" id="mak-opts"></div>
+    <div class="row"><button class="btn btn-ghost" id="mak-next" disabled>Next &rarr;</button><span class="prog" id="mak-prog"></span></div>
+    <div class="feedback" id="mak-fb" aria-live="polite"></div>
+  </div>
+
+  <!-- A7 complete the word -->
+  <div class="act" id="a7">
+    <div class="act-head"><span class="num">7</span><h3>Complete the word</h3></div>
+    <p class="instr">The first two pairs show a rule. Find the word that completes the third pair the same way.</p>
+    <div class="qbox" id="com-q"></div>
+    <div class="optgrid" id="com-opts"></div>
+    <div class="row"><button class="btn btn-ghost" id="com-next" disabled>Next &rarr;</button><span class="prog" id="com-prog"></span></div>
+    <div class="feedback" id="com-fb" aria-live="polite"></div>
+  </div>
+
+  <div class="endcard">
+    <h2>That is making &amp; changing words</h2>
+    <p>Seven kinds done. When you are ready, head back and pick another topic.</p>
+    <a href="/11-resource-hub/verbal-reasoning/">Back to Verbal Reasoning
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+    </a>
+  </div>
+
+  <footer class="foot">
+    <p style="margin:0 0 6px"><b>Tom Sanderson Tutoring</b> &middot; Milton Keynes</p>
+    <p style="margin:0;max-width:62ch">A free resource for families preparing for the 11+. If you&rsquo;d like a hand beyond the page, you can <a href="#">find out about tutoring here</a>.</p>
+  </footer>
+
+</main>
+
+<script>
+function toggleComfort(){
+  var on=document.body.classList.toggle('comfort');
+  document.getElementById('comfort').setAttribute('aria-pressed',on?'true':'false');
+}
+function $(id){return document.getElementById(id);}
+
+/* multiple choice (hidden / insert / missing / make / complete) */
+function mcQuiz(p, items, optClass){
+  optClass = optClass || 'word';
+  var i=0, score=0, locked=false;
+  function render(){
+    locked=false;
+    $(p+'-q').innerHTML=items[i].q;
+    var host=$(p+'-opts'); host.innerHTML='';
+    items[i].opts.forEach(function(o,k){
+      var b=document.createElement('button'); b.className=optClass; b.textContent=o;
+      b.onclick=function(){ pick(k,b); };
+      host.appendChild(b);
+    });
+    $(p+'-fb').textContent=''; $(p+'-fb').className='feedback';
+    $(p+'-next').disabled=true;
+    $(p+'-prog').textContent='Question '+(i+1)+' of '+items.length;
+  }
+  function pick(k,b){
+    if(locked)return; locked=true;
+    var it=items[i];
+    [].forEach.call($(p+'-opts').children,function(c,j){c.disabled=true; if(j===it.a)c.classList.add('right');});
+    if(k===it.a) score++; else b.classList.add('bad');
+    var fb=$(p+'-fb'); fb.className='feedback '+(k===it.a?'ok':'no'); fb.innerHTML=(k===it.a?'\u2713 ':'')+it.why;
+    $(p+'-next').disabled=(i>=items.length-1);
+    $(p+'-prog').textContent='Score '+score+' of '+(i+1)+(i>=items.length-1?' \u00b7 set complete':'');
+  }
+  $(p+'-next').onclick=function(){ if(i<items.length-1){i++;render();} };
+  render();
+}
+
+/* move a letter */
+function moveLetter(p, items){
+  var i=0, score=0, locked=false;
+  function render(){
+    locked=false;
+    var it=items[i], host=$(p+'-w1'); host.innerHTML='';
+    it.w1.split('').forEach(function(ch,k){
+      var b=document.createElement('button'); b.className='lett'; b.textContent=ch;
+      b.onclick=function(){ pick(k,b); };
+      host.appendChild(b);
+    });
+    $(p+'-w2').textContent=it.w2;
+    $(p+'-result').classList.add('hidden'); $(p+'-result').innerHTML='';
+    $(p+'-fb').textContent=''; $(p+'-fb').className='feedback';
+    $(p+'-next').disabled=true;
+    $(p+'-prog').textContent='Question '+(i+1)+' of '+items.length;
+  }
+  function pick(k,b){
+    if(locked)return; locked=true;
+    var it=items[i], ok=(k===it.move);
+    [].forEach.call($(p+'-w1').children,function(c,j){c.disabled=true; if(j===it.move)c.classList.add('right'); else if(j===k&&!ok)c.classList.add('bad');});
+    if(ok) score++;
+    var res=$(p+'-result'); res.classList.remove('hidden');
+    res.innerHTML='Now: <b>'+it.newW1+'</b> and <b>'+it.newW2+'</b>';
+    var fb=$(p+'-fb'); fb.className='feedback '+(ok?'ok':'no'); fb.innerHTML=(ok?'\u2713 ':'')+it.why;
+    $(p+'-next').disabled=(i>=items.length-1);
+    $(p+'-prog').textContent='Score '+score+' of '+(i+1)+(i>=items.length-1?' \u00b7 set complete':'');
+  }
+  $(p+'-next').onclick=function(){ if(i<items.length-1){i++;render();} };
+  render();
+}
+
+/* two-group picker (compound words) */
+function twoGroup(p, items){
+  var i=0, score=0, s1=null, s2=null, locked=false;
+  function fill(rowId, arr, g){
+    var host=$(rowId); host.innerHTML='';
+    arr.forEach(function(w,k){
+      var b=document.createElement('button'); b.className='word'; b.textContent=w;
+      b.onclick=function(){ if(locked)return;
+        [].forEach.call(host.children,function(c){c.classList.remove('right');c.classList.remove('bad');c.style.outline='';});
+        [].forEach.call(host.children,function(c){c.classList.remove('sel');});
+        b.classList.add('sel'); if(g===1)s1=k; else s2=k;
+        $(p+'-check').disabled = !(s1!==null && s2!==null);
+      };
+      host.appendChild(b);
+    });
+  }
+  function render(){
+    locked=false; s1=null; s2=null;
+    fill(p+'-g1', items[i].g1, 1);
+    fill(p+'-g2', items[i].g2, 2);
+    $(p+'-fb').textContent=''; $(p+'-fb').className='feedback';
+    $(p+'-check').disabled=true; $(p+'-next').disabled=true;
+    $(p+'-prog').textContent='Question '+(i+1)+' of '+items.length;
+  }
+  function check(){
+    if(locked)return; locked=true;
+    var it=items[i], ok=(s1===it.a[0] && s2===it.a[1]);
+    if(ok) score++;
+    [].forEach.call($(p+'-g1').children,function(c,k){c.disabled=true;c.classList.remove('sel');if(k===it.a[0])c.classList.add('right');else if(k===s1&&!ok)c.classList.add('bad');});
+    [].forEach.call($(p+'-g2').children,function(c,k){c.disabled=true;c.classList.remove('sel');if(k===it.a[1])c.classList.add('right');else if(k===s2&&!ok)c.classList.add('bad');});
+    var fb=$(p+'-fb'); fb.className='feedback '+(ok?'ok':'no'); fb.innerHTML=(ok?'\u2713 ':'')+it.why;
+    $(p+'-check').disabled=true; $(p+'-next').disabled=(i>=items.length-1);
+    $(p+'-prog').textContent='Score '+score+' of '+(i+1)+(i>=items.length-1?' \u00b7 set complete':'');
+  }
+  $(p+'-check').onclick=check;
+  $(p+'-next').onclick=function(){ if(i<items.length-1){i++;render();} };
+  render();
+}
+
+/* ---------- DATA (all original) ---------- */
+mcQuiz('hid',[
+  {q:'The chef ate his lunch.', opts:['gate','fate','face','late'], a:1, why:'Look across the gap: che<b>f ate</b> hides the word <b>fate</b>.'},
+  {q:'We must eat early today.', opts:['bear','team','tear','wear'], a:2, why:'ea<b>t ear</b>ly hides the word <b>tear</b>.'},
+  {q:'The cab ran away.', opts:['barn','bran','brat','brag'], a:1, why:'ca<b>b ran</b> hides the word <b>bran</b>.'},
+  {q:'The seal and the dog played.', opts:['band','land','hand','sand'], a:1, why:'sea<b>l and</b> hides the word <b>land</b>.'},
+  {q:'The star opened slowly.', opts:['ripe','rope','hope','rose'], a:1, why:'sta<b>r ope</b>ned hides the word <b>rope</b>.'}
+], 'word');
+
+mcQuiz('ins',[
+  {q:'<div class="pairs2"><span class="pl"><b>coa</b>&nbsp;(&nbsp;?&nbsp;)&nbsp;<b>ent</b></span><span class="pl"><b>boo</b>&nbsp;(&nbsp;?&nbsp;)&nbsp;<b>able</b></span></div>', opts:['s','t','n','d','p'], a:1, why:'The letter <b>t</b> fits both: coat and tent, boot and table.'},
+  {q:'<div class="pairs2"><span class="pl"><b>ban</b>&nbsp;(&nbsp;?&nbsp;)&nbsp;<b>ark</b></span><span class="pl"><b>rea</b>&nbsp;(&nbsp;?&nbsp;)&nbsp;<b>own</b></span></div>', opts:['t','d','k','l','r'], a:1, why:'The letter <b>d</b> fits both: band and dark, read and down.'},
+  {q:'<div class="pairs2"><span class="pl"><b>shar</b>&nbsp;(&nbsp;?&nbsp;)&nbsp;<b>en</b></span><span class="pl"><b>shi</b>&nbsp;(&nbsp;?&nbsp;)&nbsp;<b>ole</b></span></div>', opts:['s','t','p','d','m'], a:2, why:'The letter <b>p</b> fits both: sharp and pen, ship and pole.'},
+  {q:'<div class="pairs2"><span class="pl"><b>bu</b>&nbsp;(&nbsp;?&nbsp;)&nbsp;<b>ock</b></span><span class="pl"><b>clas</b>&nbsp;(&nbsp;?&nbsp;)&nbsp;<b>well</b></span></div>', opts:['t','s','p','n','k'], a:1, why:'The letter <b>s</b> fits both: bus and sock, class and swell.'},
+  {q:'<div class="pairs2"><span class="pl"><b>tea</b>&nbsp;(&nbsp;?&nbsp;)&nbsp;<b>ile</b></span><span class="pl"><b>far</b>&nbsp;(&nbsp;?&nbsp;)&nbsp;<b>eat</b></span></div>', opts:['t','m','s','l','n'], a:1, why:'The letter <b>m</b> fits both: team and mile, farm and meat.'}
+], 'lett-opt');
+
+mcQuiz('mis',[
+  {q:'We grew a sunflower <b>PL___</b> in the garden.', opts:['ANT','AIN','ATE','USH'], a:0, why:'PL + ANT makes <b>PLANT</b>, which fits the sentence.'},
+  {q:'Please try to <b>S___D</b> up tall.', opts:['OUN','TAN','PEE','COL'], a:1, why:'S + TAN + D makes <b>STAND</b>.'},
+  {q:'The knight carried a long <b>S___R</b>.', opts:['OLA','TAI','PEA','UGA'], a:2, why:'S + PEA + R makes <b>SPEAR</b>.'},
+  {q:'They live in a <b>G___D</b> old house.', opts:['RAN','UAR','LAN','REE'], a:0, why:'G + RAN + D makes <b>GRAND</b>.'},
+  {q:'The farmer grew golden <b>WH___</b> in the field.', opts:['ITE','OLE','EAT','ICH'], a:2, why:'WH + EAT makes <b>WHEAT</b>.'}
+], 'word');
+
+moveLetter('mov',[
+  {w1:'cart', w2:'fee', move:2, newW1:'cat', newW2:'free', why:'Take the r from cart to leave cat, and add it to fee to make free.'},
+  {w1:'boat', w2:'rod', move:1, newW1:'bat', newW2:'road', why:'Take the o from boat to leave bat, and add it to rod to make road.'},
+  {w1:'plant', w2:'back', move:1, newW1:'pant', newW2:'black', why:'Take the l from plant to leave pant, and add it to back to make black.'},
+  {w1:'feast', w2:'her', move:1, newW1:'fast', newW2:'here', why:'Take the e from feast to leave fast, and add it to her to make here.'},
+  {w1:'stale', w2:'even', move:0, newW1:'tale', newW2:'seven', why:'Take the s from stale to leave tale, and add it to even to make seven.'}
+]);
+
+twoGroup('cmp',[
+  {g1:['milk','foot','glad'], g2:['tree','ball','soft'], a:[1,1], why:'Foot and ball join to make <b>football</b>.'},
+  {g1:['tooth','jump','green'], g2:['lake','brush','kind'], a:[0,1], why:'Tooth and brush join to make <b>toothbrush</b>.'},
+  {g1:['desk','rain','warm'], g2:['bow','frog','sing'], a:[1,0], why:'Rain and bow join to make <b>rainbow</b>.'},
+  {g1:['butter','chair','loud'], g2:['pond','slow','fly'], a:[0,2], why:'Butter and fly join to make <b>butterfly</b>.'},
+  {g1:['swim','dark','play'], g2:['ground','apple','near'], a:[2,0], why:'Play and ground join to make <b>playground</b>.'}
+]);
+
+mcQuiz('mak',[
+  {q:'<div class="pairs2"><span class="pl"><b>band</b> (bath) <b>thin</b></span><span class="pl"><b>cold</b> ( ? ) <b>inch</b></span></div>', opts:['cone','coin','chin','club'], a:1, why:'Take the first two letters of each word. band + thin gives ba + th = bath. So cold + inch gives co + in = <b>coin</b>.'},
+  {q:'<div class="pairs2"><span class="pl"><b>farm</b> (fast) <b>mist</b></span><span class="pl"><b>corn</b> ( ? ) <b>wild</b></span></div>', opts:['word','cold','mild','corn'], a:1, why:'First two letters of the first word, last two of the second. farm + mist gives fa + st = fast. So corn + wild gives co + ld = <b>cold</b>.'},
+  {q:'<div class="pairs2"><span class="pl"><b>cave</b> (cape) <b>pen</b></span><span class="pl"><b>fish</b> ( ? ) <b>net</b></span></div>', opts:['find','fish','fine','nest'], a:2, why:'Take the first two letters of each word. cave + pen gives ca + pe = cape. So fish + net gives fi + ne = <b>fine</b>.'}
+], 'word');
+
+mcQuiz('com',[
+  {q:'<div class="pairs2"><span class="pl"><b>petal</b> (pet)</span><span class="pl"><b>windy</b> (win)</span><span class="pl"><b>carve</b> ( ? )</span></div>', opts:['ave','car','ear','cav'], a:1, why:'Take the first three letters. petal makes pet, windy makes win, so carve makes <b>car</b>.'},
+  {q:'<div class="pairs2"><span class="pl"><b>stand</b> (and)</span><span class="pl"><b>blink</b> (ink)</span><span class="pl"><b>spear</b> ( ? )</span></div>', opts:['pea','ear','are','spa'], a:1, why:'Take the last three letters. stand makes and, blink makes ink, so spear makes <b>ear</b>.'},
+  {q:'<div class="pairs2"><span class="pl"><b>plant</b> (pat)</span><span class="pl"><b>bring</b> (big)</span><span class="pl"><b>stamp</b> ( ? )</span></div>', opts:['map','sap','amp','tam'], a:1, why:'Take the 1st, 3rd and 5th letters. plant makes pat, bring makes big, so stamp makes <b>sap</b>.'}
+], 'word');
+
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var id=a.getAttribute('href');
+    if(id.length>1){var el=document.querySelector(id);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}}
+  });
+});
+</script>
+</body>
+</html>
