@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Number &amp; logic puzzles — Verbal Reasoning | Tom Sanderson Tutoring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#1E647C;--teal-deep:#174E61;--sky:#9FD3E8;--sky-soft:#E4F1F7;--amber:#F5BA18;--white:#FFFFFF;
+  --paper:#F1F7FA;--surface:#FFFFFF;--ink:#15323D;--muted:#5E7A84;--line:#D8E7EE;--line-soft:#E8F1F5;
+  --ok:#1B8A5A;--ok-bg:#E6F5EE;--no:#C24A3D;--no-bg:#FBECE9;
+  --radius:18px;--radius-s:12px;
+  --shadow:0 1px 2px rgba(21,50,61,.05), 0 10px 30px rgba(21,50,61,.07);
+  --shadow-lift:0 4px 10px rgba(21,50,61,.08), 0 20px 44px rgba(21,50,61,.12);
+  --maxw:860px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Raleway",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+body.comfort{letter-spacing:.02em;word-spacing:.06em;line-height:1.9}
+body.comfort p{margin-bottom:1.1em}
+h1,h2,h3,h4{font-family:"Montserrat",sans-serif;margin:0;line-height:1.2;letter-spacing:-.01em;color:var(--teal-deep)}
+p{margin:0 0 1em}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+button{font-family:inherit}
+.hidden{display:none !important}
+
+.top{position:sticky;top:0;z-index:30;background:rgba(241,247,250,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{display:inline-flex;align-items:stretch;border-radius:8px;overflow:hidden;text-decoration:none;box-shadow:0 1px 2px rgba(21,50,61,.12);flex:0 0 auto}
+.logo .a{background:var(--teal);color:var(--amber);font-family:"Montserrat";font-weight:800;font-size:.9rem;padding:8px 11px;display:flex;align-items:center;line-height:1}
+.logo .b{background:var(--white);color:var(--teal);font-family:"Montserrat";font-weight:600;font-size:.9rem;padding:8px 12px;display:flex;align-items:center;line-height:1;border:1px solid var(--line);border-left:0}
+.back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--muted);font-weight:600;font-size:.88rem}
+.back:hover{color:var(--teal)}
+.back svg{width:16px;height:16px}
+.top-right{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.free-pill{font-family:"Montserrat";font-weight:700;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--white);border:1px solid var(--line);padding:6px 11px;border-radius:999px}
+.comfort-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--white);color:var(--muted);border-radius:999px;padding:6px 12px;font-weight:600;font-size:.82rem;cursor:pointer;transition:.14s}
+.comfort-btn:hover{border-color:var(--teal);color:var(--teal)}
+.comfort-btn[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.comfort-btn svg{width:15px;height:15px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px 90px}
+.crumb{font-size:.82rem;color:var(--muted);margin:22px 0 0}
+.crumb a{color:var(--teal);text-decoration:none;font-weight:600}
+.hero{padding:14px 0 6px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:"Montserrat";font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:var(--sky-soft);border:1px solid var(--sky);padding:6px 13px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:clamp(1.9rem,4.6vw,2.6rem);font-weight:800}
+.hero .sub{font-size:clamp(1.05rem,2.2vw,1.18rem);margin-top:14px;max-width:62ch}
+.pagenav{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0}
+.pagenav a{font-size:.85rem;text-decoration:none;color:var(--teal-deep);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-weight:600}
+.pagenav a:hover{border-color:var(--sky);background:var(--sky-soft)}
+
+.section{padding:34px 0 0;scroll-margin-top:80px}
+.section h2{font-size:1.5rem;font-weight:700;margin-bottom:12px}
+.section h3{font-size:1.05rem;font-weight:700;margin:18px 0 6px;color:var(--ink)}
+.section p,.section li{max-width:66ch}
+.section ul{margin:0 0 1em;padding-left:0;list-style:none}
+.rules li{position:relative;padding:7px 0 7px 24px;max-width:66ch}
+.rules li::before{content:"";position:absolute;left:4px;top:15px;width:8px;height:8px;border-radius:3px;background:var(--sky)}
+.rules b{color:var(--ink)}
+.types-list li{position:relative;padding:8px 0 8px 30px;border-bottom:1px solid var(--line-soft);max-width:66ch}
+.types-list li:last-child{border-bottom:0}
+.types-list li::before{content:"";position:absolute;left:6px;top:15px;width:9px;height:9px;border-radius:3px;background:var(--sky)}
+.types-list b{color:var(--ink)}
+
+.callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:0 var(--radius-s) var(--radius-s) 0;padding:16px 19px;margin:16px 0 0;box-shadow:var(--shadow)}
+.callout h4{font-family:"Montserrat";font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#9A6B16;margin-bottom:7px}
+.callout p{margin:0;max-width:64ch}
+
+.worked{background:linear-gradient(135deg,#F2F8FB,#FFFFFF);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin-top:14px;box-shadow:var(--shadow)}
+.worked .wl{font-family:"Montserrat";font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:8px}
+.worked .q{background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);padding:13px 15px;margin-bottom:13px;font-size:1.08rem}
+.steps{counter-reset:s;margin:0;padding:0;list-style:none}
+.steps li{position:relative;padding:0 0 11px 36px;max-width:64ch}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--teal);color:#fff;font-family:"Montserrat";font-weight:700;font-size:.8rem;display:grid;place-items:center}
+.steps b{color:var(--ink);display:block;margin-bottom:3px}
+.answer-line{margin-top:13px;background:var(--ok-bg);border:1px solid #BFE6D2;border-radius:var(--radius-s);padding:10px 14px;font-weight:600;color:#15623f}
+.big{font-family:"Montserrat";font-weight:700;letter-spacing:.06em;color:var(--teal-deep)}
+.sum{font-family:"Montserrat";font-weight:700;letter-spacing:.08em;color:var(--teal-deep);font-size:1.04em}
+.box{display:inline-block;min-width:1.5em;text-align:center;border:2px solid var(--amber);border-radius:6px;padding:0 .25em;color:#9A6B16;font-weight:800}
+
+.keyrow{display:flex;flex-wrap:wrap;gap:7px;margin:11px 0}
+.kt{font-family:"Montserrat";font-weight:700;font-size:.9rem;background:#fff;border:1px solid var(--line);border-radius:9px;padding:6px 12px;letter-spacing:.02em}
+.kt em{font-style:normal;color:var(--teal)}
+.kt span{color:var(--ink)}
+
+.act{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow);margin-top:16px}
+.act-head{display:flex;align-items:center;gap:11px;margin-bottom:3px}
+.act-head .num{flex:0 0 auto;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--teal);color:#fff;font-family:"Montserrat";font-weight:700;font-size:.9rem}
+.act-head h3{font-size:1.05rem;font-weight:700;margin:0}
+.act .instr{color:var(--muted);font-size:.93rem;margin:2px 0 12px}
+
+.qbox{font-size:1.12rem;margin-bottom:12px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:8px;padding:13px 16px}
+.qbox .keyrow{margin:4px 0 10px}
+
+.optgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:2px 0 4px}
+.word{border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:11px 14px;font-size:1.05rem;cursor:pointer;text-align:center;font-family:"Montserrat";font-weight:700;letter-spacing:.06em;color:var(--ink);transition:transform .07s,border-color .12s,background .12s}
+.word:hover{border-color:var(--teal)}
+.word.right{background:var(--ok-bg);border-color:var(--ok);color:#15623f}
+.word.bad{background:var(--no-bg);border-color:var(--no);color:#8f2a20}
+.word[disabled]{cursor:default}
+
+.btn{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:10px;padding:10px 16px;font-family:"Montserrat";font-weight:700;font-size:.9rem;cursor:pointer;transition:.12s}
+.btn:hover{background:var(--sky-soft)}
+.btn:disabled{opacity:.5;cursor:default}
+.btn-ghost{background:transparent;border-color:transparent;color:var(--muted)}
+.btn-ghost:hover:not(:disabled){color:var(--ink);background:var(--sky-soft)}
+.row{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:10px}
+.prog{margin-left:auto;font-family:"Montserrat";font-size:.8rem;color:var(--muted)}
+.feedback{font-size:.95rem;font-weight:600;min-height:1.3em;margin-top:11px}
+.feedback.ok{color:var(--ok)}
+.feedback.no{color:var(--no)}
+
+.endcard{margin-top:34px;background:linear-gradient(135deg,var(--teal),var(--teal-deep));border-radius:var(--radius);padding:24px 28px;color:#fff;box-shadow:var(--shadow)}
+.endcard h2{color:#fff;font-size:1.2rem;margin-bottom:6px}
+.endcard p{color:#D9ECF3;margin:0 0 14px;max-width:54ch}
+.endcard a{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:#3A2D05;text-decoration:none;font-family:"Montserrat";font-weight:700;padding:12px 18px;border-radius:11px}
+.endcard a svg{width:17px;height:17px}
+
+.foot{border-top:1px solid var(--line);margin-top:40px;padding-top:24px;color:var(--muted);font-size:.9rem}
+.foot b{color:var(--ink);font-family:"Montserrat";font-weight:700}
+.foot a{color:var(--teal);font-weight:600;text-decoration:none}
+
+@media (max-width:680px){
+  body{font-size:17px}
+  .worked,.act{padding:20px 18px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/" aria-label="Tom Sanderson Tutoring home"><span class="a">Tom&nbsp;Sanderson</span><span class="b">Tutoring</span></a>
+    <a class="back" href="/11-resource-hub/verbal-reasoning/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Verbal Reasoning</a>
+    <div class="top-right">
+      <span class="free-pill">Free &middot; no sign-up</span>
+      <button class="comfort-btn" id="comfort" aria-pressed="false" onclick="toggleComfort()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg>
+        Reading comfort
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="crumb"><a href="/11-resource-hub/verbal-reasoning/">Verbal Reasoning</a> &nbsp;&rsaquo;&nbsp; Number &amp; logic puzzles</p>
+
+  <section class="hero">
+    <span class="eyebrow">Verbal Reasoning &middot; Topic 5</span>
+    <h1>Number &amp; logic puzzles</h1>
+    <p class="sub">These are the questions where you work something out one step at a time: swapping letters for numbers, filling the gap in a sum, and using a few facts to reason your way to the answer. No tricks needed &mdash; just steady working. Everything you need is on this page.</p>
+    <nav class="pagenav" aria-label="On this page">
+      <a href="#about">Start here</a>
+      <a href="#s1">Letters for numbers</a>
+      <a href="#s2">Complete the sum</a>
+      <a href="#s3">Reading information</a>
+    </nav>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2>Start here</h2>
+    <p>These three question types all reward the same calm habit: read carefully, take it one step at a time, and check that your answer fits. None of them need a clever trick. They need neat working.</p>
+    <p>Two of them are really mental maths in a costume. The third is a small logic puzzle: a handful of facts that, once you line them up in the right order, point to a single answer.</p>
+    <p>Each one below starts with a short explanation and a worked example taken slowly, then lets you try it.</p>
+    <ul class="types-list">
+      <li><b>Letters for numbers</b> &mdash; each letter is given a number, and you do a small sum, then give the answer back as a letter.</li>
+      <li><b>Complete the sum</b> &mdash; a calculation with one number missing; you work out the gap so both sides balance.</li>
+      <li><b>Reading information</b> &mdash; a few facts, then a question you answer by lining the facts up.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SECTION 1: LETTERS FOR NUMBERS ============ -->
+  <section class="section" id="s1">
+    <h2>1. Letters for numbers</h2>
+    <p>You are given a little key, where each letter stands for a number. You then work out a small sum and give your answer as the <b>letter</b> that matches &mdash; not the number. It looks unusual, but it is just two easy jobs: do the maths, then turn the answer back into a letter.</p>
+    <ul class="rules">
+      <li><b>Write the key where you can see it.</b> Each letter has its own number. Keep them in front of you.</li>
+      <li><b>Swap the letters for their numbers.</b> Replace each letter in the sum with its value, then work it out.</li>
+      <li><b>Turn the answer back into a letter.</b> Find which letter has that value. That letter is your answer.</li>
+      <li><b>The trap: giving the number.</b> The answer must be a <b>letter</b>, so always do the last step.</li>
+    </ul>
+
+    <div class="callout">
+      <h4>A little tip</h4>
+      <p>Do the swap first, the maths second. Replace every letter with its number before you start calculating &mdash; trying to do both at once is where slips happen.</p>
+    </div>
+
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">
+        <div class="keyrow">
+          <span class="kt"><em>A</em>=<span>2</span></span><span class="kt"><em>B</em>=<span>3</span></span><span class="kt"><em>C</em>=<span>4</span></span><span class="kt"><em>D</em>=<span>8</span></span><span class="kt"><em>E</em>=<span>12</span></span>
+        </div>
+        Work out <span class="sum">C &times; A</span> and give the answer as a letter.
+      </div>
+      <ol class="steps">
+        <li><b>Swap the letters for numbers.</b> C is 4 and A is 2, so the sum is 4 &times; 2.</li>
+        <li><b>Do the maths.</b> 4 &times; 2 = 8.</li>
+        <li><b>Turn it back into a letter.</b> Look down the key: which letter is 8? That is D.</li>
+      </ol>
+      <div class="answer-line">Answer: D.</div>
+    </div>
+
+    <div class="act" id="a1">
+      <div class="act-head"><span class="num">1</span><h3>Your go: letters for numbers</h3></div>
+      <p class="instr">Use the key to swap the letters for their numbers, do the sum, then choose the letter that matches your answer.</p>
+      <div class="qbox" id="lf-q"></div>
+      <div class="optgrid" id="lf-opts"></div>
+      <div class="row"><button class="btn btn-ghost" id="lf-next" disabled>Next &rarr;</button><span class="prog" id="lf-prog"></span></div>
+      <div class="feedback" id="lf-fb" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2: COMPLETE THE SUM ============ -->
+  <section class="section" id="s2">
+    <h2>2. Complete the sum</h2>
+    <p>Here a calculation has one number missing, shown as a <span class="box">?</span> box. Often there is a sum on each side of the equals sign. The two sides have to <b>balance</b> &mdash; end up equal &mdash; so you work out the side you can first, then find the number that makes the other side reach it.</p>
+    <ul class="rules">
+      <li><b>Work out the finished side first.</b> The side with no box can be totalled up straight away.</li>
+      <li><b>That total is your target.</b> The side with the box must come out to the very same number.</li>
+      <li><b>Use the opposite operation to find the box.</b> Adding undoes with taking away; multiplying undoes with dividing.</li>
+      <li><b>Check by putting your number in.</b> Both sides should now match exactly.</li>
+    </ul>
+
+    <div class="callout">
+      <h4>A little tip</h4>
+      <p>An equals sign means &ldquo;the same as&rdquo;. Find the value of the complete side first, then ask: what does my side need so it reaches that number too?</p>
+    </div>
+
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">Find the missing number.<br><span class="sum">7 &times; <span class="box">?</span> = 20 + 15</span></div>
+      <ol class="steps">
+        <li><b>Work out the finished side.</b> The right side has no box: 20 + 15 = 35. That is the target.</li>
+        <li><b>Look at the box side.</b> It says 7 times something must equal 35.</li>
+        <li><b>Use the opposite operation.</b> Times undoes with divide: 35 &divide; 7 = 5. So the box is 5.</li>
+      </ol>
+      <div class="answer-line">Answer: 5 &nbsp;(check: 7 &times; 5 = 35, and 20 + 15 = 35).</div>
+    </div>
+
+    <div class="act" id="a2">
+      <div class="act-head"><span class="num">2</span><h3>Your go: complete the sum</h3></div>
+      <p class="instr">Work out the side without the box first, then find the number that makes the box side balance with it.</p>
+      <div class="qbox" id="cs-q"></div>
+      <div class="optgrid" id="cs-opts"></div>
+      <div class="row"><button class="btn btn-ghost" id="cs-next" disabled>Next &rarr;</button><span class="prog" id="cs-prog"></span></div>
+      <div class="feedback" id="cs-fb" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3: READING INFORMATION ============ -->
+  <section class="section" id="s3">
+    <h2>3. Reading information</h2>
+    <p>You are given a few short facts, then asked a question. The facts together point to one answer. The whole skill is <b>lining the facts up</b> &mdash; usually into an order, and sometimes by crossing out what cannot be true.</p>
+    <ul class="rules">
+      <li><b>Read every fact before you answer.</b> The last one often decides it.</li>
+      <li><b>Line them up.</b> For &ldquo;taller&rdquo;, &ldquo;older&rdquo; or &ldquo;in front&rdquo; facts, build one single order from biggest to smallest.</li>
+      <li><b>Cross out what is ruled out.</b> For &ldquo;who has what&rdquo; facts, knock out the impossible until one answer is left.</li>
+      <li><b>Use only what you are told.</b> Don&rsquo;t add anything from outside the facts.</li>
+    </ul>
+
+    <div class="callout">
+      <h4>A little tip</h4>
+      <p>A quick sketch beats holding it all in your head: a line for an order, or a small grid for who-has-what. Jot the facts down as you read them.</p>
+    </div>
+
+    <div class="worked">
+      <div class="wl">Worked example &middot; putting things in order</div>
+      <div class="q">Mia, Ben and Priya are standing in a queue.<br>Mia is in front of Ben. Priya is behind Ben.<br><b>Who is at the front?</b></div>
+      <ol class="steps">
+        <li><b>Start with the first fact.</b> Mia is in front of Ben, so the order begins: Mia, then Ben.</li>
+        <li><b>Add the next fact.</b> Priya is behind Ben, so she goes last: Mia, Ben, Priya.</li>
+        <li><b>Read off the answer.</b> The person at the front of that line is Mia.</li>
+      </ol>
+      <div class="answer-line">Answer: Mia.</div>
+    </div>
+
+    <h3>Another kind: working by crossing out</h3>
+    <p>Some facts are about <b>who has what</b> rather than an order. Here you work by <b>elimination</b>: use each fact to rule a possibility out, and keep going until only one option can be true.</p>
+
+    <div class="worked">
+      <div class="wl">Worked example &middot; crossing out</div>
+      <div class="q">Sara, Tom and Raj each own one pet: a cat, a dog or a rabbit.<br>Sara does not own the dog. Raj owns the cat.<br><b>Which pet does Sara own?</b></div>
+      <ol class="steps">
+        <li><b>Use the surest fact first.</b> Raj owns the cat, so the cat is taken &mdash; Sara cannot have it.</li>
+        <li><b>Use the next fact.</b> Sara does not own the dog either.</li>
+        <li><b>See what is left.</b> Cat and dog are both ruled out for Sara, so the only pet left for her is the rabbit.</li>
+      </ol>
+      <div class="answer-line">Answer: the rabbit.</div>
+    </div>
+
+    <div class="act" id="a3">
+      <div class="act-head"><span class="num">3</span><h3>Your go: reading information</h3></div>
+      <p class="instr">Read the facts, line them up (or cross out what cannot be true), then choose the answer they point to.</p>
+      <div class="qbox" id="ri-q"></div>
+      <div class="optgrid" id="ri-opts"></div>
+      <div class="row"><button class="btn btn-ghost" id="ri-next" disabled>Next &rarr;</button><span class="prog" id="ri-prog"></span></div>
+      <div class="feedback" id="ri-fb" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <div class="endcard">
+    <h2>That is number &amp; logic puzzles</h2>
+    <p>Letters for numbers, completing the sum and reading information, all cracked. When you are ready, head back and pick another topic.</p>
+    <a href="/11-resource-hub/verbal-reasoning/">Back to Verbal Reasoning
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+    </a>
+  </div>
+
+  <footer class="foot">
+    <p style="margin:0 0 6px"><b>Tom Sanderson Tutoring</b> &middot; Milton Keynes</p>
+    <p style="margin:0;max-width:62ch">A free resource for families preparing for the 11+. If you&rsquo;d like a hand beyond the page, you can <a href="https://tomsandersontutoring.com">find out about tutoring here</a>.</p>
+  </footer>
+
+</main>
+
+<script>
+function toggleComfort(){
+  var on=document.body.classList.toggle('comfort');
+  document.getElementById('comfort').setAttribute('aria-pressed',on?'true':'false');
+}
+function $(id){return document.getElementById(id);}
+
+/* multiple choice */
+function mcQuiz(p, items){
+  var i=0, score=0, locked=false;
+  function render(){
+    locked=false;
+    $(p+'-q').innerHTML=items[i].q;
+    var host=$(p+'-opts'); host.innerHTML='';
+    items[i].opts.forEach(function(o,k){
+      var b=document.createElement('button'); b.className='word'; b.textContent=o;
+      b.onclick=function(){ pick(k,b); };
+      host.appendChild(b);
+    });
+    $(p+'-fb').textContent=''; $(p+'-fb').className='feedback';
+    $(p+'-next').disabled=true;
+    $(p+'-prog').textContent='Question '+(i+1)+' of '+items.length;
+  }
+  function pick(k,b){
+    if(locked)return; locked=true;
+    var it=items[i];
+    [].forEach.call($(p+'-opts').children,function(c,j){c.disabled=true; if(j===it.a)c.classList.add('right');});
+    if(k===it.a) score++; else b.classList.add('bad');
+    var fb=$(p+'-fb'); fb.className='feedback '+(k===it.a?'ok':'no'); fb.innerHTML=(k===it.a?'✓ ':'')+it.why;
+    $(p+'-next').disabled=(i>=items.length-1);
+    $(p+'-prog').textContent='Score '+score+' of '+(i+1)+(i>=items.length-1?' · set complete':'');
+  }
+  $(p+'-next').onclick=function(){ if(i<items.length-1){i++;render();} };
+  render();
+}
+
+/* small helper to draw a value key inside a question */
+function key(pairs){
+  var h='<div class="keyrow">';
+  pairs.forEach(function(pr){ h+='<span class="kt"><em>'+pr[0]+'</em>=<span>'+pr[1]+'</span></span>'; });
+  return h+'</div>';
+}
+
+/* ---------- DATA (all original) ---------- */
+
+/* 1. Letters for numbers — values are distinct in each key, so a result matches exactly one letter */
+mcQuiz('lf',[
+  {q:key([['A',2],['B',3],['C',4],['D',8],['E',12]])+'Work out <span class="sum">C &times; A</span>. Give the answer as a letter.',
+   opts:['B','D','E','A'], a:1,
+   why:'C is 4 and A is 2, so 4 &times; 2 = 8. The letter worth 8 is <b>D</b>. Remember to give the letter, not the number.'},
+  {q:key([['A',5],['B',10],['C',2],['D',7],['E',3]])+'Work out <span class="sum">B &divide; C</span>. Give the answer as a letter.',
+   opts:['A','D','E','C'], a:0,
+   why:'B is 10 and C is 2, so 10 &divide; 2 = 5. The letter worth 5 is <b>A</b>.'},
+  {q:key([['A',4],['B',6],['C',9],['D',10],['E',2]])+'Work out <span class="sum">A + E</span>. Give the answer as a letter.',
+   opts:['C','B','D','A'], a:1,
+   why:'A is 4 and E is 2, so 4 + 2 = 6. The letter worth 6 is <b>B</b>.'},
+  {q:key([['A',3],['B',4],['C',7],['D',12],['E',5]])+'Work out <span class="sum">D &minus; C</span>. Give the answer as a letter.',
+   opts:['B','A','E','C'], a:2,
+   why:'D is 12 and C is 7, so 12 &minus; 7 = 5. The letter worth 5 is <b>E</b>.'},
+  {q:key([['A',2],['B',5],['C',3],['D',6],['E',4]])+'Work out <span class="sum">A &times; C</span>. Give the answer as a letter.',
+   opts:['E','C','D','B'], a:2,
+   why:'A is 2 and C is 3, so 2 &times; 3 = 6. The letter worth 6 is <b>D</b>.'}
+]);
+
+/* 2. Complete the sum */
+mcQuiz('cs',[
+  {q:'Find the missing number.<br><span class="sum"><span class="box">?</span> + 9 = 17</span>',
+   opts:['6','8','7','9'], a:1,
+   why:'The finished side is 17. The box plus 9 must equal 17, so 17 &minus; 9 = <b>8</b>.'},
+  {q:'Find the missing number.<br><span class="sum">5 &times; <span class="box">?</span> = 12 + 8</span>',
+   opts:['4','5','3','6'], a:0,
+   why:'Work out the right side first: 12 + 8 = 20. Then 20 &divide; 5 = <b>4</b>.'},
+  {q:'Find the missing number.<br><span class="sum">24 &divide; <span class="box">?</span> = 2 &times; 3</span>',
+   opts:['3','6','4','8'], a:2,
+   why:'The right side is 2 &times; 3 = 6. So 24 shared into the box must give 6: 24 &divide; 6 = <b>4</b>.'},
+  {q:'Find the missing number.<br><span class="sum"><span class="box">?</span> &minus; 7 = 18 &divide; 2</span>',
+   opts:['11','16','9','25'], a:1,
+   why:'The right side is 18 &divide; 2 = 9. The box take away 7 must equal 9, so 9 + 7 = <b>16</b>.'},
+  {q:'Find the missing number.<br><span class="sum">3 &times; <span class="box">?</span> = 30 &minus; 9</span>',
+   opts:['9','6','7','8'], a:2,
+   why:'The right side is 30 &minus; 9 = 21. Then 21 &divide; 3 = <b>7</b>.'}
+]);
+
+/* 3. Reading information */
+mcQuiz('ri',[
+  {q:'Tom is taller than Sam. Sam is taller than Leo. Leo is taller than Amy.<br><b>Who is the shortest?</b>',
+   opts:['Amy','Leo','Sam','Tom'], a:0,
+   why:'Line them up tallest first: Tom, Sam, Leo, Amy. The one at the bottom is <b>Amy</b>.'},
+  {q:'A swimming pool opens on Monday, Wednesday and Saturday, and is closed every other day. Today is Wednesday.<br><b>Over the next three days &mdash; Thursday, Friday, Saturday &mdash; on how many is the pool open?</b>',
+   opts:['0','1','2','3'], a:1,
+   why:'Thursday closed, Friday closed, Saturday open. Only Saturday is on the open list, so the answer is <b>1</b>.'},
+  {q:'Grace is older than Hugo. Hugo is older than Ella. Ella is older than Finn.<br><b>Who is the second youngest?</b>',
+   opts:['Finn','Hugo','Ella','Grace'], a:2,
+   why:'Youngest first: Finn, Ella, Hugo, Grace. The second one along is <b>Ella</b>.'},
+  {q:'In a race, Nina finished just ahead of Omar. Omar finished just ahead of Pip. Ruby finished ahead of Nina.<br><b>Who came first?</b>',
+   opts:['Nina','Omar','Pip','Ruby'], a:3,
+   why:'The order is Ruby, Nina, Omar, Pip. Ruby is ahead of Nina, who leads the rest, so <b>Ruby</b> came first.'},
+  {q:'On a shelf, the maths book is to the left of the science book. The science book is to the left of the art book.<br><b>Which book is in the middle?</b>',
+   opts:['Maths','Science','Art','Cannot tell'], a:1,
+   why:'Left to right: maths, science, art. The one in the middle is the <b>science</b> book.'}
+]);
+
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var id=a.getAttribute('href');
+    if(id.length>1){var el=document.querySelector(id);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}}
+  });
+});
+</script>
+</body>
+</html>
