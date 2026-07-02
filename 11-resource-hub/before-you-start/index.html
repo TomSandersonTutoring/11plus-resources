@@ -36,6 +36,8 @@ button{font-family:inherit}
 .back:hover{color:var(--teal)}
 .back svg{width:16px;height:16px}
 .top-right{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.site-link{font-family:"Raleway",sans-serif;font-size:.85rem;font-weight:600;color:var(--muted);text-decoration:none;white-space:nowrap}
+.site-link:hover{color:var(--teal);text-decoration:underline}
 .free-pill{font-family:"Montserrat";font-weight:700;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#1E647C;background:#FFFFFF;border:1px solid #D8E7EE;padding:6px 11px;border-radius:999px}
 .comfort-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid #D8E7EE;background:#FFFFFF;color:#5E7A84;border-radius:999px;padding:6px 12px;font-weight:600;font-size:.82rem;cursor:pointer;transition:.14s}
 .comfort-btn:hover{border-color:#1E647C;color:#1E647C}
@@ -95,6 +97,7 @@ button{font-family:inherit}
 .subjects-out{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:18px 0 4px}
 .subjects-out a{text-decoration:none;text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-s);padding:16px 10px;color:var(--teal-deep);font-family:"Montserrat";font-weight:700;font-size:.88rem;box-shadow:var(--shadow);transition:.15s}
 .subjects-out a:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift);border-color:#9FD3E8}
+.subjects-out .soon{text-align:center;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-s);padding:16px 10px;color:var(--muted);font-family:"Montserrat";font-weight:700;font-size:.88rem;cursor:default}
 
 .next-cta{margin-top:30px;background:linear-gradient(135deg,#1E647C,#174E61);border-radius:var(--radius);padding:26px 28px;color:#fff;box-shadow:var(--shadow)}
 .next-cta h2{color:#fff;font-size:1.3rem;margin-bottom:6px}
@@ -122,6 +125,7 @@ button{font-family:inherit}
       All resources
     </a>
     <div class="top-right">
+      <a class="site-link" href="https://tomsandersontutoring.com">&larr; Tom&rsquo;s tutoring site</a>
       <span class="free-pill">Free &middot; no sign-up</span>
       <button class="comfort-btn" id="comfort" aria-pressed="false" onclick="toggleComfort()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg>
@@ -273,10 +277,10 @@ button{font-family:inherit}
     <p>That&rsquo;s the whole picture. From here, the practice lives in the five subjects. Start wherever you like, dip in and out, and remember nothing is being marked or counted.</p>
     <div class="subjects-out">
       <a href="/11-resource-hub/verbal-reasoning/">Verbal Reasoning</a>
-      <a href="#">Non-Verbal Reasoning (coming soon)</a>
-      <a href="#">Maths (coming soon)</a>
-      <a href="#">English (coming soon)</a>
-      <a href="#">Spatial Reasoning (coming soon)</a>
+      <span class="soon">Non-Verbal Reasoning (coming soon)</span>
+      <span class="soon">Maths (coming soon)</span>
+      <span class="soon">English (coming soon)</span>
+      <span class="soon">Spatial Reasoning (coming soon)</span>
     </div>
   </section>
 
