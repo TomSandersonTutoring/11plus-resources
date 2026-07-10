@@ -1,0 +1,425 @@
+﻿<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analogies &amp; grids — Non-Verbal Reasoning | Tom Sanderson Tutoring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#1E647C;--teal-deep:#174E61;--sky:#9FD3E8;--sky-soft:#E4F1F7;--amber:#F5BA18;--white:#FFFFFF;
+  --paper:#F1F7FA;--surface:#FFFFFF;--ink:#15323D;--muted:#5E7A84;--line:#D8E7EE;--line-soft:#E8F1F5;
+  --ok:#1B8A5A;--ok-bg:#E6F5EE;--no:#C24A3D;--no-bg:#FBECE9;
+  --radius:18px;--radius-s:12px;
+  --shadow:0 1px 2px rgba(21,50,61,.05), 0 10px 30px rgba(21,50,61,.07);
+  --shadow-lift:0 4px 10px rgba(21,50,61,.08), 0 20px 44px rgba(21,50,61,.12);
+  --maxw:860px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Raleway",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+body.comfort{letter-spacing:.02em;word-spacing:.06em;line-height:1.9}
+body.comfort p{margin-bottom:1.1em}
+h1,h2,h3,h4{font-family:"Montserrat",sans-serif;margin:0;line-height:1.2;letter-spacing:-.01em;color:var(--teal-deep)}
+p{margin:0 0 1em}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+button{font-family:inherit}
+
+.top{position:sticky;top:0;z-index:30;background:rgba(241,247,250,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{display:inline-flex;align-items:stretch;border-radius:8px;overflow:hidden;text-decoration:none;box-shadow:0 1px 2px rgba(21,50,61,.12);flex:0 0 auto}
+.logo .a{background:var(--teal);color:var(--amber);font-family:"Montserrat";font-weight:800;font-size:.9rem;padding:8px 11px;display:flex;align-items:center;line-height:1}
+.logo .b{background:var(--white);color:var(--teal);font-family:"Montserrat";font-weight:600;font-size:.9rem;padding:8px 12px;display:flex;align-items:center;line-height:1;border:1px solid var(--line);border-left:0}
+.back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--muted);font-weight:600;font-size:.88rem}
+.back:hover{color:var(--teal)}
+.back svg{width:16px;height:16px}
+.top-right{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.site-link{font-family:"Raleway",sans-serif;font-size:.85rem;font-weight:600;color:var(--muted);text-decoration:none;white-space:nowrap}
+.site-link:hover{color:var(--teal);text-decoration:underline}
+.free-pill{font-family:"Montserrat";font-weight:700;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--white);border:1px solid var(--line);padding:6px 11px;border-radius:999px}
+.comfort-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--white);color:var(--muted);border-radius:999px;padding:6px 12px;font-weight:600;font-size:.82rem;cursor:pointer;transition:.14s}
+.comfort-btn:hover{border-color:var(--teal);color:var(--teal)}
+.comfort-btn[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.comfort-btn svg{width:15px;height:15px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px 90px}
+
+.crumb{font-size:.82rem;color:var(--muted);margin:22px 0 0}
+.crumb a{color:var(--teal);text-decoration:none;font-weight:600}
+.hero{padding:14px 0 6px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:"Montserrat";font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:var(--sky-soft);border:1px solid var(--sky);padding:6px 13px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:clamp(1.9rem,4.6vw,2.6rem);font-weight:800}
+.hero .sub{font-size:clamp(1.05rem,2.2vw,1.18rem);margin-top:14px;max-width:62ch}
+
+.pagenav{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0}
+.pagenav a{font-size:.85rem;text-decoration:none;color:var(--teal-deep);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-weight:600}
+.pagenav a:hover{border-color:var(--sky);background:var(--sky-soft)}
+
+.section{padding:34px 0 0;scroll-margin-top:80px}
+.section h2{font-size:1.5rem;font-weight:700;margin-bottom:12px}
+.section h3{font-size:1.05rem;font-weight:700;margin:18px 0 6px;color:var(--ink)}
+.section p,.section li{max-width:66ch}
+.section ul{margin:0 0 1em;padding-left:0;list-style:none}
+.rules li{position:relative;padding:7px 0 7px 24px;max-width:66ch}
+.rules li::before{content:"";position:absolute;left:4px;top:15px;width:8px;height:8px;border-radius:3px;background:var(--sky)}
+.rules b{color:var(--ink)}
+.types-list li{position:relative;padding:8px 0 8px 30px;border-bottom:1px solid var(--line-soft);max-width:66ch}
+.types-list li:last-child{border-bottom:0}
+.types-list li::before{content:"";position:absolute;left:6px;top:15px;width:9px;height:9px;border-radius:3px;background:var(--sky)}
+.types-list b{color:var(--ink)}
+
+.callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:0 var(--radius-s) var(--radius-s) 0;padding:16px 19px;margin:16px 0 0;box-shadow:var(--shadow)}
+.callout h4{font-family:"Montserrat";font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#9A6B16;margin-bottom:7px}
+.callout p{margin:0;max-width:64ch}
+
+.worked{background:linear-gradient(135deg,#F2F8FB,#FFFFFF);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin-top:14px;box-shadow:var(--shadow)}
+.worked .wl{font-family:"Montserrat";font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:8px}
+.worked .q{background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);padding:13px 15px;margin-bottom:13px;font-size:1.04rem}
+.steps{counter-reset:s;margin:0;padding:0;list-style:none}
+.steps li{position:relative;padding:0 0 11px 36px;max-width:64ch}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--teal);color:#fff;font-family:"Montserrat";font-weight:700;font-size:.8rem;display:grid;place-items:center}
+.steps b{color:var(--ink);display:block;margin-bottom:3px}
+.answer-line{margin-top:13px;background:var(--ok-bg);border:1px solid #BFE6D2;border-radius:var(--radius-s);padding:10px 14px;font-weight:600;color:#15623f}
+
+.figrow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;margin:6px 0}
+.figcell{display:inline-flex;align-items:center;justify-content:center;width:66px;height:66px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:7px;flex:0 0 auto}
+.figcell.big{width:118px;height:118px;padding:10px}
+.figcell.qcell{background:var(--sky-soft);border-style:dashed;border-color:var(--sky)}
+.fig{width:100%;height:100%;display:block}
+.analogy .arrow{font-size:1.3rem;color:var(--muted);font-weight:700;padding:0 1px}
+.analogy .sep,.simrow .sep{font-size:1.5rem;color:var(--teal);font-weight:800;padding:0 6px}
+.figgrid{display:grid;grid-template-columns:repeat(2,66px);gap:8px;justify-content:center;width:max-content;margin:6px auto;padding:9px;background:var(--sky-soft);border-radius:14px;border:1px solid var(--line)}
+.ring{position:relative;width:224px;height:208px;margin:10px auto}
+.ring .figcell{position:absolute}
+
+.act{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow);margin-top:16px}
+.act-head{display:flex;align-items:center;gap:11px;margin-bottom:3px}
+.act-head .num{flex:0 0 auto;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--teal);color:#fff;font-family:"Montserrat";font-weight:700;font-size:.9rem}
+.act-head h3{font-size:1.05rem;font-weight:700;margin:0}
+.act .instr{color:var(--muted);font-size:.93rem;margin:2px 0 12px}
+.qfig{margin:2px 0 12px}
+.optlab{font-family:"Montserrat";font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;text-align:center;margin:10px 0 2px}
+.optrow{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2px 0 4px}
+.word{border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:8px;cursor:pointer;transition:transform .07s,border-color .12s,background .12s;color:var(--ink);display:flex;align-items:center;justify-content:center;min-width:76px;min-height:76px}
+.word:hover{border-color:var(--teal)}
+.word:active{transform:translateY(1px)}
+.word svg{width:56px;height:56px}
+.word.right{background:var(--ok-bg);border-color:var(--ok)}
+.word.bad{background:var(--no-bg);border-color:var(--no)}
+.word[disabled]{cursor:default}
+
+.btn{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:10px;padding:10px 16px;font-family:"Montserrat";font-weight:700;font-size:.9rem;cursor:pointer;transition:.12s}
+.btn:hover{background:var(--sky-soft)}
+.btn:disabled{opacity:.5;cursor:default}
+.btn-ghost{background:transparent;border-color:transparent;color:var(--muted)}
+.btn-ghost:hover:not(:disabled){color:var(--ink);background:var(--sky-soft)}
+.row{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:10px}
+.prog{margin-left:auto;font-family:"Montserrat";font-size:.8rem;color:var(--muted)}
+.feedback{font-size:.95rem;font-weight:600;min-height:1.3em;margin-top:11px}
+.feedback.ok{color:var(--ok)}
+.feedback.no{color:var(--no)}
+
+.endcard{margin-top:34px;background:linear-gradient(135deg,var(--teal),var(--teal-deep));border-radius:var(--radius);padding:24px 28px;color:#fff;box-shadow:var(--shadow)}
+.endcard h2{color:#fff;font-size:1.2rem;margin-bottom:6px}
+.endcard p{color:#D9ECF3;margin:0 0 14px;max-width:54ch}
+.endcard a{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:#3A2D05;text-decoration:none;font-family:"Montserrat";font-weight:700;padding:12px 18px;border-radius:11px}
+.endcard a svg{width:17px;height:17px}
+
+.foot{border-top:1px solid var(--line);margin-top:40px;padding-top:24px;color:var(--muted);font-size:.9rem}
+.foot b{color:var(--ink);font-family:"Montserrat";font-weight:700}
+.foot a{color:var(--teal);font-weight:600;text-decoration:none}
+
+@media (max-width:680px){
+  body{font-size:17px}
+  .worked,.act{padding:20px 18px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/11-resource-hub/" aria-label="Tom Sanderson Tutoring home"><span class="a">Tom&nbsp;Sanderson</span><span class="b">Tutoring</span></a>
+    <a class="back" href="/11-resource-hub/non-verbal-reasoning/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Non-Verbal Reasoning</a>
+    <div class="top-right">
+      <a class="site-link" href="https://tomsandersontutoring.com">&larr; Tom&rsquo;s tutoring site</a>
+      <span class="free-pill">Free &middot; no sign-up</span>
+      <button class="comfort-btn" id="comfort" aria-pressed="false" onclick="toggleComfort()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg>
+        Reading comfort
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="crumb"><a href="/11-resource-hub/non-verbal-reasoning/">Non-Verbal Reasoning</a> &nbsp;&rsaquo;&nbsp; Analogies &amp; grids</p>
+
+  <section class="hero">
+    <span class="eyebrow">Non-Verbal Reasoning &middot; Topic 3</span>
+    <h1>Analogies &amp; grids</h1>
+    <p class="sub">The same idea in four costumes: work out the rule that links some pictures, then use it to find the one that is missing. Each type starts with a short explanation and a worked example.</p>
+    <nav class="pagenav" aria-label="On this page">
+      <a href="#about">Start here</a>
+      <a href="#s1">Analogies</a>
+      <a href="#s2">Matrices</a>
+      <a href="#s3">Similar triangles</a>
+      <a href="#s4">Star matrices</a>
+    </nav>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2>Start here</h2>
+    <p>All four types on this page ask the same question in different ways: <b>what is the rule, and what is missing?</b> You are shown some pictures that follow a hidden rule, with one left blank. Find the rule, apply it, and pick the picture that fits the gap.</p>
+    <p>The rule is always one of the six things from the last topic &mdash; a change of shape, shading, size, number, position or rotation &mdash; so keep that check handy. The only new part is <em>where</em> to look: across a pair, along a row, down a column, or around a shape.</p>
+    <ul class="types-list">
+      <li><b>Analogies</b> &mdash; &ldquo;this changes to that, so this changes to&hellip;&rdquo;</li>
+      <li><b>Matrices</b> &mdash; a grid of pictures with one square empty.</li>
+      <li><b>Similar triangles</b> &mdash; a pattern carried from one big triangle to another.</li>
+      <li><b>Star matrices</b> &mdash; a pattern running around the points of a star.</li>
+    </ul>
+  </section>
+
+  <!-- ============ 1 ANALOGIES ============ -->
+  <section class="section" id="s1">
+    <h2>1. Analogies</h2>
+    <p>An analogy shows you one picture changing into another, then a third picture that must change in the very same way. It is written as <b>A &rarr; B :: C &rarr; ?</b> and read as &ldquo;A is to B as C is to what?&rdquo;. Work out what happened between A and B, then do exactly that to C.</p>
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">
+        <div style="margin-bottom:6px">Work out how the first picture changes, then apply it to the third.</div>
+        <div id="we-an"></div>
+      </div>
+      <ol class="steps">
+        <li><b>Look at A &rarr; B.</b> The arrow has turned a quarter-turn clockwise, from pointing up to pointing right. Nothing else changed.</li>
+        <li><b>Name the rule.</b> &ldquo;Turn a quarter-turn clockwise.&rdquo;</li>
+        <li><b>Apply it to C.</b> The triangle points up; a quarter-turn clockwise makes it point to the right.</li>
+      </ol>
+      <div class="answer-line">Answer: the triangle pointing right.</div>
+    </div>
+    <div class="act" id="p1">
+      <div class="act-head"><span class="num">1</span><h3>Your go: analogies</h3></div>
+      <p class="instr">Find the rule from the first pair, then tap the picture that completes the second pair.</p>
+      <div class="qfig" id="an-q"></div>
+      <div class="optlab">Which completes it?</div>
+      <div class="optrow" id="an-opts"></div>
+      <div class="row"><button class="btn btn-ghost" id="an-next" disabled>Next &rarr;</button><span class="prog" id="an-prog"></span></div>
+      <div class="feedback" id="an-fb" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ============ 2 MATRICES ============ -->
+  <section class="section" id="s2">
+    <h2>2. Matrices</h2>
+    <p>A matrix is a grid &mdash; usually two-by-two here &mdash; with one square left empty. The pictures change by a rule as you move <b>across each row</b>, and often the same is true <b>down each column</b>. Find the rule, then fill the empty square.</p>
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">
+        <div style="margin-bottom:6px">The bottom-right square is missing. What belongs there?</div>
+        <div id="we-ma"></div>
+      </div>
+      <ol class="steps">
+        <li><b>Read across the top row.</b> The white circle becomes a solid circle. So the rule across is &ldquo;the shape fills in solid.&rdquo;</li>
+        <li><b>Read down the columns.</b> The circle becomes a square down the left column, so the shape changes from circle to square.</li>
+        <li><b>Put it together.</b> The bottom row is squares; the empty square is on the &ldquo;solid&rdquo; side. So it is a solid square.</li>
+      </ol>
+      <div class="answer-line">Answer: a solid square.</div>
+    </div>
+    <div class="act" id="p2">
+      <div class="act-head"><span class="num">2</span><h3>Your go: matrices</h3></div>
+      <p class="instr">Work out the rule across the rows, then tap the picture for the empty square.</p>
+      <div class="qfig" id="ma-q"></div>
+      <div class="optlab">Which fills the empty square?</div>
+      <div class="optrow" id="ma-opts"></div>
+      <div class="row"><button class="btn btn-ghost" id="ma-next" disabled>Next &rarr;</button><span class="prog" id="ma-prog"></span></div>
+      <div class="feedback" id="ma-fb" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ============ 3 SIMILAR TRIANGLES ============ -->
+  <section class="section" id="s3">
+    <h2>3. Similar triangles</h2>
+    <p>Here you are shown two large triangles, each split into four smaller ones. The second triangle follows the first by a rule, and one small piece is left blank. The commonest rule is the simplest: <b>the second triangle copies the first</b>, so the missing piece matches the same corner of the first triangle. Always check the pieces you <em>can</em> see first, to be sure it is a straight copy.</p>
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">
+        <div style="margin-bottom:6px">The second triangle copies the first. Which piece is missing?</div>
+        <div id="we-st"></div>
+      </div>
+      <ol class="steps">
+        <li><b>Check the pieces you can see.</b> Top, left and centre are the same in both triangles, so the second really is a copy.</li>
+        <li><b>Find the blank.</b> It is the bottom-right piece.</li>
+        <li><b>Match it to the first triangle.</b> In the first, the bottom-right piece is solid, so the missing piece is solid.</li>
+      </ol>
+      <div class="answer-line">Answer: the solid triangle.</div>
+    </div>
+    <div class="act" id="p3">
+      <div class="act-head"><span class="num">3</span><h3>Your go: similar triangles</h3></div>
+      <p class="instr">The second triangle copies the first. Tap the small triangle that belongs in the blank piece.</p>
+      <div class="qfig" id="st-q"></div>
+      <div class="optlab">Which piece is missing?</div>
+      <div class="optrow" id="st-opts"></div>
+      <div class="row"><button class="btn btn-ghost" id="st-next" disabled>Next &rarr;</button><span class="prog" id="st-prog"></span></div>
+      <div class="feedback" id="st-fb" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ============ 4 STAR MATRICES ============ -->
+  <section class="section" id="s4">
+    <h2>4. Star matrices</h2>
+    <p>A star matrix has a picture at each of six points, with one point blank. The rule runs <b>around the star</b>. Two rules are common: the pictures may <b>alternate</b> as you go round, or <b>points opposite each other may match</b>. Check the pairs of opposite points first &mdash; it is the quickest way in.</p>
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">
+        <div style="margin-bottom:6px">One point is blank. Opposite points match &mdash; what belongs there?</div>
+        <div id="we-sr"></div>
+      </div>
+      <ol class="steps">
+        <li><b>Pair up opposite points.</b> Top and bottom are both circles. Upper-right and lower-left are both squares.</li>
+        <li><b>Find the blank&rsquo;s partner.</b> The blank is at the upper-left; its opposite point, the lower-right, is a triangle.</li>
+        <li><b>Match it.</b> Because opposite points are the same, the blank must be a triangle.</li>
+      </ol>
+      <div class="answer-line">Answer: a triangle.</div>
+    </div>
+    <div class="act" id="p4">
+      <div class="act-head"><span class="num">4</span><h3>Your go: star matrices</h3></div>
+      <p class="instr">Work out the rule running around the star, then tap the picture for the blank point.</p>
+      <div class="qfig" id="sr-q"></div>
+      <div class="optlab">Which fills the blank point?</div>
+      <div class="optrow" id="sr-opts"></div>
+      <div class="row"><button class="btn btn-ghost" id="sr-next" disabled>Next &rarr;</button><span class="prog" id="sr-prog"></span></div>
+      <div class="feedback" id="sr-fb" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- END -->
+  <div class="endcard">
+    <h2>That is analogies &amp; grids</h2>
+    <p>Four shapes of the same puzzle: find the rule, then find what is missing. When you are ready, head back and try another topic.</p>
+    <a href="/11-resource-hub/non-verbal-reasoning/">Back to Non-Verbal Reasoning
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+    </a>
+  </div>
+
+  <footer class="foot">
+    <p style="margin:0 0 6px"><b>Tom Sanderson Tutoring</b> &middot; Milton Keynes</p>
+    <p style="margin:0;max-width:62ch">A free resource for families preparing for the 11+. If you&rsquo;d like a hand beyond the page, you can <a href="https://tomsandersontutoring.com">find out about tutoring here</a>.</p>
+  </footer>
+
+</main>
+
+<script>
+function toggleComfort(){var on=document.body.classList.toggle('comfort');document.getElementById('comfort').setAttribute('aria-pressed',on?'true':'false');}
+function $(id){return document.getElementById(id);}
+
+/* ---------- shape engine ---------- */
+var COL={w:'#FFFFFF',g:'#9FD3E8',b:'#1E647C'};
+var STROKE='stroke="#174E61" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+var SIDES={tri:3,square:4,pent:5,hex:6,hept:7,oct:8};
+function poly(cx,cy,r,n,rot){var a=[],i,ang;for(i=0;i<n;i++){ang=(-90+(rot||0)+i*360/n)*Math.PI/180;a.push((cx+r*Math.cos(ang)).toFixed(1)+','+(cy+r*Math.sin(ang)).toFixed(1));}return a.join(' ');}
+function star(cx,cy,r,rot){var a=[],i,ang,rr;for(i=0;i<10;i++){rr=(i%2===0)?r:r*0.42;ang=(-90+(rot||0)+i*36)*Math.PI/180;a.push((cx+rr*Math.cos(ang)).toFixed(1)+','+(cy+rr*Math.sin(ang)).toFixed(1));}return a.join(' ');}
+function arrow(cx,cy,r,f,rot){var col=COL[f||'w'];var p=[[0,-r],[0.55*r,-0.03*r],[0.22*r,-0.03*r],[0.22*r,r],[-0.22*r,r],[-0.22*r,-0.03*r],[-0.55*r,-0.03*r]];var pts=p.map(function(q){return (cx+q[0]).toFixed(1)+','+(cy+q[1]).toFixed(1);}).join(' ');return '<polygon points="'+pts+'" fill="'+col+'" '+STROKE+' transform="rotate('+(rot||0)+' '+cx+' '+cy+')"/>';}
+function shp(s,cx,cy,r,f,rot){var col=COL[f||'w'];
+  if(s==='circle')return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="'+col+'" '+STROKE+'/>';
+  if(s==='square')return '<rect x="'+(cx-r*0.86).toFixed(1)+'" y="'+(cy-r*0.86).toFixed(1)+'" width="'+(r*1.72).toFixed(1)+'" height="'+(r*1.72).toFixed(1)+'" rx="3" fill="'+col+'" '+STROKE+' transform="rotate('+(rot||0)+' '+cx+' '+cy+')"/>';
+  if(s==='diamond')return '<polygon points="'+poly(cx,cy,r,4,rot)+'" fill="'+col+'" '+STROKE+'/>';
+  if(s==='star')return '<polygon points="'+star(cx,cy,r,rot)+'" fill="'+col+'" '+STROKE+'/>';
+  if(s==='arrow')return arrow(cx,cy,r,f,rot);
+  if(SIDES[s])return '<polygon points="'+poly(cx,cy,r,SIDES[s],rot)+'" fill="'+col+'" '+STROKE+'/>';
+  return '';}
+function tri4(fills){
+  var T=[50,12],BL=[14,82],BR=[86,82],mTL=[32,47],mTR=[68,47],mB=[50,82];
+  function tp(a,b,c,f){var col=(f==='q')?'#FFFFFF':COL[f||'w'];return '<polygon points="'+a[0]+','+a[1]+' '+b[0]+','+b[1]+' '+c[0]+','+c[1]+'" fill="'+col+'" '+STROKE+'/>';}
+  var out=tp(T,mTL,mTR,fills[0])+tp(mTL,BL,mB,fills[1])+tp(mTR,mB,BR,fills[2])+tp(mTL,mTR,mB,fills[3]);
+  var qi=fills.indexOf('q');
+  if(qi>=0){var c=[[50,35],[32,70],[68,70],[50,60]][qi];out+='<text x="'+c[0]+'" y="'+(c[1]+6)+'" text-anchor="middle" font-size="17" font-family="Montserrat,sans-serif" fill="#8AA7B1">?</text>';}
+  return '<svg viewBox="0 0 100 100" class="fig" xmlns="http://www.w3.org/2000/svg">'+out+'</svg>';
+}
+var DOTS={1:[[50,50]],2:[[35,50],[65,50]],3:[[50,34],[35,64],[65,64]],4:[[36,36],[64,36],[36,64],[64,64]],5:[[35,35],[65,35],[50,50],[35,65],[65,65]],6:[[34,32],[66,32],[34,50],[66,50],[34,68],[66,68]]};
+function F(o){o=o||{};var inner='';
+  if(o.tri4)return tri4(o.tri4);
+  if(o.q){inner='<text x="50" y="68" text-anchor="middle" font-size="56" font-family="Montserrat,sans-serif" fill="#8AA7B1">?</text>';return '<svg viewBox="0 0 100 100" class="fig" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>';}
+  if(o.dots){DOTS[o.dots].forEach(function(p){inner+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="8" fill="#1E647C" stroke="#174E61" stroke-width="2"/>';});return '<svg viewBox="0 0 100 100" class="fig" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>';}
+  var n=o.n||1,r=38*(o.sz||1);
+  if(n>1){var k,xs=(n===2?[30,70]:[22,50,78]),rr=(n===2?18:15);for(k=0;k<n;k++)inner+=shp(o.s||'circle',xs[k],50,rr,o.f,o.rot);}
+  else{inner+=shp(o.s||'circle',50,50,r,o.f,o.rot);if(o.dot)inner+='<circle cx="50" cy="50" r="6" fill="#174E61"/>';}
+  return '<svg viewBox="0 0 100 100" class="fig" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>';}
+function cell(inner,cls){return '<span class="figcell'+(cls?' '+cls:'')+'">'+inner+'</span>';}
+function analog(a,b,c){return '<div class="figrow analogy">'+cell(F(a))+'<span class="arrow">&rarr;</span>'+cell(F(b))+'<span class="sep">::</span>'+cell(F(c))+'<span class="arrow">&rarr;</span>'+cell(F({q:1}),'qcell')+'</div>';}
+function grid2(cells){return '<div class="figgrid">'+cells.map(function(o){return cell(F(o),o&&o.q?'qcell':'');}).join('')+'</div>';}
+function simTri(a,b){return '<div class="figrow simrow">'+cell(F({tri4:a}),'big')+'<span class="sep">::</span>'+cell(F({tri4:b}),'big')+'</div>';}
+function starRing(specs){var pos=[[84,6],[145,41],[145,111],[84,146],[23,111],[23,41]];var h='<div class="ring">';specs.forEach(function(o,i){h+='<span class="figcell'+(o&&o.q?' qcell':'')+'" style="left:'+pos[i][0]+'px;top:'+pos[i][1]+'px">'+F(o)+'</span>';});return h+'</div>';}
+
+/* ---------- picker ---------- */
+function nvrPick(p,items){
+  var i=0,score=0,locked=false;
+  function render(){
+    locked=false;
+    $(p+'-q').innerHTML=items[i].q||'';
+    var host=$(p+'-opts');host.innerHTML='';
+    items[i].opts.forEach(function(o,k){
+      var b=document.createElement('button');b.className='word';b.setAttribute('aria-label','Option '+(k+1));b.innerHTML=(typeof o==='string')?o:F(o);
+      b.onclick=function(){pick(k,b);};host.appendChild(b);
+    });
+    $(p+'-fb').textContent='';$(p+'-fb').className='feedback';
+    $(p+'-next').disabled=true;
+    $(p+'-prog').textContent='Question '+(i+1)+' of '+items.length;
+  }
+  function pick(k,b){
+    if(locked)return;locked=true;var it=items[i];
+    [].forEach.call($(p+'-opts').children,function(c,j){c.disabled=true;if(j===it.a)c.classList.add('right');});
+    if(k===it.a)score++;else b.classList.add('bad');
+    var fb=$(p+'-fb');fb.className='feedback '+(k===it.a?'ok':'no');fb.innerHTML=(k===it.a?'✓ ':'')+it.why;
+    $(p+'-next').disabled=(i>=items.length-1);
+    $(p+'-prog').textContent='Score '+score+' of '+(i+1)+(i>=items.length-1?' · set complete':'');
+  }
+  $(p+'-next').onclick=function(){if(i<items.length-1){i++;render();}};
+  render();
+}
+
+/* ---------- worked examples ---------- */
+$('we-an').innerHTML=analog({s:'arrow',f:'g',rot:0},{s:'arrow',f:'g',rot:90},{s:'tri',f:'g',rot:0});
+$('we-ma').innerHTML=grid2([{s:'circle',f:'w'},{s:'circle',f:'b'},{s:'square',f:'w'},{q:1}]);
+$('we-st').innerHTML=simTri(['g','w','b','g'],['g','w','q','g']);
+$('we-sr').innerHTML=starRing([{s:'circle',f:'g'},{s:'square',f:'g'},{s:'tri',f:'g'},{s:'circle',f:'g'},{s:'square',f:'g'},{q:1}]);
+
+/* ---------- DATA (all original; single valid answer by one clear rule) ---------- */
+nvrPick('an',[
+  {q:analog({s:'arrow',f:'g',rot:0},{s:'arrow',f:'g',rot:90},{s:'tri',f:'g',rot:0}),opts:[{s:'tri',f:'g',rot:0},{s:'tri',f:'g',rot:90},{s:'tri',f:'g',rot:180},{s:'tri',f:'g',rot:270}],a:1,why:'The arrow turned a quarter-turn clockwise (up to right). Turn the triangle the same way: point up becomes point right.'},
+  {q:analog({s:'circle',f:'w'},{s:'circle',f:'b'},{s:'square',f:'w'}),opts:[{s:'square',f:'b'},{s:'square',f:'w'},{s:'square',f:'g'},{s:'circle',f:'b'}],a:0,why:'White filled in to solid. So the white square becomes a solid square. The solid circle is a trap &mdash; right shading, wrong shape.'},
+  {q:analog({s:'hex',f:'g',sz:1},{s:'hex',f:'g',sz:0.55},{s:'star',f:'g',sz:1}),opts:[{s:'star',f:'g',sz:1},{s:'circle',f:'g',sz:0.55},{s:'tri',f:'g',sz:0.55},{s:'star',f:'g',sz:0.55}],a:3,why:'The shape shrank to a small version of itself. So the large star becomes a small star &mdash; same shape, just smaller.'},
+  {q:analog({s:'circle',f:'g',n:1},{s:'circle',f:'g',n:2},{s:'square',f:'g',n:1}),opts:[{s:'square',f:'g',n:1},{s:'circle',f:'g',n:2},{s:'square',f:'g',n:2},{s:'tri',f:'g',n:2}],a:2,why:'One shape became two. So a single square becomes two squares. Keep the shape the same &mdash; only the number changed.'}
+]);
+
+nvrPick('ma',[
+  {q:grid2([{s:'circle',f:'w'},{s:'circle',f:'b'},{s:'square',f:'w'},{q:1}]),opts:[{s:'square',f:'b'},{s:'square',f:'w'},{s:'square',f:'g'},{s:'circle',f:'b'}],a:0,why:'Across each row, white fills in to solid. The bottom row is squares, so the empty square is a solid square.'},
+  {q:grid2([{s:'arrow',f:'g',rot:0},{s:'arrow',f:'g',rot:90},{s:'tri',f:'g',rot:0},{q:1}]),opts:[{s:'tri',f:'g',rot:0},{s:'tri',f:'g',rot:180},{s:'tri',f:'g',rot:90},{s:'tri',f:'g',rot:270}],a:2,why:'Across each row the shape turns a quarter-turn clockwise. The bottom row is triangles, so the up-triangle turns to point right.'},
+  {q:grid2([{s:'circle',f:'g',sz:0.55},{s:'circle',f:'g',sz:1},{s:'square',f:'g',sz:0.55},{q:1}]),opts:[{s:'circle',f:'g',sz:1},{s:'square',f:'g',sz:0.55},{s:'square',f:'g',sz:1},{s:'tri',f:'g',sz:1}],a:2,why:'Across each row the shape grows from small to large. The bottom row is squares, so the empty square is a large square.'},
+  {q:grid2([{dots:1},{dots:2},{dots:2},{q:1}]),opts:[{dots:2},{dots:4},{dots:3},{dots:1}],a:2,why:'One dot is added across each row (1 to 2, and 2 to 3), and the same going down. The empty square holds 3 dots.'}
+]);
+
+nvrPick('st',[
+  {q:simTri(['g','w','b','g'],['g','w','q','g']),opts:[{s:'tri',f:'w'},{s:'tri',f:'b'},{s:'tri',f:'g'},{s:'tri',f:'g',dot:1}],a:1,why:'The second triangle copies the first. In the first, the bottom-right piece is solid, so the missing piece is solid.'},
+  {q:simTri(['w','b','g','b'],['q','b','g','b']),opts:[{s:'tri',f:'w'},{s:'tri',f:'b'},{s:'tri',f:'g'},{s:'tri',f:'g',dot:1}],a:0,why:'It is a straight copy: the visible pieces all match. The top piece of the first is white, so the missing top piece is white.'},
+  {q:simTri(['b','g','w','w'],['b','q','w','w']),opts:[{s:'tri',f:'b'},{s:'tri',f:'w'},{s:'tri',f:'g'},{s:'tri',f:'g',dot:1}],a:2,why:'A copy again. The left piece of the first is shaded, so the missing left piece is shaded too.'}
+]);
+
+nvrPick('sr',[
+  {q:starRing([{s:'circle',f:'g'},{s:'circle',f:'w'},{s:'circle',f:'g'},{s:'circle',f:'w'},{s:'circle',f:'g'},{q:1}]),opts:[{s:'circle',f:'g'},{s:'circle',f:'w'},{s:'circle',f:'b'},{s:'square',f:'w'}],a:1,why:'Opposite points here do not match (top is shaded, bottom is white), so it is the other rule: the circles alternate around the star &mdash; shaded, white, shaded, white. After a shaded one comes white.'},
+  {q:starRing([{s:'circle',f:'g'},{s:'square',f:'g'},{s:'tri',f:'g'},{s:'circle',f:'g'},{s:'square',f:'g'},{q:1}]),opts:[{s:'circle',f:'g'},{s:'square',f:'g'},{s:'tri',f:'g'},{s:'star',f:'g'}],a:2,why:'Points opposite each other match: top and bottom are both circles, and the two side pairs match too. The blank sits opposite the triangle, so it is a triangle.'},
+  {q:starRing([{s:'hex',f:'g'},{s:'hex',f:'w'},{s:'hex',f:'b'},{s:'hex',f:'g'},{s:'hex',f:'w'},{q:1}]),opts:[{s:'hex',f:'g'},{s:'hex',f:'w'},{s:'hex',f:'b'},{s:'circle',f:'b'}],a:2,why:'Opposite points share their shading. The blank sits opposite the solid hexagon, so it is solid too.'}
+]);
+
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length>1){var el=document.querySelector(id);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}}});
+});
+</script>
+</body>
+</html>

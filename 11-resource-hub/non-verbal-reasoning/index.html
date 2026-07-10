@@ -1,0 +1,270 @@
+﻿<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Non-Verbal Reasoning | Tom Sanderson Tutoring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#1E647C;--teal-deep:#174E61;--sky:#9FD3E8;--sky-soft:#E4F1F7;--amber:#F5BA18;--white:#FFFFFF;
+  --paper:#F1F7FA;--surface:#FFFFFF;--ink:#15323D;--muted:#5E7A84;--line:#D8E7EE;--line-soft:#E8F1F5;
+  --radius:18px;--radius-s:12px;
+  --shadow:0 1px 2px rgba(21,50,61,.05), 0 10px 30px rgba(21,50,61,.07);
+  --shadow-lift:0 4px 10px rgba(21,50,61,.08), 0 20px 44px rgba(21,50,61,.12);
+  --maxw:1040px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Raleway",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+body.comfort{letter-spacing:.02em;word-spacing:.06em;line-height:1.88}
+body.comfort p{margin-bottom:1.1em}
+h1,h2,h3{font-family:"Montserrat",sans-serif;margin:0;line-height:1.2;letter-spacing:-.01em;color:var(--teal-deep)}
+p{margin:0 0 1em}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+button{font-family:inherit}
+
+.top{position:sticky;top:0;z-index:30;background:rgba(241,247,250,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{display:inline-flex;align-items:stretch;border-radius:8px;overflow:hidden;text-decoration:none;box-shadow:0 1px 2px rgba(21,50,61,.12);flex:0 0 auto}
+.logo .a{background:var(--teal);color:var(--amber);font-family:"Montserrat";font-weight:800;font-size:.9rem;padding:8px 11px;display:flex;align-items:center;line-height:1}
+.logo .b{background:var(--white);color:var(--teal);font-family:"Montserrat";font-weight:600;font-size:.9rem;padding:8px 12px;display:flex;align-items:center;line-height:1;border:1px solid var(--line);border-left:0}
+.back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--muted);font-weight:600;font-size:.88rem}
+.back:hover{color:var(--teal)}
+.back svg{width:16px;height:16px}
+.top-right{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.site-link{font-family:"Raleway",sans-serif;font-size:.85rem;font-weight:600;color:var(--muted);text-decoration:none;white-space:nowrap}
+.site-link:hover{color:var(--teal);text-decoration:underline}
+.free-pill{font-family:"Montserrat";font-weight:700;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--white);border:1px solid var(--line);padding:6px 11px;border-radius:999px}
+.comfort-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--white);color:var(--muted);border-radius:999px;padding:6px 12px;font-weight:600;font-size:.82rem;cursor:pointer;transition:.14s}
+.comfort-btn:hover{border-color:var(--teal);color:var(--teal)}
+.comfort-btn[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.comfort-btn svg{width:15px;height:15px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px 90px}
+
+.hero{padding:46px 0 6px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:"Montserrat";font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:var(--sky-soft);border:1px solid var(--sky);padding:6px 13px;border-radius:999px;margin-bottom:18px}
+.hero h1{font-size:clamp(2rem,4.8vw,2.9rem);font-weight:800}
+.hero .sub{font-size:clamp(1.05rem,2.2vw,1.2rem);margin-top:14px;max-width:62ch}
+
+.intro{margin-top:22px;max-width:64ch}
+.intro p{color:var(--ink)}
+
+.callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:0 var(--radius-s) var(--radius-s) 0;padding:15px 19px;margin:22px 0 0;box-shadow:var(--shadow)}
+.callout p{margin:0;color:var(--ink);max-width:64ch}
+.callout b{font-weight:700}
+
+.featured{display:block;text-decoration:none;color:inherit;background:linear-gradient(135deg,var(--teal),var(--teal-deep));border-radius:var(--radius);padding:26px 30px;margin-top:24px;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:.16s}
+.featured:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}
+.featured::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;background:rgba(159,211,232,.16)}
+.featured .lab{font-family:"Montserrat";font-weight:700;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sky)}
+.featured h2{color:#fff;font-size:1.4rem;margin:8px 0 6px}
+.featured p{color:#D9ECF3;margin:0;max-width:58ch;font-size:1.02rem}
+.featured .go{display:inline-flex;align-items:center;gap:8px;margin-top:15px;font-family:"Montserrat";font-weight:700;color:#fff;font-size:.95rem}
+.featured .go svg{width:17px;height:17px}
+
+.sec-h{margin:44px 0 4px}
+.sec-h h2{font-size:1.4rem;font-weight:700}
+.sec-lead{color:var(--muted);max-width:62ch;margin:0 0 22px}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{display:flex;flex-direction:column;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);transition:.16s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift);border-color:var(--sky)}
+.card .ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;margin-bottom:14px;background:var(--sky-soft);border:1px solid var(--sky)}
+.card .ic svg{width:24px;height:24px;stroke:var(--teal);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.18rem;font-weight:700;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.96rem;margin:0 0 14px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+.tags span{font-size:.77rem;color:var(--teal);background:var(--sky-soft);border:1px solid var(--line-soft);border-radius:999px;padding:4px 10px}
+.tags .ct{background:var(--teal);color:#fff;border-color:var(--teal);font-weight:700;font-family:"Montserrat";letter-spacing:.02em}
+.card .enter{display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-family:"Montserrat";font-weight:700;font-size:.9rem;color:var(--teal)}
+.card .enter svg{width:15px;height:15px;transition:transform .16s}
+.card:hover .enter svg{transform:translateX(4px)}
+
+.howto{margin-top:44px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 30px;box-shadow:var(--shadow)}
+.howto h2{font-size:1.25rem;margin-bottom:16px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{display:flex;flex-direction:column;gap:6px}
+.step .n{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--sky-soft);border:1px solid var(--sky);font-family:"Montserrat";font-weight:800;color:var(--teal-deep)}
+.step h3{font-size:1rem;font-weight:700}
+.step p{color:var(--muted);font-size:.92rem;margin:0}
+.howto .note{margin:16px 0 0;color:var(--muted);font-size:.92rem}
+
+/* every-type reference */
+.qref{margin-top:34px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 30px;box-shadow:var(--shadow)}
+.qref h2{font-size:1.25rem;margin-bottom:8px}
+.qref .lead{color:var(--muted);max-width:66ch;margin:0 0 16px;font-size:.95rem}
+.qgroup{padding:15px 0;border-top:1px solid var(--line-soft)}
+.qgroup:first-of-type{border-top:0;padding-top:4px}
+.qgroup h3{font-size:1rem;font-weight:700;margin-bottom:10px;color:var(--ink);display:flex;align-items:center;gap:9px}
+.qgroup h3 .dot{width:9px;height:9px;border-radius:3px;background:var(--teal);flex:0 0 auto}
+.qgroup .chips{display:flex;flex-wrap:wrap;gap:7px}
+.qgroup .chips span{font-size:.82rem;color:var(--teal-deep);background:var(--sky-soft);border:1px solid var(--line-soft);border-radius:999px;padding:5px 11px}
+
+.foot{border-top:1px solid var(--line);margin-top:54px;padding-top:24px;color:var(--muted);font-size:.9rem}
+.foot b{color:var(--ink);font-family:"Montserrat";font-weight:700}
+.foot a{color:var(--teal);font-weight:600;text-decoration:none}
+.foot a:hover{text-decoration:underline}
+
+@media (max-width:760px){
+  body{font-size:17px}
+  .grid,.steps{grid-template-columns:1fr}
+  .hero{padding:34px 0 4px}
+  .featured,.howto,.qref{padding:24px 22px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/" aria-label="Tom Sanderson Tutoring home"><span class="a">Tom&nbsp;Sanderson</span><span class="b">Tutoring</span></a>
+    <a class="back" href="/11-resource-hub/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>All resources</a>
+    <div class="top-right">
+      <a class="site-link" href="https://tomsandersontutoring.com">&larr; Tom&rsquo;s tutoring site</a>
+      <span class="free-pill">Free &middot; no sign-up</span>
+      <button class="comfort-btn" id="comfort" aria-pressed="false" onclick="toggleComfort()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg>
+        Reading comfort
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <span class="eyebrow">Subject &middot; Non-Verbal Reasoning</span>
+    <h1>Non-Verbal Reasoning</h1>
+    <p class="sub">Puzzles made of shapes and patterns, with no words at all. Once you know what to look for, they turn from baffling into rather satisfying.</p>
+    <div class="intro">
+      <p>Non-verbal reasoning swaps words for shapes. Every puzzle is a small pattern to crack: something is changing from one picture to the next, and your job is to spot exactly what, then carry it on or use it. There&rsquo;s no reading and no vocabulary, just careful looking.</p>
+      <p>None of this is taught in school, so nearly every child meets it cold. That&rsquo;s the good news, really: because it&rsquo;s all about familiarity, a little time with each type makes a real difference. The exam won&rsquo;t tell you in advance which types will appear, so it&rsquo;s worth meeting all of them at least once. Pick a topic below and start whenever you like.</p>
+    </div>
+    <div class="callout">
+      <p><b>Worth knowing:</b> there are only a handful of things these puzzles ever change, and nearly every question is one of them: <b>size, shape, shading, how many, position,</b> or <b>rotation</b>. Once you get into the habit of checking each one in turn, most questions come apart quickly. We&rsquo;ll point them out as we go.</p>
+    </div>
+  </section>
+
+  <!-- recommended start -->
+  <a class="featured" href="nvr-odd-matches.html">
+    <span class="lab">A friendly place to start</span>
+    <h2>Odd ones out &amp; matches</h2>
+    <p>Spot the shape that doesn&rsquo;t belong, or the one that fits best with a group. It&rsquo;s the most natural way in, since you&rsquo;re simply comparing pictures, and it builds the habit of noticing small differences that every other type leans on.</p>
+    <span class="go">Start here
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </span>
+  </a>
+
+  <!-- the rest -->
+  <div class="sec-h"><h2>The other topics</h2></div>
+  <p class="sec-lead">Each one stands on its own, so there&rsquo;s no set order. Explore whatever looks interesting.</p>
+
+  <div class="grid">
+
+    <a class="card" href="nvr-sequences.html">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="14" width="4" height="6" rx="1"/><rect x="10" y="10" width="4" height="10" rx="1"/><rect x="17" y="5" width="4" height="15" rx="1"/></svg></span>
+      <h3>Sequences</h3>
+      <p>A row of figures changing step by step. Work out the rule driving the change, then choose the figure that comes next.</p>
+      <div class="tags"><span class="ct">3 types</span><span>Series</span><span>Extended series</span><span>Triangle series</span></div>
+      <span class="enter">Explore
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </a>
+
+    <a class="card" href="nvr-analogies-grids.html">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18M3 12h18"/><circle cx="16.5" cy="16.5" r="2"/></svg></span>
+      <h3>Analogies &amp; grids</h3>
+      <p>Work out the rule that links a pair, or fills a grid, then use it to find the missing figure. The same idea, wearing a few different costumes.</p>
+      <div class="tags"><span class="ct">4 types</span><span>Analogies</span><span>Matrices</span><span>Star matrices</span></div>
+      <span class="enter">Explore
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </a>
+
+    <a class="card" href="nvr-shape-codes.html">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2.5" y="7.5" width="7" height="7" rx="1.5"/><path d="M12 11h3.5"/><path d="M13.5 9l2 2-2 2"/><path d="M18.5 8v6M21.5 8v6"/></svg></span>
+      <h3>Shape codes</h3>
+      <p>Each shape is described by a small code of letters. Work out what each letter stands for from the examples, then read, or build, the code for a new shape.</p>
+      <div class="tags"><span class="ct">2 types</span><span>Horizontal codes</span><span>Vertical codes</span></div>
+      <span class="enter">Explore
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </a>
+
+  </div>
+
+  <!-- how each topic works -->
+  <section class="howto">
+    <h2>How each topic works</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="n">1</span>
+        <h3>Explanation</h3>
+        <p>A plain, jargon-free description of the puzzle and the trick to it.</p>
+      </div>
+      <div class="step">
+        <span class="n">2</span>
+        <h3>Worked example</h3>
+        <p>One question taken slowly, step by step, so you can see the thinking.</p>
+      </div>
+      <div class="step">
+        <span class="n">3</span>
+        <h3>Your go</h3>
+        <p>A set to try yourself, with instant feedback that explains each answer.</p>
+      </div>
+    </div>
+    <p class="note">Nothing here is timed, scored or saved. Get it wrong as many times as you like, that&rsquo;s how it&rsquo;s meant to work.</p>
+  </section>
+
+  <!-- every question type, covered -->
+  <section class="qref">
+    <h2>Every question type, covered</h2>
+    <p class="lead">GL Assessment, the board most areas use, publishes 12 non-verbal reasoning question types, and it doesn&rsquo;t say in advance which will appear on the day. Here is every one, and which topic above it lives in. Not every paper uses every type, so treat this as the full map rather than a to-do list.</p>
+
+    <div class="qgroup">
+      <h3><span class="dot"></span>Odd ones out &amp; matches</h3>
+      <div class="chips"><span>Most Unlike</span><span>Most Like (3 Figures)</span><span>Most Like (2 Figures)</span></div>
+    </div>
+    <div class="qgroup">
+      <h3><span class="dot"></span>Sequences</h3>
+      <div class="chips"><span>Series / Sequences</span><span>Extended Series</span><span>Triangle Series</span></div>
+    </div>
+    <div class="qgroup">
+      <h3><span class="dot"></span>Analogies &amp; grids</h3>
+      <div class="chips"><span>Analogies</span><span>Matrices</span><span>Similar Triangles</span><span>Star Matrices</span></div>
+    </div>
+    <div class="qgroup">
+      <h3><span class="dot"></span>Shape codes</h3>
+      <div class="chips"><span>Horizontal Codes</span><span>Vertical Codes</span></div>
+    </div>
+
+    <p class="lead" style="margin:16px 0 0">A note for Buckinghamshire, Kent and a few other areas: your test may also include <b>Spatial Reasoning</b> (folding nets, rotating 3D shapes, and the like). That&rsquo;s a separate section with its own page, not part of the 12 above.</p>
+  </section>
+
+  <footer class="foot">
+    <p style="margin:0 0 6px"><b>Tom Sanderson Tutoring</b> &middot; Milton Keynes</p>
+    <p style="margin:0;max-width:62ch">A free resource for families preparing for the 11+. If you&rsquo;d like a hand beyond the page, you can <a href="https://tomsandersontutoring.com">find out about tutoring here</a>.</p>
+  </footer>
+
+</main>
+
+<script>
+function toggleComfort(){
+  var on=document.body.classList.toggle('comfort');
+  document.getElementById('comfort').setAttribute('aria-pressed',on?'true':'false');
+}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var id=a.getAttribute('href');
+    if(id.length>1){var el=document.querySelector(id);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}}
+  });
+});
+</script>
+</body>
+</html>

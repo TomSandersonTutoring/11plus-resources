@@ -1,0 +1,363 @@
+﻿<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Odd ones out &amp; matches — Non-Verbal Reasoning | Tom Sanderson Tutoring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#1E647C;--teal-deep:#174E61;--sky:#9FD3E8;--sky-soft:#E4F1F7;--amber:#F5BA18;--white:#FFFFFF;
+  --paper:#F1F7FA;--surface:#FFFFFF;--ink:#15323D;--muted:#5E7A84;--line:#D8E7EE;--line-soft:#E8F1F5;
+  --ok:#1B8A5A;--ok-bg:#E6F5EE;--no:#C24A3D;--no-bg:#FBECE9;
+  --radius:18px;--radius-s:12px;
+  --shadow:0 1px 2px rgba(21,50,61,.05), 0 10px 30px rgba(21,50,61,.07);
+  --shadow-lift:0 4px 10px rgba(21,50,61,.08), 0 20px 44px rgba(21,50,61,.12);
+  --maxw:860px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Raleway",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+body.comfort{letter-spacing:.02em;word-spacing:.06em;line-height:1.9}
+body.comfort p{margin-bottom:1.1em}
+h1,h2,h3,h4{font-family:"Montserrat",sans-serif;margin:0;line-height:1.2;letter-spacing:-.01em;color:var(--teal-deep)}
+p{margin:0 0 1em}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+button{font-family:inherit}
+
+.top{position:sticky;top:0;z-index:30;background:rgba(241,247,250,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{display:inline-flex;align-items:stretch;border-radius:8px;overflow:hidden;text-decoration:none;box-shadow:0 1px 2px rgba(21,50,61,.12);flex:0 0 auto}
+.logo .a{background:var(--teal);color:var(--amber);font-family:"Montserrat";font-weight:800;font-size:.9rem;padding:8px 11px;display:flex;align-items:center;line-height:1}
+.logo .b{background:var(--white);color:var(--teal);font-family:"Montserrat";font-weight:600;font-size:.9rem;padding:8px 12px;display:flex;align-items:center;line-height:1;border:1px solid var(--line);border-left:0}
+.back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--muted);font-weight:600;font-size:.88rem}
+.back:hover{color:var(--teal)}
+.back svg{width:16px;height:16px}
+.top-right{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.site-link{font-family:"Raleway",sans-serif;font-size:.85rem;font-weight:600;color:var(--muted);text-decoration:none;white-space:nowrap}
+.site-link:hover{color:var(--teal);text-decoration:underline}
+.free-pill{font-family:"Montserrat";font-weight:700;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--white);border:1px solid var(--line);padding:6px 11px;border-radius:999px}
+.comfort-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--white);color:var(--muted);border-radius:999px;padding:6px 12px;font-weight:600;font-size:.82rem;cursor:pointer;transition:.14s}
+.comfort-btn:hover{border-color:var(--teal);color:var(--teal)}
+.comfort-btn[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.comfort-btn svg{width:15px;height:15px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px 90px}
+
+.crumb{font-size:.82rem;color:var(--muted);margin:22px 0 0}
+.crumb a{color:var(--teal);text-decoration:none;font-weight:600}
+.hero{padding:14px 0 6px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:"Montserrat";font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:var(--sky-soft);border:1px solid var(--sky);padding:6px 13px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:clamp(1.9rem,4.6vw,2.6rem);font-weight:800}
+.hero .sub{font-size:clamp(1.05rem,2.2vw,1.18rem);margin-top:14px;max-width:62ch}
+
+.pagenav{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0}
+.pagenav a{font-size:.85rem;text-decoration:none;color:var(--teal-deep);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-weight:600}
+.pagenav a:hover{border-color:var(--sky);background:var(--sky-soft)}
+
+.section{padding:32px 0 0;scroll-margin-top:80px}
+.section h2{font-size:1.45rem;font-weight:700;margin-bottom:12px}
+.section h3{font-size:1.05rem;font-weight:700;margin:18px 0 6px;color:var(--ink)}
+.section p,.section li{max-width:66ch}
+.section ul{margin:0 0 1em;padding-left:0;list-style:none}
+.types-list li{position:relative;padding:8px 0 8px 30px;border-bottom:1px solid var(--line-soft);max-width:66ch}
+.types-list li:last-child{border-bottom:0}
+.types-list li::before{content:"";position:absolute;left:6px;top:15px;width:9px;height:9px;border-radius:3px;background:var(--sky)}
+.types-list b{color:var(--ink)}
+
+.callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:0 var(--radius-s) var(--radius-s) 0;padding:16px 19px;margin:16px 0 0;box-shadow:var(--shadow)}
+.callout h4{font-family:"Montserrat";font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#9A6B16;margin-bottom:7px}
+.callout ul{margin:0;padding-left:18px}
+.callout li{margin:4px 0;font-size:.95rem;max-width:64ch}
+.callout li::marker{color:var(--amber)}
+.callout p{margin:0;max-width:64ch}
+
+/* worked example */
+.worked{background:linear-gradient(135deg,#F2F8FB,#FFFFFF);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin-top:14px;box-shadow:var(--shadow)}
+.worked .wl{font-family:"Montserrat";font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:8px}
+.worked .q{background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);padding:13px 15px;margin-bottom:13px;font-size:1.04rem}
+.steps{counter-reset:s;margin:0;padding:0;list-style:none}
+.steps li{position:relative;padding:0 0 11px 36px;max-width:64ch}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--teal);color:#fff;font-family:"Montserrat";font-weight:700;font-size:.8rem;display:grid;place-items:center}
+.steps b{color:var(--ink);display:block;margin-bottom:3px}
+.answer-line{margin-top:13px;background:var(--ok-bg);border:1px solid #BFE6D2;border-radius:var(--radius-s);padding:10px 14px;font-weight:600;color:#15623f}
+
+/* figures */
+.figrow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;margin:6px 0}
+.figcell{display:inline-flex;align-items:center;justify-content:center;width:66px;height:66px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:7px;flex:0 0 auto}
+.figcell.hi{border-color:var(--ok);background:var(--ok-bg);box-shadow:0 0 0 2px rgba(27,138,90,.35)}
+.fig{width:100%;height:100%;display:block}
+
+/* activities */
+.act{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow);margin-top:16px}
+.act-head{display:flex;align-items:center;gap:11px;margin-bottom:3px}
+.act-head .num{flex:0 0 auto;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--teal);color:#fff;font-family:"Montserrat";font-weight:700;font-size:.9rem}
+.act-head h3{font-size:1.05rem;font-weight:700;margin:0}
+.act .instr{color:var(--muted);font-size:.93rem;margin:2px 0 12px}
+.qfig{margin:2px 0 12px}
+.qfig:empty{display:none}
+.grouplab{font-family:"Montserrat";font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;text-align:center;margin:2px 0 2px}
+.optlab{font-family:"Montserrat";font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;text-align:center;margin:10px 0 2px}
+.optrow{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2px 0 4px}
+.word{border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:8px;cursor:pointer;transition:transform .07s,border-color .12s,background .12s;color:var(--ink);display:flex;align-items:center;justify-content:center;min-width:76px;min-height:76px}
+.word:hover{border-color:var(--teal)}
+.word:active{transform:translateY(1px)}
+.word svg{width:56px;height:56px}
+.word.right{background:var(--ok-bg);border-color:var(--ok)}
+.word.bad{background:var(--no-bg);border-color:var(--no)}
+.word[disabled]{cursor:default}
+
+.btn{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:10px;padding:10px 16px;font-family:"Montserrat";font-weight:700;font-size:.9rem;cursor:pointer;transition:.12s}
+.btn:hover{background:var(--sky-soft)}
+.btn:disabled{opacity:.5;cursor:default}
+.btn-ghost{background:transparent;border-color:transparent;color:var(--muted)}
+.btn-ghost:hover:not(:disabled){color:var(--ink);background:var(--sky-soft)}
+.row{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:10px}
+.prog{margin-left:auto;font-family:"Montserrat";font-size:.8rem;color:var(--muted)}
+.feedback{font-size:.95rem;font-weight:600;min-height:1.3em;margin-top:11px}
+.feedback.ok{color:var(--ok)}
+.feedback.no{color:var(--no)}
+
+.endcard{margin-top:34px;background:linear-gradient(135deg,var(--teal),var(--teal-deep));border-radius:var(--radius);padding:24px 28px;color:#fff;box-shadow:var(--shadow)}
+.endcard h2{color:#fff;font-size:1.2rem;margin-bottom:6px}
+.endcard p{color:#D9ECF3;margin:0 0 14px;max-width:54ch}
+.endcard a{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:#3A2D05;text-decoration:none;font-family:"Montserrat";font-weight:700;padding:12px 18px;border-radius:11px}
+.endcard a svg{width:17px;height:17px}
+
+.foot{border-top:1px solid var(--line);margin-top:40px;padding-top:24px;color:var(--muted);font-size:.9rem}
+.foot b{color:var(--ink);font-family:"Montserrat";font-weight:700}
+.foot a{color:var(--teal);font-weight:600;text-decoration:none}
+
+@media (max-width:680px){
+  body{font-size:17px}
+  .worked,.act{padding:20px 18px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/11-resource-hub/" aria-label="Tom Sanderson Tutoring home"><span class="a">Tom&nbsp;Sanderson</span><span class="b">Tutoring</span></a>
+    <a class="back" href="/11-resource-hub/non-verbal-reasoning/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Non-Verbal Reasoning</a>
+    <div class="top-right">
+      <a class="site-link" href="https://tomsandersontutoring.com">&larr; Tom&rsquo;s tutoring site</a>
+      <span class="free-pill">Free &middot; no sign-up</span>
+      <button class="comfort-btn" id="comfort" aria-pressed="false" onclick="toggleComfort()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg>
+        Reading comfort
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="crumb"><a href="/11-resource-hub/non-verbal-reasoning/">Non-Verbal Reasoning</a> &nbsp;&rsaquo;&nbsp; Odd ones out &amp; matches</p>
+
+  <section class="hero">
+    <span class="eyebrow">Non-Verbal Reasoning &middot; Topic 1</span>
+    <h1>Odd ones out &amp; matches</h1>
+    <p class="sub">The friendliest way into non-verbal reasoning. You simply compare pictures: spot the shape that does not belong, or the one that fits best with a group.</p>
+    <nav class="pagenav" aria-label="On this page">
+      <a href="#about">What these are</a>
+      <a href="#example">Worked example</a>
+      <a href="#p1">Most unlike</a>
+      <a href="#p2">Most like (3)</a>
+      <a href="#p3">Most like (2)</a>
+    </nav>
+  </section>
+
+  <!-- WHAT IT IS -->
+  <section class="section" id="about">
+    <h2>What these questions are</h2>
+    <p>These puzzles show you a handful of small pictures and ask you to compare them. Sometimes four go together and one does not, and you find the odd one out. Sometimes a little group belongs together and you pick the extra picture that joins them. Either way, the skill is the same: notice what the pictures have in common, and what makes one different.</p>
+    <p>On this page you will meet three kinds:</p>
+    <ul class="types-list">
+      <li><b>Most unlike</b> &mdash; five shapes, four share something. Find the one that does not belong.</li>
+      <li><b>Most like (3 figures)</b> &mdash; three shapes go together. Pick the option that belongs with them.</li>
+      <li><b>Most like (2 figures)</b> &mdash; the same idea, but with only two shapes to learn the rule from.</li>
+    </ul>
+    <div class="callout">
+      <h4>The six-point check</h4>
+      <p style="margin-bottom:8px;font-size:.95rem">Almost every difference in non-verbal reasoning is one of six things. When a picture puzzle looks baffling, run through them in order and one will usually jump out:</p>
+      <ul>
+        <li><b>Shape</b> &mdash; how many sides; curved or straight?</li>
+        <li><b>Shading</b> &mdash; white, shaded, or solid?</li>
+        <li><b>Size</b> &mdash; large or small?</li>
+        <li><b>Number</b> &mdash; how many shapes, dots or lines?</li>
+        <li><b>Position</b> &mdash; where things sit, and which way up?</li>
+        <li><b>Rotation</b> &mdash; has it been turned?</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WORKED EXAMPLE -->
+  <section class="section" id="example">
+    <h2>A worked example</h2>
+    <p>Here is a &ldquo;most unlike&rdquo; question, taken slowly. Four of these five belong together; one does not.</p>
+    <div class="worked">
+      <div class="wl">Worked example &middot; most unlike</div>
+      <div class="q">
+        <div style="margin-bottom:4px">Which shape is the odd one out?</div>
+        <div id="we-fig"></div>
+      </div>
+      <ol class="steps">
+        <li><b>Do not grab the first difference you see.</b> Go through the six-point check one at a time: shape, shading, size, number, then any marks inside.</li>
+        <li><b>Shape.</b> They are all different &mdash; circle, square, triangle, pentagon, hexagon. Because they are <em>all</em> different, shape cannot be the answer: an odd one out needs four the same and one different.</li>
+        <li><b>Shading, size, number.</b> All are shaded, all the same size, all a single shape. None of those singles anyone out.</li>
+        <li><b>Inside.</b> Four have a dot in the middle. One does not. That is the odd one out.</li>
+      </ol>
+      <div class="answer-line">Answer: the hexagon &mdash; it is the only shape with no dot inside. The changing shapes were there to distract you.</div>
+    </div>
+  </section>
+
+  <!-- PRACTICE -->
+  <section class="section">
+    <h2>Now your go</h2>
+    <p>Three short sets, one for each kind. Tap a shape to answer and you will get an explanation straight away. Nothing is timed or saved, so get it wrong as often as you like.</p>
+    <div class="callout"><p style="font-size:.95rem"><b>A little tip:</b> when the shapes all look different, that is usually the distraction. Keep running the six-point check until the real pattern shows itself.</p></div>
+  </section>
+
+  <!-- P1 most unlike -->
+  <div class="act" id="p1">
+    <div class="act-head"><span class="num">1</span><h3>Most unlike</h3></div>
+    <p class="instr">Four of the five shapes share something. Tap the <b>one</b> that does not belong.</p>
+    <div class="qfig" id="mu-q"></div>
+    <div class="optrow" id="mu-opts"></div>
+    <div class="row"><button class="btn btn-ghost" id="mu-next" disabled>Next &rarr;</button><span class="prog" id="mu-prog"></span></div>
+    <div class="feedback" id="mu-fb" aria-live="polite"></div>
+  </div>
+
+  <!-- P2 most like 3 -->
+  <div class="act" id="p2">
+    <div class="act-head"><span class="num">2</span><h3>Most like (3 figures)</h3></div>
+    <p class="instr">These three shapes go together. Work out what they share, then tap the option below that belongs with them.</p>
+    <div class="grouplab">These go together</div>
+    <div class="qfig" id="ml3-q"></div>
+    <div class="optlab">Which one joins them?</div>
+    <div class="optrow" id="ml3-opts"></div>
+    <div class="row"><button class="btn btn-ghost" id="ml3-next" disabled>Next &rarr;</button><span class="prog" id="ml3-prog"></span></div>
+    <div class="feedback" id="ml3-fb" aria-live="polite"></div>
+  </div>
+
+  <!-- P3 most like 2 -->
+  <div class="act" id="p3">
+    <div class="act-head"><span class="num">3</span><h3>Most like (2 figures)</h3></div>
+    <p class="instr">Now only two shapes to learn from. Spot the one thing they share, then tap the option that shares it too.</p>
+    <div class="grouplab">These two go together</div>
+    <div class="qfig" id="ml2-q"></div>
+    <div class="optlab">Which one joins them?</div>
+    <div class="optrow" id="ml2-opts"></div>
+    <div class="row"><button class="btn btn-ghost" id="ml2-next" disabled>Next &rarr;</button><span class="prog" id="ml2-prog"></span></div>
+    <div class="feedback" id="ml2-fb" aria-live="polite"></div>
+  </div>
+
+  <!-- END -->
+  <div class="endcard">
+    <h2>That is odd ones out &amp; matches</h2>
+    <p>You have started building the habit every other type leans on: noticing small differences. When you are ready, head back and try another topic.</p>
+    <a href="/11-resource-hub/non-verbal-reasoning/">Back to Non-Verbal Reasoning
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+    </a>
+  </div>
+
+  <footer class="foot">
+    <p style="margin:0 0 6px"><b>Tom Sanderson Tutoring</b> &middot; Milton Keynes</p>
+    <p style="margin:0;max-width:62ch">A free resource for families preparing for the 11+. If you&rsquo;d like a hand beyond the page, you can <a href="https://tomsandersontutoring.com">find out about tutoring here</a>.</p>
+  </footer>
+
+</main>
+
+<script>
+function toggleComfort(){var on=document.body.classList.toggle('comfort');document.getElementById('comfort').setAttribute('aria-pressed',on?'true':'false');}
+function $(id){return document.getElementById(id);}
+
+/* ---------- shape engine ---------- */
+var COL={w:'#FFFFFF',g:'#9FD3E8',b:'#1E647C'};
+var STROKE='stroke="#174E61" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+function poly(cx,cy,r,n,rot){var a=[],i,ang;for(i=0;i<n;i++){ang=(-90+(rot||0)+i*360/n)*Math.PI/180;a.push((cx+r*Math.cos(ang)).toFixed(1)+','+(cy+r*Math.sin(ang)).toFixed(1));}return a.join(' ');}
+function star(cx,cy,r,rot){var a=[],i,ang,rr;for(i=0;i<10;i++){rr=(i%2===0)?r:r*0.42;ang=(-90+(rot||0)+i*36)*Math.PI/180;a.push((cx+rr*Math.cos(ang)).toFixed(1)+','+(cy+rr*Math.sin(ang)).toFixed(1));}return a.join(' ');}
+function shp(s,cx,cy,r,f,rot){var col=COL[f||'w'];
+  if(s==='circle')return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="'+col+'" '+STROKE+'/>';
+  if(s==='square')return '<rect x="'+(cx-r*0.86).toFixed(1)+'" y="'+(cy-r*0.86).toFixed(1)+'" width="'+(r*1.72).toFixed(1)+'" height="'+(r*1.72).toFixed(1)+'" rx="3" fill="'+col+'" '+STROKE+' transform="rotate('+(rot||0)+' '+cx+' '+cy+')"/>';
+  if(s==='tri')return '<polygon points="'+poly(cx,cy,r,3,rot)+'" fill="'+col+'" '+STROKE+'/>';
+  if(s==='diamond')return '<polygon points="'+poly(cx,cy,r,4,rot)+'" fill="'+col+'" '+STROKE+'/>';
+  if(s==='pent')return '<polygon points="'+poly(cx,cy,r,5,rot)+'" fill="'+col+'" '+STROKE+'/>';
+  if(s==='hex')return '<polygon points="'+poly(cx,cy,r,6,rot)+'" fill="'+col+'" '+STROKE+'/>';
+  if(s==='star')return '<polygon points="'+star(cx,cy,r,rot)+'" fill="'+col+'" '+STROKE+'/>';
+  return '';}
+function F(o){o=o||{};var inner='';
+  if(o.q){inner='<text x="50" y="68" text-anchor="middle" font-size="56" font-family="Montserrat,sans-serif" fill="#9AB4BE">?</text>';return '<svg viewBox="0 0 100 100" class="fig" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>';}
+  var n=o.n||1,r=38*(o.sz||1);
+  if(n>1){var k,xs=(n===2?[30,70]:[22,50,78]),rr=(n===2?18:15);for(k=0;k<n;k++)inner+=shp(o.s||'circle',xs[k],50,rr,o.f,o.rot);}
+  else{inner+=shp(o.s||'circle',50,50,r,o.f,o.rot);if(o.dot)inner+='<circle cx="50" cy="50" r="6" fill="#174E61"/>';}
+  return '<svg viewBox="0 0 100 100" class="fig" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>';}
+function cell(inner,cls){return '<span class="figcell'+(cls?' '+cls:'')+'">'+inner+'</span>';}
+function strip(specs){return '<div class="figrow">'+specs.map(function(o){return cell(F(o));}).join('')+'</div>';}
+function stripHi(specs,hi){return '<div class="figrow">'+specs.map(function(o,i){return cell(F(o),i===hi?'hi':'');}).join('')+'</div>';}
+
+/* ---------- picker ---------- */
+function nvrPick(p,items){
+  var i=0,score=0,locked=false;
+  function render(){
+    locked=false;
+    $(p+'-q').innerHTML=items[i].q||'';
+    var host=$(p+'-opts');host.innerHTML='';
+    items[i].opts.forEach(function(o,k){
+      var b=document.createElement('button');b.className='word';b.setAttribute('aria-label','Option '+(k+1));b.innerHTML=(typeof o==='string')?o:F(o);
+      b.onclick=function(){pick(k,b);};host.appendChild(b);
+    });
+    $(p+'-fb').textContent='';$(p+'-fb').className='feedback';
+    $(p+'-next').disabled=true;
+    $(p+'-prog').textContent='Question '+(i+1)+' of '+items.length;
+  }
+  function pick(k,b){
+    if(locked)return;locked=true;var it=items[i];
+    [].forEach.call($(p+'-opts').children,function(c,j){c.disabled=true;if(j===it.a)c.classList.add('right');});
+    if(k===it.a)score++;else b.classList.add('bad');
+    var fb=$(p+'-fb');fb.className='feedback '+(k===it.a?'ok':'no');fb.innerHTML=(k===it.a?'✓ ':'')+it.why;
+    $(p+'-next').disabled=(i>=items.length-1);
+    $(p+'-prog').textContent='Score '+score+' of '+(i+1)+(i>=items.length-1?' · set complete':'');
+  }
+  $(p+'-next').onclick=function(){if(i<items.length-1){i++;render();}};
+  render();
+}
+
+/* ---------- worked example ---------- */
+$('we-fig').innerHTML=stripHi([{s:'square',f:'g',dot:1},{s:'circle',f:'g',dot:1},{s:'pent',f:'g',dot:1},{s:'tri',f:'g',dot:1},{s:'hex',f:'g',dot:0}],4);
+
+/* ---------- DATA (all original; every answer checked for a single valid solution) ---------- */
+nvrPick('mu',[
+  {opts:[{s:'circle',f:'g'},{s:'square',f:'g'},{s:'tri',f:'g'},{s:'pent',f:'g'},{s:'hex',f:'w'}],a:4,why:'Four shapes are shaded; only the hexagon is left white. Their shapes all differ, but that is the distraction &mdash; shading is the real split.'},
+  {opts:[{s:'circle',f:'g'},{s:'pent',f:'w'},{s:'pent',f:'g'},{s:'pent',f:'w'},{s:'pent',f:'g'}],a:0,why:'Four are pentagons and one is a circle. The colours keep changing to throw you off, but the circle is the only shape with curved sides.'},
+  {opts:[{s:'circle',n:1},{s:'circle',n:1},{s:'circle',n:2},{s:'circle',n:1},{s:'circle',n:1}],a:2,why:'Every figure shows one circle except this one, which shows two. When the shapes look identical, count them.'},
+  {opts:[{s:'circle',sz:1},{s:'square',sz:1},{s:'tri',sz:1},{s:'star',sz:0.6},{s:'pent',sz:1}],a:3,why:'Four shapes are large and one is small. They are all different kinds, so do not be caught by that &mdash; size is what sets the star apart.'},
+  {opts:[{s:'circle',dot:1},{s:'square',dot:0},{s:'tri',dot:1},{s:'pent',dot:1},{s:'hex',dot:1}],a:1,why:'Four shapes have a dot in the middle; the square has none. Always check inside a shape, not just its outline.'}
+]);
+
+nvrPick('ml3',[
+  {q:strip([{s:'circle',f:'g',sz:1,n:1},{s:'square',f:'g',sz:0.7,n:2},{s:'tri',f:'g',sz:1,n:1}]),opts:[{s:'star',f:'w'},{s:'hex',f:'g'},{s:'circle',f:'w'},{s:'diamond',f:'b'}],a:1,why:'The three share one thing: they are shaded, whatever their shape, size or number. Only the shaded hexagon matches. The white shapes are traps.'},
+  {q:strip([{s:'tri',f:'w',sz:1,n:1},{s:'tri',f:'g',sz:0.7,n:1},{s:'tri',f:'b',sz:1,n:2}]),opts:[{s:'circle',f:'g'},{s:'pent',f:'b'},{s:'square',f:'w'},{s:'tri',f:'g',sz:0.8}],a:3,why:'Each of the three is a triangle, in different colours and sizes. Only one option is a triangle too &mdash; colour and size are there to distract you.'},
+  {q:strip([{s:'circle',f:'w',n:2,sz:1},{s:'square',f:'g',n:2,sz:0.8},{s:'tri',f:'b',n:2,sz:1}]),opts:[{s:'star',f:'g',n:2},{s:'hex',f:'w',n:1},{s:'pent',f:'b',n:1},{s:'circle',f:'g',n:1}],a:0,why:'Every figure in the group shows two shapes. The kind and colour keep changing, so it is about how many &mdash; pick the option that also shows two.'},
+  {q:strip([{s:'circle',f:'w',sz:1,n:1},{s:'square',f:'g',sz:1,n:2},{s:'tri',f:'b',sz:1,n:1}]),opts:[{s:'pent',f:'g',sz:0.6},{s:'hex',f:'w',sz:0.6},{s:'star',f:'b',sz:1},{s:'diamond',f:'g',sz:0.6}],a:2,why:'The three are all large. Their shape, colour and number vary, so size is the thread. Only the large star belongs; the rest are small.'}
+]);
+
+nvrPick('ml2',[
+  {q:strip([{s:'circle',f:'g',sz:1,n:1},{s:'tri',f:'g',sz:0.7,n:2}]),opts:[{s:'square',f:'w'},{s:'star',f:'w'},{s:'pent',f:'g'},{s:'hex',f:'b'}],a:2,why:'Both are shaded, though one is a circle and one a pair of triangles. Shading is what they share &mdash; pick the shaded pentagon.'},
+  {q:strip([{s:'square',f:'w',n:1,sz:1},{s:'square',f:'b',n:2,sz:0.7}]),opts:[{s:'square',f:'g',sz:0.9},{s:'circle',f:'b'},{s:'tri',f:'w'},{s:'pent',f:'g'}],a:0,why:'Both are squares, despite the different colours, sizes and counts. Only one option is a square too.'},
+  {q:strip([{s:'circle',f:'w',n:2,sz:1},{s:'star',f:'g',n:2,sz:0.7}]),opts:[{s:'tri',f:'g',n:1},{s:'pent',f:'w',n:1},{s:'hex',f:'b',n:1},{s:'square',f:'w',n:2}],a:3,why:'Both show two shapes. Everything else about them differs, so count is the link &mdash; choose the option with two.'},
+  {q:strip([{s:'pent',f:'w',sz:1,n:1},{s:'circle',f:'g',sz:1,n:2}]),opts:[{s:'tri',f:'g',sz:0.6},{s:'hex',f:'w',sz:1},{s:'star',f:'b',sz:0.6},{s:'square',f:'g',sz:0.6}],a:1,why:'Both are large. Shape, colour and number all change between them, so size is what they share &mdash; the large hexagon fits.'}
+]);
+
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length>1){var el=document.querySelector(id);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}}});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+﻿<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shape codes — Non-Verbal Reasoning | Tom Sanderson Tutoring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#1E647C;--teal-deep:#174E61;--sky:#9FD3E8;--sky-soft:#E4F1F7;--amber:#F5BA18;--white:#FFFFFF;
+  --paper:#F1F7FA;--surface:#FFFFFF;--ink:#15323D;--muted:#5E7A84;--line:#D8E7EE;--line-soft:#E8F1F5;
+  --ok:#1B8A5A;--ok-bg:#E6F5EE;--no:#C24A3D;--no-bg:#FBECE9;
+  --radius:18px;--radius-s:12px;
+  --shadow:0 1px 2px rgba(21,50,61,.05), 0 10px 30px rgba(21,50,61,.07);
+  --shadow-lift:0 4px 10px rgba(21,50,61,.08), 0 20px 44px rgba(21,50,61,.12);
+  --maxw:860px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Raleway",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+body.comfort{letter-spacing:.02em;word-spacing:.06em;line-height:1.9}
+body.comfort p{margin-bottom:1.1em}
+h1,h2,h3,h4{font-family:"Montserrat",sans-serif;margin:0;line-height:1.2;letter-spacing:-.01em;color:var(--teal-deep)}
+p{margin:0 0 1em}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+button{font-family:inherit}
+
+.top{position:sticky;top:0;z-index:30;background:rgba(241,247,250,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{display:inline-flex;align-items:stretch;border-radius:8px;overflow:hidden;text-decoration:none;box-shadow:0 1px 2px rgba(21,50,61,.12);flex:0 0 auto}
+.logo .a{background:var(--teal);color:var(--amber);font-family:"Montserrat";font-weight:800;font-size:.9rem;padding:8px 11px;display:flex;align-items:center;line-height:1}
+.logo .b{background:var(--white);color:var(--teal);font-family:"Montserrat";font-weight:600;font-size:.9rem;padding:8px 12px;display:flex;align-items:center;line-height:1;border:1px solid var(--line);border-left:0}
+.back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--muted);font-weight:600;font-size:.88rem}
+.back:hover{color:var(--teal)}
+.back svg{width:16px;height:16px}
+.top-right{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.site-link{font-family:"Raleway",sans-serif;font-size:.85rem;font-weight:600;color:var(--muted);text-decoration:none;white-space:nowrap}
+.site-link:hover{color:var(--teal);text-decoration:underline}
+.free-pill{font-family:"Montserrat";font-weight:700;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--white);border:1px solid var(--line);padding:6px 11px;border-radius:999px}
+.comfort-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--white);color:var(--muted);border-radius:999px;padding:6px 12px;font-weight:600;font-size:.82rem;cursor:pointer;transition:.14s}
+.comfort-btn:hover{border-color:var(--teal);color:var(--teal)}
+.comfort-btn[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.comfort-btn svg{width:15px;height:15px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px 90px}
+
+.crumb{font-size:.82rem;color:var(--muted);margin:22px 0 0}
+.crumb a{color:var(--teal);text-decoration:none;font-weight:600}
+.hero{padding:14px 0 6px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:"Montserrat";font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:var(--sky-soft);border:1px solid var(--sky);padding:6px 13px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:clamp(1.9rem,4.6vw,2.6rem);font-weight:800}
+.hero .sub{font-size:clamp(1.05rem,2.2vw,1.18rem);margin-top:14px;max-width:62ch}
+
+.pagenav{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0}
+.pagenav a{font-size:.85rem;text-decoration:none;color:var(--teal-deep);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-weight:600}
+.pagenav a:hover{border-color:var(--sky);background:var(--sky-soft)}
+
+.section{padding:34px 0 0;scroll-margin-top:80px}
+.section h2{font-size:1.5rem;font-weight:700;margin-bottom:12px}
+.section h3{font-size:1.05rem;font-weight:700;margin:18px 0 6px;color:var(--ink)}
+.section p,.section li{max-width:66ch}
+.section ul{margin:0 0 1em;padding-left:0;list-style:none}
+.rules li{position:relative;padding:7px 0 7px 24px;max-width:66ch}
+.rules li::before{content:"";position:absolute;left:4px;top:15px;width:8px;height:8px;border-radius:3px;background:var(--sky)}
+.rules b{color:var(--ink)}
+.types-list li{position:relative;padding:8px 0 8px 30px;border-bottom:1px solid var(--line-soft);max-width:66ch}
+.types-list li:last-child{border-bottom:0}
+.types-list li::before{content:"";position:absolute;left:6px;top:15px;width:9px;height:9px;border-radius:3px;background:var(--sky)}
+.types-list b{color:var(--ink)}
+
+.callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:0 var(--radius-s) var(--radius-s) 0;padding:16px 19px;margin:16px 0 0;box-shadow:var(--shadow)}
+.callout h4{font-family:"Montserrat";font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#9A6B16;margin-bottom:7px}
+.callout p{margin:0;max-width:64ch}
+
+.worked{background:linear-gradient(135deg,#F2F8FB,#FFFFFF);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin-top:14px;box-shadow:var(--shadow)}
+.worked .wl{font-family:"Montserrat";font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:8px}
+.worked .q{background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);padding:13px 15px;margin-bottom:13px;font-size:1.04rem}
+.steps{counter-reset:s;margin:0;padding:0;list-style:none}
+.steps li{position:relative;padding:0 0 11px 36px;max-width:64ch}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--teal);color:#fff;font-family:"Montserrat";font-weight:700;font-size:.8rem;display:grid;place-items:center}
+.steps b{color:var(--ink);display:block;margin-bottom:3px}
+.answer-line{margin-top:13px;background:var(--ok-bg);border:1px solid #BFE6D2;border-radius:var(--radius-s);padding:10px 14px;font-weight:600;color:#15623f}
+
+.figcell{display:inline-flex;align-items:center;justify-content:center;width:60px;height:60px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:6px;flex:0 0 auto}
+.fig{width:100%;height:100%;display:block}
+.keylab,.qlab{font-family:"Montserrat";font-size:.7rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:4px 0 6px}
+.keyrow{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin:2px 0 10px;padding:13px;background:var(--sky-soft);border:1px solid var(--line);border-radius:14px}
+.keyitem{display:flex;flex-direction:column;align-items:center;gap:5px}
+.keyitem .code{font-family:"Montserrat";font-weight:700;letter-spacing:.1em;color:var(--teal-deep);font-size:1.02rem}
+.targetrow{display:flex;align-items:center;justify-content:center;gap:12px;margin:2px 0}
+.targetrow .eq{font-family:"Montserrat";font-weight:800;font-size:1.3rem;color:var(--teal)}
+.vstack{display:inline-flex;flex-direction:column;line-height:1.0}
+.vstack b{font-family:"Montserrat";font-size:1.02rem;color:var(--teal-deep);letter-spacing:0}
+
+.act{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow);margin-top:16px}
+.act-head{display:flex;align-items:center;gap:11px;margin-bottom:3px}
+.act-head .num{flex:0 0 auto;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--teal);color:#fff;font-family:"Montserrat";font-weight:700;font-size:.9rem}
+.act-head h3{font-size:1.05rem;font-weight:700;margin:0}
+.act .instr{color:var(--muted);font-size:.93rem;margin:2px 0 12px}
+.qfig{margin:2px 0 12px}
+.optlab{font-family:"Montserrat";font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;text-align:center;margin:10px 0 2px}
+.optrow{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2px 0 4px}
+.word{border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:8px;cursor:pointer;transition:transform .07s,border-color .12s,background .12s;color:var(--ink);display:flex;align-items:center;justify-content:center;min-width:72px;min-height:64px}
+.word.tile{font-family:"Montserrat";font-weight:700;letter-spacing:.1em;font-size:1.2rem;color:var(--teal-deep)}
+.word:hover{border-color:var(--teal)}
+.word:active{transform:translateY(1px)}
+.word.right{background:var(--ok-bg);border-color:var(--ok);color:#15623f}
+.word.bad{background:var(--no-bg);border-color:var(--no);color:#8f2a20}
+.word[disabled]{cursor:default}
+
+.btn{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:10px;padding:10px 16px;font-family:"Montserrat";font-weight:700;font-size:.9rem;cursor:pointer;transition:.12s}
+.btn:hover{background:var(--sky-soft)}
+.btn:disabled{opacity:.5;cursor:default}
+.btn-ghost{background:transparent;border-color:transparent;color:var(--muted)}
+.btn-ghost:hover:not(:disabled){color:var(--ink);background:var(--sky-soft)}
+.row{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:10px}
+.prog{margin-left:auto;font-family:"Montserrat";font-size:.8rem;color:var(--muted)}
+.feedback{font-size:.95rem;font-weight:600;min-height:1.3em;margin-top:11px}
+.feedback.ok{color:var(--ok)}
+.feedback.no{color:var(--no)}
+
+.endcard{margin-top:34px;background:linear-gradient(135deg,var(--teal),var(--teal-deep));border-radius:var(--radius);padding:24px 28px;color:#fff;box-shadow:var(--shadow)}
+.endcard h2{color:#fff;font-size:1.2rem;margin-bottom:6px}
+.endcard p{color:#D9ECF3;margin:0 0 14px;max-width:54ch}
+.endcard a{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:#3A2D05;text-decoration:none;font-family:"Montserrat";font-weight:700;padding:12px 18px;border-radius:11px}
+.endcard a svg{width:17px;height:17px}
+
+.foot{border-top:1px solid var(--line);margin-top:40px;padding-top:24px;color:var(--muted);font-size:.9rem}
+.foot b{color:var(--ink);font-family:"Montserrat";font-weight:700}
+.foot a{color:var(--teal);font-weight:600;text-decoration:none}
+
+@media (max-width:680px){
+  body{font-size:17px}
+  .worked,.act{padding:20px 18px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/11-resource-hub/" aria-label="Tom Sanderson Tutoring home"><span class="a">Tom&nbsp;Sanderson</span><span class="b">Tutoring</span></a>
+    <a class="back" href="/11-resource-hub/non-verbal-reasoning/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Non-Verbal Reasoning</a>
+    <div class="top-right">
+      <a class="site-link" href="https://tomsandersontutoring.com">&larr; Tom&rsquo;s tutoring site</a>
+      <span class="free-pill">Free &middot; no sign-up</span>
+      <button class="comfort-btn" id="comfort" aria-pressed="false" onclick="toggleComfort()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg>
+        Reading comfort
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="crumb"><a href="/11-resource-hub/non-verbal-reasoning/">Non-Verbal Reasoning</a> &nbsp;&rsaquo;&nbsp; Shape codes</p>
+
+  <section class="hero">
+    <span class="eyebrow">Non-Verbal Reasoning &middot; Topic 4</span>
+    <h1>Shape codes</h1>
+    <p class="sub">Every shape is given a short code of letters, where each letter stands for one feature. You are shown a few examples, work out what the letters mean, then use them. Everything you need is on this page.</p>
+    <nav class="pagenav" aria-label="On this page">
+      <a href="#about">Start here</a>
+      <a href="#s1">Horizontal codes</a>
+      <a href="#s2">Vertical codes</a>
+    </nav>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2>Start here</h2>
+    <p>A shape code is a little label made of letters. Each letter describes <b>one</b> feature of the shape &mdash; perhaps what shape it is, how it is shaded, or how many there are. You are always given some example shapes with their codes. Those examples are the key: compare them and you can work out what each letter means, then read or build any code you like.</p>
+    <p>The trick is to take the letters <b>one column at a time</b>. Look only at the first letters across all the examples and ask what they have in common; then only the second letters. Each position is its own little puzzle.</p>
+    <ul class="types-list">
+      <li><b>Horizontal codes</b> &mdash; the two letters sit side by side, and each stands for a feature.</li>
+      <li><b>Vertical codes</b> &mdash; the same idea, but the two letters are stacked one above the other.</li>
+    </ul>
+  </section>
+
+  <!-- ============ 1 HORIZONTAL ============ -->
+  <section class="section" id="s1">
+    <h2>1. Horizontal codes</h2>
+    <p>Here the code is two letters, side by side. In the examples below, the <b>first letter</b> tells you the shape and the <b>second letter</b> tells you the shading. Work out the key from the examples, then find the code for a new shape.</p>
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">
+        <div style="margin-bottom:8px">Use the examples to work out the code for the new shape.</div>
+        <div id="we-hc"></div>
+      </div>
+      <ol class="steps">
+        <li><b>First letters.</b> A goes with the circle, B with the square, C with the triangle. So the first letter is the <em>shape</em>.</li>
+        <li><b>Second letters.</b> P goes with white, Q with shaded, R with solid. So the second letter is the <em>shading</em>.</li>
+        <li><b>Build the new code.</b> The new shape is a shaded circle: circle is A, shaded is Q.</li>
+      </ol>
+      <div class="answer-line">Answer: AQ.</div>
+    </div>
+    <div class="act" id="p1">
+      <div class="act-head"><span class="num">1</span><h3>Your go: horizontal codes</h3></div>
+      <p class="instr">Work out what each letter means from the examples, then tap the code for the new shape.</p>
+      <div class="qfig" id="hc-q"></div>
+      <div class="optlab">Which code is right?</div>
+      <div class="optrow" id="hc-opts"></div>
+      <div class="row"><button class="btn btn-ghost" id="hc-next" disabled>Next &rarr;</button><span class="prog" id="hc-prog"></span></div>
+      <div class="feedback" id="hc-fb" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ============ 2 VERTICAL ============ -->
+  <section class="section" id="s2">
+    <h2>2. Vertical codes</h2>
+    <p>Vertical codes work in just the same way, but the two letters are stacked, one above the other. To show you the idea is the same whatever the letters stand for, here the <b>top letter</b> tells you <em>how many</em> shapes there are, and the <b>bottom letter</b> tells you <em>which</em> shape.</p>
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">
+        <div style="margin-bottom:8px">The top letter is the number, the bottom letter is the shape. Find the code.</div>
+        <div id="we-vc"></div>
+      </div>
+      <ol class="steps">
+        <li><b>Top letters.</b> J goes with one shape, K goes with two. So the top letter is <em>how many</em>.</li>
+        <li><b>Bottom letters.</b> A goes with the circle, B with the square, C with the triangle. So the bottom letter is the <em>shape</em>.</li>
+        <li><b>Build the new code.</b> The new picture is two circles: two is K, circle is A.</li>
+      </ol>
+      <div class="answer-line">Answer: K above A.</div>
+    </div>
+    <div class="act" id="p2">
+      <div class="act-head"><span class="num">2</span><h3>Your go: vertical codes</h3></div>
+      <p class="instr">Read the top letter as the number and the bottom letter as the shape, then tap the code for the new picture.</p>
+      <div class="qfig" id="vc-q"></div>
+      <div class="optlab">Which code is right?</div>
+      <div class="optrow" id="vc-opts"></div>
+      <div class="row"><button class="btn btn-ghost" id="vc-next" disabled>Next &rarr;</button><span class="prog" id="vc-prog"></span></div>
+      <div class="feedback" id="vc-fb" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- END -->
+  <div class="endcard">
+    <h2>That is shape codes</h2>
+    <p>One column at a time, and the key falls out of the examples every time. That is the whole of non-verbal reasoning covered &mdash; well done.</p>
+    <a href="/11-resource-hub/non-verbal-reasoning/">Back to Non-Verbal Reasoning
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+    </a>
+  </div>
+
+  <footer class="foot">
+    <p style="margin:0 0 6px"><b>Tom Sanderson Tutoring</b> &middot; Milton Keynes</p>
+    <p style="margin:0;max-width:62ch">A free resource for families preparing for the 11+. If you&rsquo;d like a hand beyond the page, you can <a href="https://tomsandersontutoring.com">find out about tutoring here</a>.</p>
+  </footer>
+
+</main>
+
+<script>
+function toggleComfort(){var on=document.body.classList.toggle('comfort');document.getElementById('comfort').setAttribute('aria-pressed',on?'true':'false');}
+function $(id){return document.getElementById(id);}
+
+/* ---------- shape engine ---------- */
+var COL={w:'#FFFFFF',g:'#9FD3E8',b:'#1E647C'};
+var STROKE='stroke="#174E61" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+var SIDES={tri:3,square:4,pent:5,hex:6};
+function poly(cx,cy,r,n,rot){var a=[],i,ang;for(i=0;i<n;i++){ang=(-90+(rot||0)+i*360/n)*Math.PI/180;a.push((cx+r*Math.cos(ang)).toFixed(1)+','+(cy+r*Math.sin(ang)).toFixed(1));}return a.join(' ');}
+function shp(s,cx,cy,r,f,rot){var col=COL[f||'w'];
+  if(s==='circle')return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="'+col+'" '+STROKE+'/>';
+  if(s==='square')return '<rect x="'+(cx-r*0.86).toFixed(1)+'" y="'+(cy-r*0.86).toFixed(1)+'" width="'+(r*1.72).toFixed(1)+'" height="'+(r*1.72).toFixed(1)+'" rx="3" fill="'+col+'" '+STROKE+' transform="rotate('+(rot||0)+' '+cx+' '+cy+')"/>';
+  if(SIDES[s])return '<polygon points="'+poly(cx,cy,r,SIDES[s],rot)+'" fill="'+col+'" '+STROKE+'/>';
+  return '';}
+function F(o){o=o||{};var inner='';var n=o.n||1,r=38*(o.sz||1);
+  if(n>1){var k,xs=(n===2?[30,70]:[22,50,78]),rr=(n===2?18:15);for(k=0;k<n;k++)inner+=shp(o.s||'circle',xs[k],50,rr,o.f,o.rot);}
+  else{inner+=shp(o.s||'circle',50,50,r,o.f,o.rot);}
+  return '<svg viewBox="0 0 100 100" class="fig" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>';}
+
+/* ---------- code builders ---------- */
+function vs(a,b){return '<span class="vstack"><b>'+a+'</b><b>'+b+'</b></span>';}
+function keyRow(pairs){return '<div class="keylab">The code for each shape:</div><div class="keyrow">'+pairs.map(function(p){return '<div class="keyitem"><span class="figcell">'+F(p.s)+'</span><div class="code">'+p.c+'</div></div>';}).join('')+'</div>';}
+function target(spec){return '<div class="qlab">Now find the code for this:</div><div class="targetrow"><span class="figcell">'+F(spec)+'</span><span class="eq">= ?</span></div>';}
+function codeQ(pairs,tgt){return keyRow(pairs)+target(tgt);}
+
+/* ---------- picker ---------- */
+function nvrPick(p,items){
+  var i=0,score=0,locked=false;
+  function render(){
+    locked=false;
+    $(p+'-q').innerHTML=items[i].q||'';
+    var host=$(p+'-opts');host.innerHTML='';
+    items[i].opts.forEach(function(o,k){
+      var b=document.createElement('button');b.setAttribute('aria-label','Option '+(k+1));
+      if(typeof o==='string'){b.className='word tile';b.innerHTML=o;}else{b.className='word';b.innerHTML=F(o);}
+      b.onclick=function(){pick(k,b);};host.appendChild(b);
+    });
+    $(p+'-fb').textContent='';$(p+'-fb').className='feedback';
+    $(p+'-next').disabled=true;
+    $(p+'-prog').textContent='Question '+(i+1)+' of '+items.length;
+  }
+  function pick(k,b){
+    if(locked)return;locked=true;var it=items[i];
+    [].forEach.call($(p+'-opts').children,function(c,j){c.disabled=true;if(j===it.a)c.classList.add('right');});
+    if(k===it.a)score++;else b.classList.add('bad');
+    var fb=$(p+'-fb');fb.className='feedback '+(k===it.a?'ok':'no');fb.innerHTML=(k===it.a?'✓ ':'')+it.why;
+    $(p+'-next').disabled=(i>=items.length-1);
+    $(p+'-prog').textContent='Score '+score+' of '+(i+1)+(i>=items.length-1?' · set complete':'');
+  }
+  $(p+'-next').onclick=function(){if(i<items.length-1){i++;render();}};
+  render();
+}
+
+/* ---------- worked examples ---------- */
+$('we-hc').innerHTML=codeQ([{s:{s:'circle',f:'w'},c:'AP'},{s:{s:'square',f:'g'},c:'BQ'},{s:{s:'tri',f:'b'},c:'CR'}],{s:'circle',f:'g'});
+$('we-vc').innerHTML=codeQ([{s:{s:'circle',n:1,f:'g'},c:vs('J','A')},{s:{s:'square',n:2,f:'g'},c:vs('K','B')},{s:{s:'tri',n:1,f:'g'},c:vs('J','C')}],{s:'circle',n:2,f:'g'});
+
+/* ---------- DATA (all original; one code fits by the key shown) ---------- */
+/* Horizontal: 1st letter = shape (circle A, square B, triangle C, pentagon D); 2nd letter = shading (white P, shaded Q, solid R) */
+nvrPick('hc',[
+  {q:codeQ([{s:{s:'circle',f:'w'},c:'AP'},{s:{s:'square',f:'g'},c:'BQ'},{s:{s:'tri',f:'b'},c:'CR'}],{s:'circle',f:'g'}),opts:['AQ','AP','BQ','CR'],a:0,why:'First letter is the shape (A = circle), second is the shading (Q = shaded). A shaded circle is AQ. AP would be a white circle.'},
+  {q:codeQ([{s:{s:'circle',f:'b'},c:'AR'},{s:{s:'square',f:'w'},c:'BP'},{s:{s:'tri',f:'g'},c:'CQ'}],{s:'tri',f:'w'}),opts:['CP','CQ','BP','AR'],a:0,why:'C is the triangle, P is white. A white triangle is CP. CQ would be a shaded triangle.'},
+  {q:codeQ([{s:{s:'pent',f:'g'},c:'DQ'},{s:{s:'square',f:'b'},c:'BR'},{s:{s:'circle',f:'w'},c:'AP'}],{s:'square',f:'g'}),opts:['BR','BQ','DQ','AP'],a:1,why:'B is the square, Q is shaded. A shaded square is BQ. BR would be a solid square.'},
+  {q:codeQ([{s:{s:'pent',f:'w'},c:'DP'},{s:{s:'circle',f:'b'},c:'AR'},{s:{s:'square',f:'g'},c:'BQ'}],{s:'pent',f:'b'}),opts:['AR','DP','DR','BQ'],a:2,why:'D is the pentagon, R is solid. A solid pentagon is DR. DP would be a white pentagon.'}
+]);
+
+/* Vertical: top letter = number (one J, two K); bottom letter = shape (circle A, square B, triangle C, pentagon D) */
+nvrPick('vc',[
+  {q:codeQ([{s:{s:'circle',n:1,f:'g'},c:vs('J','A')},{s:{s:'square',n:2,f:'g'},c:vs('K','B')},{s:{s:'tri',n:1,f:'g'},c:vs('J','C')}],{s:'circle',n:2,f:'g'}),opts:[vs('K','A'),vs('J','A'),vs('K','B'),vs('J','C')],a:0,why:'Top letter is the number (K = two), bottom is the shape (A = circle). Two circles is K above A.'},
+  {q:codeQ([{s:{s:'tri',n:2,f:'g'},c:vs('K','C')},{s:{s:'square',n:1,f:'g'},c:vs('J','B')},{s:{s:'circle',n:2,f:'g'},c:vs('K','A')}],{s:'tri',n:1,f:'g'}),opts:[vs('J','C'),vs('K','C'),vs('J','B'),vs('K','A')],a:0,why:'One is J, and the triangle is C. One triangle is J above C. K above C would be two triangles.'},
+  {q:codeQ([{s:{s:'pent',n:1,f:'g'},c:vs('J','D')},{s:{s:'square',n:2,f:'g'},c:vs('K','B')},{s:{s:'circle',n:1,f:'g'},c:vs('J','A')}],{s:'pent',n:2,f:'g'}),opts:[vs('K','B'),vs('J','D'),vs('K','D'),vs('J','A')],a:2,why:'Two is K, and the pentagon is D. Two pentagons is K above D.'},
+  {q:codeQ([{s:{s:'pent',n:2,f:'g'},c:vs('K','D')},{s:{s:'tri',n:1,f:'g'},c:vs('J','C')},{s:{s:'square',n:2,f:'g'},c:vs('K','B')}],{s:'pent',n:1,f:'g'}),opts:[vs('K','D'),vs('J','D'),vs('J','C'),vs('K','B')],a:1,why:'One is J, and the pentagon is D. One pentagon is J above D. K above D would be two pentagons.'}
+]);
+
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length>1){var el=document.querySelector(id);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}}});
+});
+</script>
+</body>
+</html>
