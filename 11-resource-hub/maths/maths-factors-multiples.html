@@ -1,0 +1,631 @@
+<!doctype html>
+<!-- Tom Sanderson Tutoring — 11+ Resource Hub · Maths. All content original and © Tom Sanderson Tutoring. -->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Factors, multiples &amp; special numbers — Maths | Tom Sanderson Tutoring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#1E647C;--teal-deep:#174E61;--sky:#9FD3E8;--sky-soft:#E4F1F7;--amber:#F5BA18;--white:#FFFFFF;
+  --paper:#F1F7FA;--surface:#FFFFFF;--ink:#15323D;--muted:#5E7A84;--line:#D8E7EE;--line-soft:#E8F1F5;
+  --ok:#1B8A5A;--ok-bg:#E6F5EE;--no:#C24A3D;--no-bg:#FBECE9;
+  --radius:18px;--radius-s:12px;
+  --shadow:0 1px 2px rgba(21,50,61,.05), 0 10px 30px rgba(21,50,61,.07);
+  --shadow-lift:0 4px 10px rgba(21,50,61,.08), 0 20px 44px rgba(21,50,61,.12);
+  --maxw:860px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Raleway",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+body.comfort{letter-spacing:.02em;word-spacing:.06em;line-height:1.9}
+body.comfort p{margin-bottom:1.1em}
+h1,h2,h3,h4{font-family:"Montserrat",sans-serif;margin:0;line-height:1.2;letter-spacing:-.01em;color:var(--teal-deep)}
+p{margin:0 0 1em}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+button{font-family:inherit}
+
+.top{position:sticky;top:0;z-index:30;background:rgba(241,247,250,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{display:inline-flex;align-items:stretch;border-radius:8px;overflow:hidden;text-decoration:none;box-shadow:0 1px 2px rgba(21,50,61,.12);flex:0 0 auto}
+.logo .a{background:var(--teal);color:var(--amber);font-family:"Montserrat";font-weight:800;font-size:.9rem;padding:8px 11px;display:flex;align-items:center;line-height:1}
+.logo .b{background:var(--white);color:var(--teal);font-family:"Montserrat";font-weight:600;font-size:.9rem;padding:8px 12px;display:flex;align-items:center;line-height:1;border:1px solid var(--line);border-left:0}
+.back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--muted);font-weight:600;font-size:.88rem}
+.back:hover{color:var(--teal)}
+.back svg{width:16px;height:16px}
+.top-right{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.site-link{font-family:"Raleway",sans-serif;font-size:.85rem;font-weight:600;color:var(--muted);text-decoration:none;white-space:nowrap}
+.site-link:hover{color:var(--teal);text-decoration:underline}
+.free-pill{font-family:"Montserrat";font-weight:700;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--white);border:1px solid var(--line);padding:6px 11px;border-radius:999px}
+.comfort-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--white);color:var(--muted);border-radius:999px;padding:6px 12px;font-weight:600;font-size:.82rem;cursor:pointer;transition:.14s}
+.comfort-btn:hover{border-color:var(--teal);color:var(--teal)}
+.comfort-btn[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.comfort-btn svg{width:15px;height:15px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px 90px}
+
+.crumb{font-size:.82rem;color:var(--muted);margin:22px 0 0}
+.crumb a{color:var(--teal);text-decoration:none;font-weight:600}
+.hero{padding:14px 0 6px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:"Montserrat";font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:var(--sky-soft);border:1px solid var(--sky);padding:6px 13px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:clamp(1.9rem,4.6vw,2.6rem);font-weight:800}
+.hero .sub{font-size:clamp(1.05rem,2.2vw,1.18rem);margin-top:14px;max-width:62ch}
+
+.pagenav{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0}
+.pagenav a{font-size:.85rem;text-decoration:none;color:var(--teal-deep);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-weight:600}
+.pagenav a:hover{border-color:var(--sky);background:var(--sky-soft)}
+
+.section{padding:30px 0 0;scroll-margin-top:80px}
+.section h2{font-size:1.45rem;font-weight:700;margin-bottom:12px}
+.section p,.section li{max-width:66ch}
+.section ul{margin:0 0 1em;padding-left:0;list-style:none}
+.types-list li{position:relative;padding:8px 0 8px 30px;border-bottom:1px solid var(--line-soft);max-width:66ch}
+.types-list li:last-child{border-bottom:0}
+.types-list li::before{content:"";position:absolute;left:6px;top:15px;width:9px;height:9px;border-radius:3px;background:var(--sky)}
+.types-list b{color:var(--ink)}
+
+.callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:0 var(--radius-s) var(--radius-s) 0;padding:16px 19px;margin:16px 0 0;box-shadow:var(--shadow)}
+.callout h4{font-family:"Montserrat";font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#9A6B16;margin-bottom:7px}
+.callout ul{margin:0;padding-left:18px}
+.callout li{margin:4px 0;font-size:.95rem}
+.callout li::marker{color:var(--amber)}
+
+/* worked example */
+.worked{background:linear-gradient(135deg,#F2F8FB,#FFFFFF);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;margin-top:14px;box-shadow:var(--shadow)}
+.worked .q{background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);padding:14px 16px;margin-bottom:14px}
+.worked .q .ask{font-weight:600;margin-bottom:10px}
+.worked .pair{display:flex;gap:18px;flex-wrap:wrap}
+.worked .pair .grp{font-family:"Montserrat";font-weight:700;color:var(--teal-deep);background:var(--sky-soft);border:1px solid var(--sky);border-radius:8px;padding:8px 12px}
+.steps{counter-reset:s;margin:0;padding:0;list-style:none}
+.steps li{position:relative;padding:0 0 12px 38px;max-width:64ch}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;font-family:"Montserrat";font-weight:700;font-size:.85rem;display:grid;place-items:center}
+.steps b{color:var(--ink)}
+.answer-line{margin-top:14px;background:var(--ok-bg);border:1px solid #BFE6D2;border-radius:var(--radius-s);padding:11px 15px;font-weight:600;color:#15623f}
+
+/* activities */
+.act{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow);margin-top:16px}
+.act-head{display:flex;align-items:center;gap:11px;margin-bottom:3px}
+.act-head .num{flex:0 0 auto;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--teal);color:#fff;font-family:"Montserrat";font-weight:700;font-size:.9rem}
+.act-head h3{font-size:1.1rem;font-weight:700}
+.act .instr{color:var(--muted);font-size:.93rem;margin:2px 0 14px}
+.stem{background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:8px;padding:12px 15px;font-size:1.06rem;margin-bottom:14px}
+.stem .fillw{color:var(--teal);border-bottom:2px solid var(--sky)}
+.groups{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 14px}
+.groupbox{background:var(--sky-soft);border:1px solid var(--line);border-radius:var(--radius-s);padding:12px 13px}
+.groupbox .gl{font-family:"Montserrat";font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:9px}
+.wordcol{display:flex;flex-direction:column;gap:8px}
+.wordwrap{display:flex;flex-wrap:wrap;gap:9px;margin:2px 0 14px}
+.optgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:2px 0 14px}
+.word{border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:10px 14px;font-size:1rem;cursor:pointer;text-align:center;transition:transform .07s,border-color .12s,background .12s;color:var(--ink)}
+.word:hover{border-color:var(--teal)}
+.word:active{transform:translateY(1px)}
+.word.sel{background:var(--teal);border-color:var(--teal);color:#fff;font-weight:600}
+.word.right{background:var(--ok-bg);border-color:var(--ok);color:#15623f;font-weight:600}
+.word.bad{background:var(--no-bg);border-color:var(--no);color:#8f2a20;font-weight:600}
+.word[disabled]{cursor:default}
+
+.btn{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:10px;padding:10px 16px;font-family:"Montserrat";font-weight:700;font-size:.9rem;cursor:pointer;transition:.12s}
+.btn:hover{background:var(--sky-soft)}
+.btn:disabled{opacity:.5;cursor:default}
+.btn-primary{background:var(--teal);border-color:var(--teal);color:#fff}
+.btn-primary:hover:not(:disabled){background:var(--teal-deep)}
+.btn-ghost{background:transparent;border-color:transparent;color:var(--muted)}
+.btn-ghost:hover:not(:disabled){color:var(--ink);background:var(--sky-soft)}
+.row{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:4px}
+.prog{margin-left:auto;font-family:"Montserrat";font-size:.8rem;color:var(--muted)}
+.feedback{font-size:.95rem;font-weight:600;min-height:1.3em;margin-top:11px}
+.feedback.ok{color:var(--ok)}
+.feedback.no{color:var(--no)}
+
+.endcard{margin-top:30px;background:linear-gradient(135deg,var(--teal),var(--teal-deep));border-radius:var(--radius);padding:24px 28px;color:#fff;box-shadow:var(--shadow)}
+.endcard h2{color:#fff;font-size:1.2rem;margin-bottom:6px}
+.endcard p{color:#D9ECF3;margin:0 0 14px;max-width:54ch}
+.endcard a{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:#3A2D05;text-decoration:none;font-family:"Montserrat";font-weight:700;padding:12px 18px;border-radius:11px}
+.endcard a svg{width:17px;height:17px}
+
+.foot{border-top:1px solid var(--line);margin-top:40px;padding-top:24px;color:var(--muted);font-size:.9rem}
+.foot b{color:var(--ink);font-family:"Montserrat";font-weight:700}
+.foot a{color:var(--teal);font-weight:600;text-decoration:none}
+
+@media (max-width:680px){
+  body{font-size:17px}
+  .groups,.optgrid{grid-template-columns:1fr}
+  .worked,.act{padding:20px 18px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
+
+/* ---- page-specific additions (Factors, multiples & special numbers) ---- */
+.section h3{font-size:1.05rem;font-weight:700;margin:24px 0 8px;color:var(--ink)}
+.worked .wl{font-family:"Montserrat";font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:8px}
+.steps b{display:block;margin-bottom:3px}
+.big{font-family:"Montserrat";font-weight:700;letter-spacing:.03em;color:var(--teal-deep)}
+
+.numstrip-lab{font-size:.8rem;color:var(--muted);margin:6px 0 6px;font-weight:600}
+.numstrip{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:6px;padding-bottom:6px;margin:0 0 12px;-webkit-overflow-scrolling:touch}
+.numstrip .n{flex:0 0 auto;min-width:54px;text-align:center;border:1.5px solid var(--line);border-radius:8px;padding:8px 6px;background:#fff}
+.numstrip .n b{display:block;font-family:"Montserrat";font-size:1.05rem;color:var(--teal-deep);line-height:1.15}
+.numstrip .n span{display:block;font-size:.64rem;color:var(--muted);margin-top:3px;line-height:1.2}
+
+.diagram{background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);padding:14px 12px 8px;margin:6px 0 8px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.diagram svg{display:block;min-width:520px;margin:0 auto}
+.cap{font-size:.85rem;color:var(--muted);margin:0 0 1em}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/11-resource-hub/" aria-label="Tom Sanderson Tutoring home"><span class="a">Tom&nbsp;Sanderson</span><span class="b">Tutoring</span></a>
+    <a class="back" href="/11-resource-hub/maths/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Maths</a>
+    <div class="top-right">
+      <a class="site-link" href="https://tomsandersontutoring.com">&larr; Tom&rsquo;s tutoring site</a>
+      <span class="free-pill">Free &middot; no sign-up</span>
+      <button class="comfort-btn" id="comfort" aria-pressed="false" onclick="toggleComfort()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg>
+        Reading comfort
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="crumb"><a href="/11-resource-hub/maths/">Maths</a> &nbsp;&rsaquo;&nbsp; Factors, multiples &amp; special numbers</p>
+
+  <section class="hero">
+    <span class="eyebrow">Maths &middot; Topic 3</span>
+    <h1>Factors, multiples &amp; special numbers</h1>
+    <p class="sub">These are the patterns hiding inside numbers &mdash; what divides into what, which numbers are &ldquo;special&rdquo;, and the quick tricks for spotting them. Learn a few of these by heart and a lot of questions turn into a few seconds&rsquo; work.</p>
+    <nav class="pagenav" aria-label="On this page">
+      <a href="#about">Start here</a>
+      <a href="#s1">Factors &amp; multiples</a>
+      <a href="#s2">Primes &amp; divisibility</a>
+      <a href="#s3">Squares, cubes &amp; roots</a>
+      <a href="#s4">Roman numerals &amp; more</a>
+    </nav>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2>What these questions are</h2>
+    <p>Most of this topic is about looking at a number and seeing how it is built &mdash; which numbers divide into it, which times-table it belongs to, and whether it is one of the &ldquo;special&rdquo; numbers like a square or a prime.</p>
+    <p>None of it needs hard arithmetic. It rewards knowing a few facts by heart and spotting a pattern quickly. Here is how the page is split:</p>
+    <ul class="types-list">
+      <li><b>Factors, multiples, HCF &amp; LCM</b> &mdash; what divides into a number, its times-table, and the shared ones between two numbers.</li>
+      <li><b>Primes, prime factors &amp; divisibility</b> &mdash; numbers with exactly two factors, breaking a number into primes, and quick tests for dividing.</li>
+      <li><b>Squares, cubes, roots &amp; triangular numbers</b> &mdash; the special number patterns, and powers written the short way.</li>
+      <li><b>Roman numerals, odd &amp; even, and consecutive numbers</b> &mdash; a few smaller ideas that come up often.</li>
+    </ul>
+    <div class="callout">
+      <h4>How to crack them</h4>
+      <ul>
+        <li><b>Factors</b> divide <b>into</b> a number; <b>multiples</b> are its <b>times-table</b>. Keep the two words apart.</li>
+        <li>To spot a prime, test the small primes in turn: 2, then 3, then 5, then 7&hellip;</li>
+        <li>Learn the divisibility shortcuts &mdash; they save you doing the division at all.</li>
+        <li>Keep a mental list of the squares to 12&sup2; and the cubes to 5&sup3;.</li>
+      </ul>
+    </div>
+    <div class="callout"><p style="margin:0;font-size:.95rem"><b>A little tip:</b> in every question we&rsquo;ve <b>bolded</b> the key word &mdash; like <b>factor</b>, <b>multiple</b>, <b>prime</b>, <b>highest</b> or <b>lowest</b> &mdash; so you always know exactly what you&rsquo;re being asked to find.</p></div>
+  </section>
+
+  <!-- ============ SECTION 1: FACTORS, MULTIPLES, HCF & LCM ============ -->
+  <section class="section" id="s1">
+    <h2>1. Factors, multiples, HCF &amp; LCM</h2>
+    <p>A <b>factor</b> is a number that divides into another exactly, leaving no remainder. A <b>multiple</b> is what you get in a number&rsquo;s times-table. So 3 is a factor of 12, and 12 is a multiple of 3 &mdash; the same fact seen from both ends.</p>
+    <p>When you compare two numbers, the factors they share are their <b>common factors</b>, and the biggest of those is the <b>highest common factor (HCF)</b>. The first multiple they share is the <b>lowest common multiple (LCM)</b>.</p>
+
+    <h3>Listing factors in pairs</h3>
+    <p>The safe way to find every factor is to work in pairs, so you never miss one.</p>
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">List all the <b>factors</b> of <span class="big">24</span>.</div>
+      <div class="pair" style="margin-bottom:14px">
+        <span class="grp">1 &times; 24</span><span class="grp">2 &times; 12</span><span class="grp">3 &times; 8</span><span class="grp">4 &times; 6</span>
+      </div>
+      <ol class="steps">
+        <li><b>Work upwards in pairs.</b> 1 goes with 24, 2 with 12, 3 with 8, 4 with 6 &mdash; each pair multiplies to make 24.</li>
+        <li><b>Stop when the pairs meet.</b> 5 doesn&rsquo;t divide 24, and after 4 &times; 6 the next factor (6) has already appeared, so the list is finished.</li>
+        <li><b>Write them in order, smallest first.</b></li>
+      </ol>
+      <div class="answer-line">Answer: 1, 2, 3, 4, 6, 8, 12, 24 &mdash; eight factors in all.</div>
+    </div>
+
+    <h3>Highest common factor &amp; lowest common multiple</h3>
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">Find the <b>highest</b> common factor of 12 and 18, and the <b>lowest</b> common multiple of 4 and 6.</div>
+      <ol class="steps">
+        <li><b>HCF &mdash; list the factors of each, then pick the biggest shared one.</b> Factors of 12: 1, 2, 3, 4, 6, 12. Factors of 18: 1, 2, 3, 6, 9, 18. Shared: 1, 2, 3 and 6 &mdash; the highest is 6.</li>
+        <li><b>LCM &mdash; list the multiples of each, then pick the first shared one.</b> Multiples of 4: 4, 8, 12, 16&hellip; Multiples of 6: 6, 12, 18&hellip; The first in both lists is 12.</li>
+        <li><b>Keep them straight.</b> The HCF is a factor, so it divides in and stays small; the LCM is a multiple, so it&rsquo;s usually bigger. Swapping the two is the classic slip.</li>
+      </ol>
+      <div class="answer-line">Answer: HCF of 12 and 18 = 6; LCM of 4 and 6 = 12.</div>
+    </div>
+
+    <div class="act" id="a1">
+      <div class="act-head"><span class="num">1</span><h3>Your go: factors, multiples, HCF &amp; LCM</h3></div>
+      <p class="instr">Read the bolded word carefully &mdash; a <b>factor</b> divides in, a <b>multiple</b> is in the times-table, and watch the <b>highest</b>/<b>lowest</b> swap.</p>
+      <div class="stem" id="fm-q"></div>
+      <div class="optgrid" id="fm-opts"></div>
+      <div class="row"><button class="btn btn-ghost" id="fm-next" disabled>Next &rarr;</button><span class="prog" id="fm-prog"></span></div>
+      <div class="feedback" id="fm-fb" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2: PRIMES, PRIME FACTORS & DIVISIBILITY ============ -->
+  <section class="section" id="s2">
+    <h2>2. Prime numbers, prime factors &amp; divisibility</h2>
+    <p>A <b>prime</b> number has exactly two factors: 1 and itself. So it can only be divided cleanly by 1 and by the number you started with. The first few are 2, 3, 5, 7, 11, 13&hellip;</p>
+    <p>Two things worth remembering: <b>1 is not prime</b> (it has only one factor, itself), and 2 is the only even prime &mdash; every other even number has 2 as a factor.</p>
+
+    <h3>Is it prime? Test the small primes</h3>
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">Is <span class="big">51</span> a <b>prime</b> number?</div>
+      <ol class="steps">
+        <li><b>Try the small primes in turn.</b> Is 51 even? No, so 2 is out.</li>
+        <li><b>Test 3 with the digit trick.</b> 5 + 1 = 6, which is a multiple of 3, so 3 divides 51.</li>
+        <li><b>Finish the division.</b> 51 &divide; 3 = 17, so 51 = 3 &times; 17 &mdash; it has more than two factors.</li>
+      </ol>
+      <div class="answer-line">Answer: 51 is <b>not</b> prime; it is 3 &times; 17. (51, 57 and 91 all look prime but aren&rsquo;t.)</div>
+    </div>
+
+    <h3>Breaking a number into its prime factors</h3>
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">Write <span class="big">60</span> as a product of its <b>prime</b> factors.</div>
+      <ol class="steps">
+        <li><b>Peel off the smallest prime you can, again and again.</b> 60 = 2 &times; 30, then 30 = 2 &times; 15, then 15 = 3 &times; 5.</li>
+        <li><b>Collect the primes.</b> That leaves 60 = 2 &times; 2 &times; 3 &times; 5, all of them prime.</li>
+        <li><b>Check by multiplying back.</b> 2 &times; 2 &times; 3 &times; 5 = 60. In short (index) form that&rsquo;s 2&sup2; &times; 3 &times; 5.</li>
+      </ol>
+      <div class="answer-line">Answer: 60 = 2 &times; 2 &times; 3 &times; 5 (= 2&sup2; &times; 3 &times; 5).</div>
+    </div>
+
+    <h3>Divisibility shortcuts</h3>
+    <p>These quick tests tell you whether one number divides into another, without doing the division:</p>
+    <ul class="types-list">
+      <li><b>&divide; 2</b> &mdash; the number is even (ends in 0, 2, 4, 6 or 8).</li>
+      <li><b>&divide; 3</b> &mdash; the digits add up to a multiple of 3.</li>
+      <li><b>&divide; 4</b> &mdash; the last two digits make a multiple of 4.</li>
+      <li><b>&divide; 5</b> &mdash; it ends in 0 or 5.</li>
+      <li><b>&divide; 6</b> &mdash; it passes the &divide; 2 test <b>and</b> the &divide; 3 test.</li>
+      <li><b>&divide; 9</b> &mdash; the digits add up to a multiple of 9.</li>
+      <li><b>&divide; 10</b> &mdash; it ends in 0.</li>
+    </ul>
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">Is <span class="big">918</span> divisible by 9?</div>
+      <ol class="steps">
+        <li><b>Add the digits.</b> 9 + 1 + 8 = 18.</li>
+        <li><b>Check the total.</b> 18 is a multiple of 9, so yes.</li>
+        <li><b>Don&rsquo;t confuse it with the 3-test.</b> For 9 the digit-total must reach a multiple of <b>9</b>, not just of 3.</li>
+      </ol>
+      <div class="answer-line">Answer: yes &mdash; 918 &divide; 9 = 102.</div>
+    </div>
+
+    <div class="act" id="a2">
+      <div class="act-head"><span class="num">2</span><h3>Your go: primes, prime factors &amp; divisibility</h3></div>
+      <p class="instr">Spot the <b>prime</b>, choose the correct prime factorisation, or use a divisibility test.</p>
+      <div class="stem" id="pr-q"></div>
+      <div class="optgrid" id="pr-opts"></div>
+      <div class="row"><button class="btn btn-ghost" id="pr-next" disabled>Next &rarr;</button><span class="prog" id="pr-prog"></span></div>
+      <div class="feedback" id="pr-fb" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3: SQUARES, CUBES, ROOTS & TRIANGULAR NUMBERS ============ -->
+  <section class="section" id="s3">
+    <h2>3. Square &amp; cube numbers, roots &amp; triangular numbers</h2>
+    <p>A <b>square</b> number is a number multiplied by itself: 5&sup2; = 5 &times; 5 = 25. A <b>cube</b> number is a number multiplied by itself three times: 2&sup3; = 2 &times; 2 &times; 2 = 8. It&rsquo;s worth knowing these by heart, so here they are:</p>
+
+    <div class="numstrip-lab">Square numbers, 1&sup2; to 12&sup2;:</div>
+    <div class="numstrip" role="img" aria-label="Square numbers: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144 — the squares of 1 to 12">
+      <div class="n"><b>1</b><span>1&sup2;</span></div>
+      <div class="n"><b>4</b><span>2&sup2;</span></div>
+      <div class="n"><b>9</b><span>3&sup2;</span></div>
+      <div class="n"><b>16</b><span>4&sup2;</span></div>
+      <div class="n"><b>25</b><span>5&sup2;</span></div>
+      <div class="n"><b>36</b><span>6&sup2;</span></div>
+      <div class="n"><b>49</b><span>7&sup2;</span></div>
+      <div class="n"><b>64</b><span>8&sup2;</span></div>
+      <div class="n"><b>81</b><span>9&sup2;</span></div>
+      <div class="n"><b>100</b><span>10&sup2;</span></div>
+      <div class="n"><b>121</b><span>11&sup2;</span></div>
+      <div class="n"><b>144</b><span>12&sup2;</span></div>
+    </div>
+
+    <div class="numstrip-lab">Cube numbers, 1&sup3; to 5&sup3;:</div>
+    <div class="numstrip" role="img" aria-label="Cube numbers: 1, 8, 27, 64, 125 — the cubes of 1 to 5">
+      <div class="n"><b>1</b><span>1&sup3;</span></div>
+      <div class="n"><b>8</b><span>2&sup3;</span></div>
+      <div class="n"><b>27</b><span>3&sup3;</span></div>
+      <div class="n"><b>64</b><span>4&sup3;</span></div>
+      <div class="n"><b>125</b><span>5&sup3;</span></div>
+    </div>
+
+    <p>A <b>root</b> asks the reverse question. A square root, written &radic;, asks &ldquo;what number times itself makes this?&rdquo; A cube root asks &ldquo;what number times itself three times makes this?&rdquo;</p>
+    <p>The small raised number is called an <b>index</b> (or power). It tells you how many of the number to multiply together &mdash; it is <b>not</b> a &ldquo;times&rdquo;. So 3&#8308; means four 3s multiplied, not 3 &times; 4.</p>
+
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">Work out <span class="big">7&sup2;</span>, <span class="big">2&sup3;</span> and <span class="big">3&#8308;</span>, then <span class="big">&radic;81</span> and the cube root of 27.</div>
+      <ol class="steps">
+        <li><b>Square: a number times itself.</b> 7&sup2; = 7 &times; 7 = 49.</li>
+        <li><b>Cube: a number times itself three times.</b> 2&sup3; = 2 &times; 2 &times; 2 = 8.</li>
+        <li><b>Index: multiply that many of the number.</b> 3&#8308; = 3 &times; 3 &times; 3 &times; 3 = 81. (The trap is 3 &times; 4 = 12 &mdash; the 4 counts the threes, it doesn&rsquo;t multiply.)</li>
+        <li><b>Root: the reverse.</b> &radic;81 asks what times itself is 81, which is 9. The cube root of 27 asks what times itself three times is 27, which is 3.</li>
+      </ol>
+      <div class="answer-line">Answer: 7&sup2; = 49, 2&sup3; = 8, 3&#8308; = 81, &radic;81 = 9, and the cube root of 27 = 3.</div>
+    </div>
+
+    <h3>Triangular numbers</h3>
+    <p><b>Triangular</b> numbers are the counts of dots that build up into neat triangles: 1, 3, 6, 10, 15, and so on.</p>
+    <div class="diagram">
+      <svg viewBox="0 0 560 148" role="img" aria-label="Dot triangles for the triangular numbers 1, 3, 6 and 10, each adding one more row of dots than the last">
+        <circle cx="60" cy="34" r="6" fill="#1E647C"/>
+        <text x="60" y="126" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="15" fill="#174E61">1</text>
+
+        <circle cx="170" cy="34" r="6" fill="#1E647C"/>
+        <circle cx="159" cy="56" r="6" fill="#1E647C"/>
+        <circle cx="181" cy="56" r="6" fill="#1E647C"/>
+        <text x="170" y="126" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="15" fill="#174E61">3</text>
+
+        <circle cx="300" cy="34" r="6" fill="#1E647C"/>
+        <circle cx="289" cy="56" r="6" fill="#1E647C"/>
+        <circle cx="311" cy="56" r="6" fill="#1E647C"/>
+        <circle cx="278" cy="78" r="6" fill="#1E647C"/>
+        <circle cx="300" cy="78" r="6" fill="#1E647C"/>
+        <circle cx="322" cy="78" r="6" fill="#1E647C"/>
+        <text x="300" y="126" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="15" fill="#174E61">6</text>
+
+        <circle cx="470" cy="34" r="6" fill="#1E647C"/>
+        <circle cx="459" cy="56" r="6" fill="#1E647C"/>
+        <circle cx="481" cy="56" r="6" fill="#1E647C"/>
+        <circle cx="448" cy="78" r="6" fill="#1E647C"/>
+        <circle cx="470" cy="78" r="6" fill="#1E647C"/>
+        <circle cx="492" cy="78" r="6" fill="#1E647C"/>
+        <circle cx="437" cy="100" r="6" fill="#1E647C"/>
+        <circle cx="459" cy="100" r="6" fill="#1E647C"/>
+        <circle cx="481" cy="100" r="6" fill="#1E647C"/>
+        <circle cx="503" cy="100" r="6" fill="#1E647C"/>
+        <text x="470" y="126" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="15" fill="#174E61">10</text>
+      </svg>
+    </div>
+    <p class="cap">Each triangle adds a new bottom row: +2 dots, then +3, then +4 &mdash; the gap grows by one each time.</p>
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">Continue the <b>triangular</b> numbers: 1, 3, 6, 10, 15, &hellip;</div>
+      <ol class="steps">
+        <li><b>Look at the gaps.</b> 1 to 3 is +2, 3 to 6 is +3, 6 to 10 is +4, 10 to 15 is +5.</li>
+        <li><b>The gap grows by one each time.</b> So the next gap must be +6.</li>
+        <li><b>Add it on.</b> 15 + 6 = 21.</li>
+      </ol>
+      <div class="answer-line">Answer: the next triangular number is 21.</div>
+    </div>
+
+    <div class="act" id="a3">
+      <div class="act-head"><span class="num">3</span><h3>Your go: squares, cubes, roots &amp; triangular numbers</h3></div>
+      <p class="instr">Square or cube a number, find a root, evaluate an index, or continue a pattern.</p>
+      <div class="stem" id="sq-q"></div>
+      <div class="optgrid" id="sq-opts"></div>
+      <div class="row"><button class="btn btn-ghost" id="sq-next" disabled>Next &rarr;</button><span class="prog" id="sq-prog"></span></div>
+      <div class="feedback" id="sq-fb" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 4: ROMAN NUMERALS, ODD/EVEN & CONSECUTIVE ============ -->
+  <section class="section" id="s4">
+    <h2>4. Roman numerals, odd &amp; even, and consecutive numbers</h2>
+    <p>Roman numerals build numbers from seven letters. You add the values as you read left to right &mdash; unless a smaller letter sits in front of a larger one, which means &ldquo;subtract&rdquo; (so IV is 5 &minus; 1 = 4, and IX is 10 &minus; 1 = 9).</p>
+    <div class="numstrip-lab">The seven Roman numerals:</div>
+    <div class="numstrip" role="img" aria-label="Roman numerals and their values: I is 1, V is 5, X is 10, L is 50, C is 100, D is 500, M is 1000">
+      <div class="n"><b>I</b><span>1</span></div>
+      <div class="n"><b>V</b><span>5</span></div>
+      <div class="n"><b>X</b><span>10</span></div>
+      <div class="n"><b>L</b><span>50</span></div>
+      <div class="n"><b>C</b><span>100</span></div>
+      <div class="n"><b>D</b><span>500</span></div>
+      <div class="n"><b>M</b><span>1000</span></div>
+    </div>
+    <p>Two more small ideas round off the topic. <b>Even</b> numbers end in 0, 2, 4, 6 or 8; <b>odd</b> numbers end in 1, 3, 5, 7 or 9. Adding two odds always gives an even (odd + odd = even), and multiplying by an even number always gives an even answer.</p>
+    <p><b>Consecutive</b> numbers are ones that follow straight on, like 7, 8, 9.</p>
+
+    <h3>Reading a Roman numeral</h3>
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">What is <span class="big">XXIV</span> as a number?</div>
+      <ol class="steps">
+        <li><b>Break it into parts.</b> XX is 10 + 10 = 20. Then comes IV.</li>
+        <li><b>Watch the order.</b> I (1) is before V (5), so it means &ldquo;one less than five&rdquo; &mdash; that&rsquo;s 4, not 6.</li>
+        <li><b>Add the parts.</b> 20 + 4 = 24.</li>
+      </ol>
+      <div class="answer-line">Answer: XXIV = 24.</div>
+    </div>
+
+    <h3>Consecutive numbers</h3>
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">Add three <b>consecutive</b> numbers: 6 + 7 + 8. What do you notice?</div>
+      <ol class="steps">
+        <li><b>Consecutive means one after another.</b> 6, 7 and 8 follow straight on.</li>
+        <li><b>Add them.</b> 6 + 7 + 8 = 21.</li>
+        <li><b>Spot the shortcut.</b> 21 is exactly 3 &times; 7 &mdash; three times the middle number. This works for any three consecutive numbers.</li>
+      </ol>
+      <div class="answer-line">Answer: 6 + 7 + 8 = 21, which is 3 &times; the middle number (7).</div>
+    </div>
+
+    <div class="act" id="a4">
+      <div class="act-head"><span class="num">4</span><h3>Your go: Roman numerals, odd/even &amp; consecutive</h3></div>
+      <p class="instr">Read or write a Roman numeral, reason about odd and even, or use the <b>consecutive</b>-numbers shortcut.</p>
+      <div class="stem" id="rn-q"></div>
+      <div class="optgrid" id="rn-opts"></div>
+      <div class="row"><button class="btn btn-ghost" id="rn-next" disabled>Next &rarr;</button><span class="prog" id="rn-prog"></span></div>
+      <div class="feedback" id="rn-fb" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- END -->
+  <div class="endcard">
+    <h2>That&rsquo;s factors, multiples &amp; special numbers</h2>
+    <p>Learn a handful of these facts by heart &mdash; the squares, the cubes, the small primes &mdash; and a lot of the 11+ number questions become quick wins. When you&rsquo;re ready, head back and pick another topic.</p>
+    <a href="/11-resource-hub/maths/">Back to Maths
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+    </a>
+  </div>
+
+  <footer class="foot">
+    <p style="margin:0 0 6px"><b>Tom Sanderson Tutoring</b> &middot; Milton Keynes</p>
+    <p style="margin:0;max-width:62ch">A free resource for families preparing for the 11+. If you&rsquo;d like a hand beyond the page, you can <a href="https://tomsandersontutoring.com">find out about tutoring here</a>.</p>
+  </footer>
+
+</main>
+
+<script>
+function toggleComfort(){
+  var on=document.body.classList.toggle('comfort');
+  document.getElementById('comfort').setAttribute('aria-pressed',on?'true':'false');
+}
+function $(id){return document.getElementById(id);}
+
+/* ---- multiple choice ---- */
+function mcQuiz(p, items){
+  var i=0, score=0, locked=false;
+  function render(){
+    locked=false;
+    $(p+'-q').innerHTML=items[i].q;
+    var host=$(p+'-opts'); host.innerHTML='';
+    items[i].opts.forEach(function(o,k){
+      var b=document.createElement('button'); b.className='word'; b.textContent=o;
+      b.onclick=function(){ pick(k,b); };
+      host.appendChild(b);
+    });
+    $(p+'-fb').textContent=''; $(p+'-fb').className='feedback';
+    $(p+'-next').disabled=true;
+    $(p+'-prog').textContent='Question '+(i+1)+' of '+items.length;
+  }
+  function pick(k,b){
+    if(locked)return; locked=true;
+    var it=items[i];
+    [].forEach.call($(p+'-opts').children,function(c,j){c.disabled=true;if(j===it.a)c.classList.add('right');});
+    if(k===it.a) score++; else b.classList.add('bad');
+    var fb=$(p+'-fb'); fb.className='feedback '+(k===it.a?'ok':'no'); fb.innerHTML=(k===it.a?'✓ ':'')+it.why;
+    $(p+'-next').disabled=(i>=items.length-1);
+    $(p+'-prog').textContent='Score '+score+' of '+(i+1)+(i>=items.length-1?' · set complete':'');
+  }
+  $(p+'-next').onclick=function(){ if(i<items.length-1){i++;render();} };
+  render();
+}
+
+/* ---------- DATA (all original) ---------- */
+
+mcQuiz('fm',[
+  {q:'Which of these is a <b>multiple</b> of 6?',
+   opts:['3','2','48','16'], a:2,
+   why:'48 is in the six times-table (6 × 8 = 48), so it is a multiple of 6. 2 and 3 are <em>factors</em> of 6 — they divide into it — which is the classic factor/multiple mix-up; 16 is neither.'},
+  {q:'Which is the complete list of <b>factors</b> of 28?',
+   opts:['1, 2, 4, 7, 14, 28','1, 2, 4, 7, 28','1, 2, 4, 14, 28','1, 2, 4, 7, 8, 14, 28'], a:0,
+   why:'Working in pairs, 28 = 1 × 28, 2 × 14 and 4 × 7, giving 1, 2, 4, 7, 14, 28. The lists that drop 14 or 7 have missed one of a pair; the last list adds 8, which isn’t a factor because 28 ÷ 8 leaves a remainder.'},
+  {q:'What is the <b>highest</b> common factor (HCF) of 24 and 36?',
+   opts:['6','4','72','12'], a:3,
+   why:'The common factors of 24 and 36 are 1, 2, 3, 4, 6 and 12; the highest is 12. 6 and 4 are shared but not the biggest; 72 is the lowest common <em>multiple</em>, not the factor — that HCF/LCM swap is the trap.'},
+  {q:'What is the <b>lowest</b> common multiple (LCM) of 6 and 8?',
+   opts:['48','24','2','14'], a:1,
+   why:'24 is the first number in both the 6- and 8-times-tables (6 × 4 and 8 × 3). 48 is also common but it isn’t the lowest; 2 is the highest common <em>factor</em>, not a multiple (the swap); 14 just adds 6 and 8.'},
+  {q:'Which number is a <b>factor</b> of <b>both</b> 20 and 30?',
+   opts:['4','3','5','7'], a:2,
+   why:'5 divides both 20 and 30 exactly, so it is a common factor. 4 divides only 20; 3 divides only 30; 7 divides neither — a common factor has to go into both numbers.'},
+  {q:'Buns come in packs of 4 and candles in packs of 6. What is the <b>lowest</b> number of each you can buy so there are equal amounts?',
+   opts:['12','24','10','2'], a:0,
+   why:'You need the lowest common multiple of 4 and 6, which is 12 (three packs of buns, two packs of candles). 24 works too but isn’t the lowest; 10 just adds the pack sizes; 2 is the highest common factor, not a multiple.'},
+  {q:'Which of these is a <b>factor</b> of 36?',
+   opts:['8','10','16','9'], a:3,
+   why:'36 ÷ 9 = 4 exactly, so 9 is a factor. 8, 10 and 16 all leave a remainder when you divide 36 by them, so none of those is a factor.'},
+  {q:'Which of these is <b>not</b> a <b>factor</b> of 48?',
+   opts:['8','9','12','16'], a:1,
+   why:'48 ÷ 9 = 5 remainder 3, so 9 is not a factor. 8, 12 and 16 all divide 48 exactly (6 × 8, 4 × 12, 3 × 16). The word to watch here is <b>not</b>.'}
+]);
+
+mcQuiz('pr',[
+  {q:'Which of these is a <b>prime</b> number?',
+   opts:['51','29','1','57'], a:1,
+   why:'29 has exactly two factors, 1 and 29, so it is prime. 51 = 3 × 17 and 57 = 3 × 19, so both have extra factors; 1 is not prime because it has only one factor (itself).'},
+  {q:'Three of these are <b>prime</b>. Which one is <b>not</b>?',
+   opts:['91','11','43','5'], a:0,
+   why:'91 = 7 × 13, so it is not prime — even though it isn’t in an obvious times-table, which is what makes it a favourite trap. 11, 43 and 5 each have only two factors.'},
+  {q:'Which is the correct <b>prime</b> factorisation of 60?',
+   opts:['2 × 3 × 10','2 × 2 × 15','2 × 2 × 3 × 5','4 × 3 × 5'], a:2,
+   why:'60 = 2 × 2 × 3 × 5, and every one of those is prime. The others do reach 60, but each contains a number that isn’t prime (10, 15 or 4), so they can still be broken down further.'},
+  {q:'Which is the correct <b>prime</b> factorisation of 45?',
+   opts:['5 × 9','3 × 15','3 × 5 × 5','3 × 3 × 5'], a:3,
+   why:'45 = 3 × 3 × 5, all primes. 5 × 9 and 3 × 15 reach 45 but 9 and 15 aren’t prime; 3 × 5 × 5 is all primes but multiplies to 75, not 45 — always check your factors multiply back.'},
+  {q:'Using a <b>divisibility</b> test, which number divides exactly by 3?',
+   opts:['124','516','233','710'], a:1,
+   why:'A number divides by 3 when its digits add to a multiple of 3. 5 + 1 + 6 = 12, which does, so 516 works. The others’ digit sums are 7, 8 and 8 — none a multiple of 3.'},
+  {q:'Which number divides exactly by 9?',
+   opts:['324','132','510','168'], a:0,
+   why:'For 9 the digits must add to a multiple of 9. 3 + 2 + 4 = 9, so 324 works. The others add to 6, 6 and 15 — each divisible by 3 but not by 9, which is the trap: the 9-test needs a multiple of 9, not just of 3.'},
+  {q:'Which number divides exactly by 6?',
+   opts:['214','405','534','128'], a:2,
+   why:'A number divides by 6 only if it passes both the ÷2 and ÷3 tests. 534 is even and its digits add to 12, so it passes both. 214 is even but adds to 7; 405 adds to 9 but is odd; 128 is even but adds to 11.'}
+]);
+
+mcQuiz('sq',[
+  {q:'What is <span class="big">9&sup2;</span> (nine <b>squared</b>)?',
+   opts:['81','18','729','90'], a:0,
+   why:'9² means 9 × 9 = 81. 18 comes from doubling (9 × 2) instead of squaring; 729 is 9 <em>cubed</em> (9 × 9 × 9), mixing up square and cube; 90 is just 9 × 10.'},
+  {q:'What is <span class="big">4&sup3;</span> (four <b>cubed</b>)?',
+   opts:['12','64','16','256'], a:1,
+   why:'4³ means 4 × 4 × 4 = 64. 12 is 4 × 3 (the little 3 isn’t a multiplier); 16 is 4 <em>squared</em>, only two 4s; 256 uses four 4s instead of three.'},
+  {q:'What is <span class="big">&radic;81</span> (the <b>square</b> root of 81)?',
+   opts:['40.5','6561','27','9'], a:3,
+   why:'√81 asks what number times itself makes 81 — that’s 9, because 9 × 9 = 81. 40.5 is just 81 halved (a root is not halving); 6561 is 81 squared, the opposite of a root; 27 is 81 ÷ 3.'},
+  {q:'What is the <b>cube</b> root of 27?',
+   opts:['9','13.5','3','54'], a:2,
+   why:'The cube root of 27 asks what number times itself three times makes 27 — that’s 3, because 3 × 3 × 3 = 27. 9 is 27 ÷ 3; 13.5 halves it; 54 doubles it — none of those reverses a cube.'},
+  {q:'What is <span class="big">3&#8308;</span>?',
+   opts:['81','12','7','64'], a:0,
+   why:'3⁴ means four 3s multiplied: 3 × 3 × 3 × 3 = 81. The commonest mistake is 3 × 4 = 12, but the little 4 counts the threes — it isn’t a times. 7 just adds them; 64 is 4 × 4 × 4.'},
+  {q:'Which of these is a <b>cube</b> number?',
+   opts:['9','18','36','27'], a:3,
+   why:'27 = 3 × 3 × 3, so it is a cube number. 9 and 36 are <em>square</em> numbers (3² and 6²), not cubes — a common mix-up; 18 is neither.'},
+  {q:'The <b>triangular</b> numbers begin 1, 3, 6, 10, 15, … What is the <b>next</b> one?',
+   opts:['18','21','20','25'], a:1,
+   why:'The gaps grow by one each time: +2, +3, +4, +5, then +6. 15 + 6 = 21. 18 adds only 3; 20 repeats the previous gap of 5; 25 jumps too far.'}
+]);
+
+mcQuiz('rn',[
+  {q:'What number is <span class="big">XXIV</span>?',
+   opts:['26','16','24','14'], a:2,
+   why:'XX is 20 and IV is 4 (the I before the V means one less than five), so 24. Reading IV as 6 gives 26 — that’s the classic slip; a smaller symbol <em>before</em> a larger one means subtract.'},
+  {q:'What number is <span class="big">XLII</span>?',
+   opts:['42','62','38','52'], a:0,
+   why:'XL means 40 (ten before fifty = fifty minus ten) and II is 2, giving 42. Reading XL as LX (60) gives 62 — remember the smaller symbol first means subtract.'},
+  {q:'How do you write <b>19</b> in Roman numerals?',
+   opts:['XVIII','XIX','XXI','XIV'], a:1,
+   why:'19 is 10 + 9, and nine is written IX (one before ten), so 19 is XIX. XVIII is 18, XXI is 21 and XIV is 14 — check each symbol’s value and whether it adds or subtracts.'},
+  {q:'Priya adds two <b>odd</b> numbers together. What kind of number does she always get?',
+   opts:['An odd number','It depends on the numbers','Always a prime','An even number'], a:3,
+   why:'Two odds always make an even — for example 3 + 5 = 8 and 7 + 7 = 14. Each odd is “one more than even”, and the two spare ones pair up. Expecting odd + odd = odd is the trap; the total isn’t always prime either.'},
+  {q:'An <b>even</b> number is multiplied by an <b>odd</b> number. The answer is always…',
+   opts:['Even','Odd','Sometimes even, sometimes odd','Zero'], a:0,
+   why:'Multiplying by an even number always gives an even answer, because there is a factor of 2 in it — for example 4 × 3 = 12 and 6 × 5 = 30. It doesn’t depend on the odd number, and it needn’t be zero.'},
+  {q:'Three <b>consecutive</b> numbers add up to 24. What is the <b>middle</b> number?',
+   opts:['7','8','12','9'], a:1,
+   why:'Three consecutive numbers add up to 3 times the middle one, so the middle is 24 ÷ 3 = 8 (the numbers are 7, 8 and 9). 7 is the smallest and 9 the largest; 12 halves the total instead of thirding it.'}
+]);
+
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var id=a.getAttribute('href');
+    if(id.length>1){var el=document.querySelector(id);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}}
+  });
+});
+</script>
+</body>
+</html>
