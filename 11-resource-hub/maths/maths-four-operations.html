@@ -1,0 +1,506 @@
+<!doctype html>
+<!-- Tom Sanderson Tutoring — 11+ Resource Hub · Maths. All content original and © Tom Sanderson Tutoring. -->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The four operations — Maths | Tom Sanderson Tutoring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#1E647C;--teal-deep:#174E61;--sky:#9FD3E8;--sky-soft:#E4F1F7;--amber:#F5BA18;--white:#FFFFFF;
+  --paper:#F1F7FA;--surface:#FFFFFF;--ink:#15323D;--muted:#5E7A84;--line:#D8E7EE;--line-soft:#E8F1F5;
+  --ok:#1B8A5A;--ok-bg:#E6F5EE;--no:#C24A3D;--no-bg:#FBECE9;
+  --radius:18px;--radius-s:12px;
+  --shadow:0 1px 2px rgba(21,50,61,.05), 0 10px 30px rgba(21,50,61,.07);
+  --shadow-lift:0 4px 10px rgba(21,50,61,.08), 0 20px 44px rgba(21,50,61,.12);
+  --maxw:860px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Raleway",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+body.comfort{letter-spacing:.02em;word-spacing:.06em;line-height:1.9}
+body.comfort p{margin-bottom:1.1em}
+h1,h2,h3,h4{font-family:"Montserrat",sans-serif;margin:0;line-height:1.2;letter-spacing:-.01em;color:var(--teal-deep)}
+p{margin:0 0 1em}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+button{font-family:inherit}
+
+.top{position:sticky;top:0;z-index:30;background:rgba(241,247,250,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{display:inline-flex;align-items:stretch;border-radius:8px;overflow:hidden;text-decoration:none;box-shadow:0 1px 2px rgba(21,50,61,.12);flex:0 0 auto}
+.logo .a{background:var(--teal);color:var(--amber);font-family:"Montserrat";font-weight:800;font-size:.9rem;padding:8px 11px;display:flex;align-items:center;line-height:1}
+.logo .b{background:var(--white);color:var(--teal);font-family:"Montserrat";font-weight:600;font-size:.9rem;padding:8px 12px;display:flex;align-items:center;line-height:1;border:1px solid var(--line);border-left:0}
+.back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--muted);font-weight:600;font-size:.88rem}
+.back:hover{color:var(--teal)}
+.back svg{width:16px;height:16px}
+.top-right{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.site-link{font-family:"Raleway",sans-serif;font-size:.85rem;font-weight:600;color:var(--muted);text-decoration:none;white-space:nowrap}
+.site-link:hover{color:var(--teal);text-decoration:underline}
+.free-pill{font-family:"Montserrat";font-weight:700;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--white);border:1px solid var(--line);padding:6px 11px;border-radius:999px}
+.comfort-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--white);color:var(--muted);border-radius:999px;padding:6px 12px;font-weight:600;font-size:.82rem;cursor:pointer;transition:.14s}
+.comfort-btn:hover{border-color:var(--teal);color:var(--teal)}
+.comfort-btn[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.comfort-btn svg{width:15px;height:15px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px 90px}
+
+.crumb{font-size:.82rem;color:var(--muted);margin:22px 0 0}
+.crumb a{color:var(--teal);text-decoration:none;font-weight:600}
+.hero{padding:14px 0 6px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:"Montserrat";font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:var(--sky-soft);border:1px solid var(--sky);padding:6px 13px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:clamp(1.9rem,4.6vw,2.6rem);font-weight:800}
+.hero .sub{font-size:clamp(1.05rem,2.2vw,1.18rem);margin-top:14px;max-width:62ch}
+
+.pagenav{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0}
+.pagenav a{font-size:.85rem;text-decoration:none;color:var(--teal-deep);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-weight:600}
+.pagenav a:hover{border-color:var(--sky);background:var(--sky-soft)}
+
+.section{padding:30px 0 0;scroll-margin-top:80px}
+.section h2{font-size:1.45rem;font-weight:700;margin-bottom:12px}
+.section p,.section li{max-width:66ch}
+.section ul{margin:0 0 1em;padding-left:0;list-style:none}
+.types-list li{position:relative;padding:8px 0 8px 30px;border-bottom:1px solid var(--line-soft);max-width:66ch}
+.types-list li:last-child{border-bottom:0}
+.types-list li::before{content:"";position:absolute;left:6px;top:15px;width:9px;height:9px;border-radius:3px;background:var(--sky)}
+.types-list b{color:var(--ink)}
+
+.callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:0 var(--radius-s) var(--radius-s) 0;padding:16px 19px;margin:16px 0 0;box-shadow:var(--shadow)}
+.callout h4{font-family:"Montserrat";font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#9A6B16;margin-bottom:7px}
+.callout ul{margin:0;padding-left:18px}
+.callout li{margin:4px 0;font-size:.95rem}
+.callout li::marker{color:var(--amber)}
+
+/* worked example */
+.worked{background:linear-gradient(135deg,#F2F8FB,#FFFFFF);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;margin-top:14px;box-shadow:var(--shadow)}
+.worked .q{background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);padding:14px 16px;margin-bottom:14px}
+.worked .q .ask{font-weight:600;margin-bottom:10px}
+.worked .pair{display:flex;gap:18px;flex-wrap:wrap}
+.worked .pair .grp{font-family:"Montserrat";font-weight:700;color:var(--teal-deep);background:var(--sky-soft);border:1px solid var(--sky);border-radius:8px;padding:8px 12px}
+.steps{counter-reset:s;margin:0;padding:0;list-style:none}
+.steps li{position:relative;padding:0 0 12px 38px;max-width:64ch}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;font-family:"Montserrat";font-weight:700;font-size:.85rem;display:grid;place-items:center}
+.steps b{color:var(--ink)}
+.answer-line{margin-top:14px;background:var(--ok-bg);border:1px solid #BFE6D2;border-radius:var(--radius-s);padding:11px 15px;font-weight:600;color:#15623f}
+
+/* activities */
+.act{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow);margin-top:16px}
+.act-head{display:flex;align-items:center;gap:11px;margin-bottom:3px}
+.act-head .num{flex:0 0 auto;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--teal);color:#fff;font-family:"Montserrat";font-weight:700;font-size:.9rem}
+.act-head h3{font-size:1.1rem;font-weight:700}
+.act .instr{color:var(--muted);font-size:.93rem;margin:2px 0 14px}
+.stem{background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:8px;padding:12px 15px;font-size:1.06rem;margin-bottom:14px}
+.stem .fillw{color:var(--teal);border-bottom:2px solid var(--sky)}
+.groups{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 14px}
+.groupbox{background:var(--sky-soft);border:1px solid var(--line);border-radius:var(--radius-s);padding:12px 13px}
+.groupbox .gl{font-family:"Montserrat";font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:9px}
+.wordcol{display:flex;flex-direction:column;gap:8px}
+.wordwrap{display:flex;flex-wrap:wrap;gap:9px;margin:2px 0 14px}
+.optgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:2px 0 14px}
+.word{border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:10px 14px;font-size:1rem;cursor:pointer;text-align:center;transition:transform .07s,border-color .12s,background .12s;color:var(--ink)}
+.word:hover{border-color:var(--teal)}
+.word:active{transform:translateY(1px)}
+.word.sel{background:var(--teal);border-color:var(--teal);color:#fff;font-weight:600}
+.word.right{background:var(--ok-bg);border-color:var(--ok);color:#15623f;font-weight:600}
+.word.bad{background:var(--no-bg);border-color:var(--no);color:#8f2a20;font-weight:600}
+.word[disabled]{cursor:default}
+
+.btn{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:10px;padding:10px 16px;font-family:"Montserrat";font-weight:700;font-size:.9rem;cursor:pointer;transition:.12s}
+.btn:hover{background:var(--sky-soft)}
+.btn:disabled{opacity:.5;cursor:default}
+.btn-primary{background:var(--teal);border-color:var(--teal);color:#fff}
+.btn-primary:hover:not(:disabled){background:var(--teal-deep)}
+.btn-ghost{background:transparent;border-color:transparent;color:var(--muted)}
+.btn-ghost:hover:not(:disabled){color:var(--ink);background:var(--sky-soft)}
+.row{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:4px}
+.prog{margin-left:auto;font-family:"Montserrat";font-size:.8rem;color:var(--muted)}
+.feedback{font-size:.95rem;font-weight:600;min-height:1.3em;margin-top:11px}
+.feedback.ok{color:var(--ok)}
+.feedback.no{color:var(--no)}
+
+.endcard{margin-top:30px;background:linear-gradient(135deg,var(--teal),var(--teal-deep));border-radius:var(--radius);padding:24px 28px;color:#fff;box-shadow:var(--shadow)}
+.endcard h2{color:#fff;font-size:1.2rem;margin-bottom:6px}
+.endcard p{color:#D9ECF3;margin:0 0 14px;max-width:54ch}
+.endcard a{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:#3A2D05;text-decoration:none;font-family:"Montserrat";font-weight:700;padding:12px 18px;border-radius:11px}
+.endcard a svg{width:17px;height:17px}
+
+.foot{border-top:1px solid var(--line);margin-top:40px;padding-top:24px;color:var(--muted);font-size:.9rem}
+.foot b{color:var(--ink);font-family:"Montserrat";font-weight:700}
+.foot a{color:var(--teal);font-weight:600;text-decoration:none}
+
+@media (max-width:680px){
+  body{font-size:17px}
+  .groups,.optgrid{grid-template-columns:1fr}
+  .worked,.act{padding:20px 18px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
+
+/* ---- page-specific additions (The four operations) ---- */
+.section h3{font-size:1.05rem;font-weight:700;margin:24px 0 8px;color:var(--ink)}
+.worked .wl{font-family:"Montserrat";font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:8px}
+.steps b{display:block;margin-bottom:3px}
+.big{font-family:"Montserrat";font-weight:700;letter-spacing:.03em;color:var(--teal-deep)}
+
+.diagram{background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);padding:14px 12px 8px;margin:6px 0 8px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.diagram svg{display:block;min-width:620px;margin:0 auto}
+.cap{font-size:.85rem;color:var(--muted);margin:0 0 1em}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/11-resource-hub/" aria-label="Tom Sanderson Tutoring home"><span class="a">Tom&nbsp;Sanderson</span><span class="b">Tutoring</span></a>
+    <a class="back" href="/11-resource-hub/maths/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Maths</a>
+    <div class="top-right">
+      <a class="site-link" href="https://tomsandersontutoring.com">&larr; Tom&rsquo;s tutoring site</a>
+      <span class="free-pill">Free &middot; no sign-up</span>
+      <button class="comfort-btn" id="comfort" aria-pressed="false" onclick="toggleComfort()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg>
+        Reading comfort
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="crumb"><a href="/11-resource-hub/maths/">Maths</a> &nbsp;&rsaquo;&nbsp; The four operations</p>
+
+  <section class="hero">
+    <span class="eyebrow">Maths &middot; Topic 2</span>
+    <h1>The four operations</h1>
+    <p class="sub">Adding, subtracting, multiplying and dividing are the tools every other topic borrows. Here we tidy up the written methods, add a few quick mental ones, and learn the order to use them in when several turn up in the same sum.</p>
+    <nav class="pagenav" aria-label="On this page">
+      <a href="#about">Start here</a>
+      <a href="#s1">Written &amp; mental methods</a>
+      <a href="#s2">Order of operations</a>
+      <a href="#s3">Function machines</a>
+    </nav>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2>What these questions are</h2>
+    <p>This is the workhorse page. The maths itself is familiar &mdash; you have been adding and subtracting since Year 1 &mdash; so the value here is in tidy, reliable methods: setting your working out clearly, knowing which order to do things in, and having a quick way to check your answer is right.</p>
+    <p>On this page you&rsquo;ll cover three things:</p>
+    <ul class="types-list">
+      <li><b>Written &amp; mental methods</b> &mdash; the column methods for all four operations, including with large numbers, plus a few quick mental strategies.</li>
+      <li><b>Order of operations &amp; brackets</b> &mdash; what to do first when a sum mixes several operations together, and how brackets change that order.</li>
+      <li><b>Function machines &amp; inverse operations</b> &mdash; following a chain of operations through, and running it backwards to find a missing input.</li>
+    </ul>
+    <div class="callout">
+      <h4>How to crack them</h4>
+      <ul>
+        <li>Line up your columns by place value &mdash; ones under ones, tens under tens &mdash; or the exchanging will go wrong.</li>
+        <li>Estimate first, so you&rsquo;d notice straight away if your exact answer came out a silly size.</li>
+        <li>In a string of operations, &times; and &divide; always happen before + and &minus;.</li>
+        <li>When you&rsquo;re not sure, check your answer with the inverse operation.</li>
+      </ul>
+    </div>
+    <div class="callout"><p style="margin:0;font-size:.95rem"><b>A little tip:</b> we&rsquo;ve <b>bolded</b> the key instruction word in each question &mdash; like <b>altogether</b>, <b>left over</b>, <b>share</b> or <b>each</b> &mdash; so you always know exactly what you&rsquo;re being asked to find.</p></div>
+  </section>
+
+  <!-- ============ SECTION 1: WRITTEN & MENTAL METHODS ============ -->
+  <section class="section" id="s1">
+    <h2>1. Written &amp; mental methods</h2>
+    <p>Each of the four operations has a reliable written method &mdash; a way of setting it out so the answer falls out step by step, without needing to hold the whole calculation in your head at once.</p>
+    <p>They all lean on the same idea: line the digits up by place value, then work through the columns in order.</p>
+
+    <h3>Addition and subtraction</h3>
+    <p>For column addition, add each column starting from the ones, on the right. Whenever a column adds up to 10 or more, write down the ones digit and <b>exchange</b> ten of them for one extra in the column to the left &mdash; this is often called &ldquo;carrying&rdquo;.</p>
+    <p>Column subtraction works the same way in reverse. If the top digit in a column is smaller than the one you&rsquo;re taking away, <b>exchange</b> one from the column to its left first &mdash; &ldquo;borrowing&rdquo;. If that column is a zero, the exchange has to reach one column further left still.</p>
+
+    <h3>Multiplication and division</h3>
+    <p>For long multiplication, split the second number by place value, multiply the first number by each part separately, then add the results together. The worked example below shows exactly this.</p>
+    <p>For division, short division handles dividing by a single digit; long division handles bigger divisors the same way, just with more room to show the working.</p>
+    <p>Either can leave a <b>remainder</b> &mdash; what&rsquo;s left over once the dividing number no longer fits exactly. What you do with it depends on the question: sometimes you report it, sometimes you round the answer up or down instead.</p>
+    <p>Every one of these methods works exactly the same way for large numbers too. Nothing new is needed &mdash; just more columns.</p>
+
+    <h3>Mental strategies</h3>
+    <p>For friendlier numbers, it&rsquo;s often quicker to work in your head using one of these:</p>
+    <ul class="types-list">
+      <li><b>Partitioning</b> &mdash; split a number into friendly parts and deal with each separately, e.g. 47 + 35 = 47 + 30 + 5.</li>
+      <li><b>Near-doubles</b> &mdash; if two numbers are almost the same, double one and adjust, e.g. 58 + 59 = 58 + 58 + 1.</li>
+      <li><b>Rounding and adjusting</b> &mdash; round a number to make the sum easy, then correct for the rounding afterwards, e.g. 99 + 35 = 100 + 35 &minus; 1.</li>
+    </ul>
+
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">Work out <span class="big">34 &times; 26</span>.</div>
+      <ol class="steps">
+        <li><b>Split the second number by place value.</b> 26 is 20 + 6, so the sum splits into two friendlier parts.</li>
+        <li><b>Multiply by each part.</b> 34 &times; 20 = 680, and 34 &times; 6 = 204.</li>
+        <li><b>Add the two results together.</b> 680 + 204 = 884.</li>
+        <li><b>Check with an estimate.</b> 34 rounds to 30 and 26 rounds to 30, so 30 &times; 30 = 900 &mdash; close to 884, which shows the exact answer is a sensible size.</li>
+      </ol>
+      <div class="answer-line">Answer: 884.</div>
+    </div>
+
+    <div class="act" id="a1">
+      <div class="act-head"><span class="num">1</span><h3>Your go: written &amp; mental methods</h3></div>
+      <p class="instr">A mix of adding, subtracting, multiplying and dividing &mdash; read carefully to see which is needed, then press an answer.</p>
+      <div class="stem" id="calc-q"></div>
+      <div class="optgrid" id="calc-opts"></div>
+      <div class="row"><button class="btn btn-ghost" id="calc-next" disabled>Next &rarr;</button><span class="prog" id="calc-prog"></span></div>
+      <div class="feedback" id="calc-fb" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2: ORDER OF OPERATIONS & BRACKETS ============ -->
+  <section class="section" id="s2">
+    <h2>2. Order of operations &amp; brackets</h2>
+    <p>When a sum mixes several operations together, the order you do them in changes the answer &mdash; so everyone has to agree on the same order. That order is often remembered as <b>BODMAS</b> or <b>BIDMAS</b>: Brackets first, then Orders/Indices (powers, which you&rsquo;ll meet on another page), then Division and Multiplication, then Addition and Subtraction.</p>
+    <p>Division and multiplication are equal partners &mdash; do whichever comes first, reading left to right. The same goes for addition and subtraction. The one rule that overrides everything is brackets: whatever sits inside them is always done first, no matter what it looks like from outside.</p>
+
+    <h3>Same digits, different order</h3>
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">Work out <span class="big">3 + 4 &times; 5</span>, and then <span class="big">(3 + 4) &times; 5</span>.</div>
+      <ol class="steps">
+        <li><b>Without brackets, multiply first.</b> 3 + 4 &times; 5: do 4 &times; 5 = 20 first, then 3 + 20 = 23.</li>
+        <li><b>With brackets, the bracket goes first instead.</b> (3 + 4) &times; 5: do 3 + 4 = 7 first, then 7 &times; 5 = 35.</li>
+        <li><b>Same three numbers, same two operations &mdash; a different order gives a different answer.</b> That is the whole reason brackets exist.</li>
+      </ol>
+      <div class="answer-line">Answer: 23 without brackets; 35 with brackets round the 3 + 4.</div>
+    </div>
+
+    <h3>Division before subtraction</h3>
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">Work out <span class="big">20 &minus; 6 &divide; 2</span>.</div>
+      <ol class="steps">
+        <li><b>Scan for &times; or &divide; first.</b> There is a &divide; in this sum, so it happens before the &minus;.</li>
+        <li><b>Work out the division.</b> 6 &divide; 2 = 3.</li>
+        <li><b>Now do the subtraction.</b> 20 &minus; 3 = 17.</li>
+      </ol>
+      <div class="answer-line">Answer: 17.</div>
+    </div>
+
+    <div class="act" id="a2">
+      <div class="act-head"><span class="num">2</span><h3>Your go: order of operations &amp; brackets</h3></div>
+      <p class="instr">Work out the value of each expression &mdash; remember, brackets (where there are any) always come first.</p>
+      <div class="stem" id="bod-q"></div>
+      <div class="optgrid" id="bod-opts"></div>
+      <div class="row"><button class="btn btn-ghost" id="bod-next" disabled>Next &rarr;</button><span class="prog" id="bod-prog"></span></div>
+      <div class="feedback" id="bod-fb" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3: FUNCTION MACHINES & INVERSE OPERATIONS ============ -->
+  <section class="section" id="s3">
+    <h2>3. Function machines &amp; inverse operations</h2>
+    <p>A function machine is just a diagram for a chain of operations. A number goes in, each box does something to it in turn, and a number comes out. To find the output, do whatever comes <b>first</b> exactly as it&rsquo;s written, box by box, left to right.</p>
+    <p>Sometimes you&rsquo;re given the output instead, and asked to find the input. To do that, run the machine <b>backwards</b>: start from the output, work right to left, and undo each box using its <b>inverse</b> &mdash; the operation that reverses it.</p>
+    <p>The inverse of + is &minus;, the inverse of &minus; is +, the inverse of &times; is &divide;, and the inverse of &divide; is &times;.</p>
+    <p>Inverses are also a ready-made way to check an ordinary answer: if a sum is right, reversing it with the inverse operation should always take you back to where you started.</p>
+
+    <div class="worked">
+      <div class="wl">Worked example</div>
+      <div class="q">A machine does <span class="big">&times;3</span> then <span class="big">+2</span>. If the input is <span class="big">5</span>, what is the output? And if the output were <span class="big">17</span>, what input would that come from?</div>
+      <div class="diagram">
+        <svg viewBox="0 0 750 210" role="img" aria-label="A function machine diagram. Forward row: input 5, times 3 gives 15, plus 2 gives 17, the output. Reverse row underneath: from output 17, minus 2 gives 15, divide by 3 gives 5, the input.">
+          <text x="110" y="14" font-family="Montserrat" font-weight="700" font-size="11" letter-spacing="0.06em" fill="#174E61">FORWARD &mdash; APPLY EACH STEP IN ORDER</text>
+
+          <rect x="110" y="25" width="110" height="60" rx="10" fill="#fff" stroke="#1E647C" stroke-width="2"/>
+          <text x="165" y="52" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="22" fill="#174E61">5</text>
+          <text x="165" y="70" text-anchor="middle" font-family="Raleway" font-size="10" fill="#5E7A84">input</text>
+
+          <line x1="230" y1="55" x2="288" y2="55" stroke="#1E647C" stroke-width="2.2"/>
+          <path d="M295,55 L286,50 L286,60 Z" fill="#1E647C"/>
+          <text x="262" y="42" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="14" fill="#174E61">&times;3</text>
+
+          <rect x="305" y="25" width="110" height="60" rx="10" fill="#fff" stroke="#1E647C" stroke-width="2"/>
+          <text x="360" y="58" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="22" fill="#174E61">15</text>
+
+          <line x1="425" y1="55" x2="483" y2="55" stroke="#1E647C" stroke-width="2.2"/>
+          <path d="M490,55 L481,50 L481,60 Z" fill="#1E647C"/>
+          <text x="457" y="42" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="14" fill="#174E61">+2</text>
+
+          <rect x="500" y="25" width="140" height="60" rx="10" fill="#E4F1F7" stroke="#1E647C" stroke-width="2"/>
+          <text x="570" y="52" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="22" fill="#174E61">17</text>
+          <text x="570" y="70" text-anchor="middle" font-family="Raleway" font-size="10" fill="#5E7A84">output</text>
+
+          <text x="110" y="119" font-family="Montserrat" font-weight="700" font-size="11" letter-spacing="0.06em" fill="#174E61">REVERSE &mdash; UNDO EACH STEP, RIGHT TO LEFT</text>
+
+          <rect x="500" y="130" width="140" height="60" rx="10" fill="#E4F1F7" stroke="#1E647C" stroke-width="2"/>
+          <text x="570" y="157" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="22" fill="#174E61">17</text>
+          <text x="570" y="175" text-anchor="middle" font-family="Raleway" font-size="10" fill="#5E7A84">output</text>
+
+          <line x1="490" y1="160" x2="432" y2="160" stroke="#1E647C" stroke-width="2.2"/>
+          <path d="M425,160 L434,155 L434,165 Z" fill="#1E647C"/>
+          <text x="457" y="147" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="14" fill="#174E61">&minus;2</text>
+
+          <rect x="305" y="130" width="110" height="60" rx="10" fill="#fff" stroke="#1E647C" stroke-width="2"/>
+          <text x="360" y="163" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="22" fill="#174E61">15</text>
+
+          <line x1="295" y1="160" x2="237" y2="160" stroke="#1E647C" stroke-width="2.2"/>
+          <path d="M230,160 L239,155 L239,165 Z" fill="#1E647C"/>
+          <text x="262" y="147" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="14" fill="#174E61">&divide;3</text>
+
+          <rect x="110" y="130" width="110" height="60" rx="10" fill="#fff" stroke="#1E647C" stroke-width="2"/>
+          <text x="165" y="157" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="22" fill="#174E61">5</text>
+          <text x="165" y="175" text-anchor="middle" font-family="Raleway" font-size="10" fill="#5E7A84">input</text>
+        </svg>
+      </div>
+      <p class="cap">Forward: 5 &rarr; &times;3 &rarr; 15 &rarr; +2 &rarr; 17. Reverse: 17 &rarr; &minus;2 &rarr; 15 &rarr; &divide;3 &rarr; 5, using the inverse of each step in reverse order.</p>
+      <ol class="steps">
+        <li><b>Forwards, apply the steps in order.</b> 5 &times; 3 = 15, then 15 + 2 = 17. So an input of 5 gives an output of 17.</li>
+        <li><b>Backwards, undo the steps in reverse order, using inverses.</b> Start from 17 and undo the <i>last</i> step first: the inverse of +2 is &minus;2, so 17 &minus; 2 = 15.</li>
+        <li><b>Undo the first step last.</b> The inverse of &times;3 is &divide;3, so 15 &divide; 3 = 5 &mdash; back to the original input.</li>
+      </ol>
+      <div class="answer-line">Answer: an input of 5 gives an output of 17; working back from an output of 17 gives an input of 5.</div>
+    </div>
+
+    <div class="act" id="a3">
+      <div class="act-head"><span class="num">3</span><h3>Your go: function machines &amp; inverse operations</h3></div>
+      <p class="instr">Some questions give the input and ask for the output. Others give the output and ask you to work backwards for the input &mdash; remember to reverse the <b>order</b> as well as the operations.</p>
+      <div class="stem" id="fm-q"></div>
+      <div class="optgrid" id="fm-opts"></div>
+      <div class="row"><button class="btn btn-ghost" id="fm-next" disabled>Next &rarr;</button><span class="prog" id="fm-prog"></span></div>
+      <div class="feedback" id="fm-fb" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- END -->
+  <div class="endcard">
+    <h2>That is the four operations</h2>
+    <p>Solid written methods, the right order, and a quick way to check your working &mdash; these turn up on every other page from here. When you&rsquo;re ready, head back and try another topic.</p>
+    <a href="/11-resource-hub/maths/">Back to Maths
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+    </a>
+  </div>
+
+  <footer class="foot">
+    <p style="margin:0 0 6px"><b>Tom Sanderson Tutoring</b> &middot; Milton Keynes</p>
+    <p style="margin:0;max-width:62ch">A free resource for families preparing for the 11+. If you&rsquo;d like a hand beyond the page, you can <a href="https://tomsandersontutoring.com">find out about tutoring here</a>.</p>
+  </footer>
+
+</main>
+
+<script>
+function toggleComfort(){
+  var on=document.body.classList.toggle('comfort');
+  document.getElementById('comfort').setAttribute('aria-pressed',on?'true':'false');
+}
+function $(id){return document.getElementById(id);}
+
+/* ---- multiple choice ---- */
+function mcQuiz(p, items){
+  var i=0, score=0, locked=false;
+  function render(){
+    locked=false;
+    $(p+'-q').innerHTML=items[i].q;
+    var host=$(p+'-opts'); host.innerHTML='';
+    items[i].opts.forEach(function(o,k){
+      var b=document.createElement('button'); b.className='word'; b.textContent=o;
+      b.onclick=function(){ pick(k,b); };
+      host.appendChild(b);
+    });
+    $(p+'-fb').textContent=''; $(p+'-fb').className='feedback';
+    $(p+'-next').disabled=true;
+    $(p+'-prog').textContent='Question '+(i+1)+' of '+items.length;
+  }
+  function pick(k,b){
+    if(locked)return; locked=true;
+    var it=items[i];
+    [].forEach.call($(p+'-opts').children,function(c,j){c.disabled=true;if(j===it.a)c.classList.add('right');});
+    if(k===it.a) score++; else b.classList.add('bad');
+    var fb=$(p+'-fb'); fb.className='feedback '+(k===it.a?'ok':'no'); fb.innerHTML=(k===it.a?'✓ ':'')+it.why;
+    $(p+'-next').disabled=(i>=items.length-1);
+    $(p+'-prog').textContent='Score '+score+' of '+(i+1)+(i>=items.length-1?' · set complete':'');
+  }
+  $(p+'-next').onclick=function(){ if(i<items.length-1){i++;render();} };
+  render();
+}
+
+/* ---------- DATA (all original) ---------- */
+
+mcQuiz('calc',[
+  {q:'Add: <span class="big">3,586 + 4,675</span>.',
+   opts:['8,261','8,251','8,161','7,261'], a:0,
+   why:'3,586 + 4,675 = 8,261. Add from the ones: 6+5=11 (write 1, carry 1), 8+7+1=16 (write 6, carry 1), 5+6+1=12 (write 2, carry 1), 3+4+1=8. Each wrong option is what you get if one of those carries is forgotten.'},
+  {q:'Subtract: <span class="big">6,203 &minus; 2,847</span>.',
+   opts:['4,644','3,356','3,456','3,256'], a:1,
+   why:'6,203 &minus; 2,847 = 3,356. The borrowing cascades through the zero: thousands lends to hundreds, hundreds lends to tens, tens lends to ones, giving ones 13&minus;7=6, tens 9&minus;4=5, hundreds 11&minus;8=3, thousands 5&minus;2=3. Subtracting the smaller digit from the larger in every column instead of borrowing gives 4,644; forgetting to reduce a column after it lends gives an answer 100 out, like 3,456 or 3,256.'},
+  {q:'A minibus has 18 seats. How many seats are there <b>altogether</b> in 24 minibuses?',
+   opts:['360','42','432','4,320'], a:2,
+   why:'18 &times; 24 = 432. Split 24 into 20 and 4: 18&times;20=360, 18&times;4=72, then add: 360+72=432. Only adding the first partial product gives 360 (the second part is forgotten); adding the two numbers instead of multiplying gives 42; sliding the digits along gives 4,320.'},
+  {q:'A coach holds 32 seats. 149 pupils go on a trip, filling as many coaches as possible. How many pupils are <b>left</b> over for the last, part-filled coach?',
+   opts:['4','5','22','21'], a:3,
+   why:'149 &divide; 32 = 4 remainder 21, since 32 &times; 4 = 128 and 149 &minus; 128 = 21. 4 is the number of full coaches, not the pupils left over; 5 is how many coaches you would need in total, which answers a different question; 22 comes from subtracting 149 &minus; 127 instead of 149 &minus; 128.'},
+  {q:'Tom buys a rucksack for &pound;24.60 and a pencil case for &pound;7.85. He pays with a &pound;50 note. How much change should he get?',
+   opts:['£17.55','£18.55','£25.40','£18.45'], a:0,
+   why:'Add the two prices first: &pound;24.60 + &pound;7.85 = &pound;32.45 (60p+85p=&pound;1.45, so carry &pound;1 into the pounds). Then find the change: &pound;50.00 &minus; &pound;32.45 = &pound;17.55. Forgetting to carry that &pound;1 gives &pound;18.55; forgetting to borrow when subtracting from the zero pence in &pound;50.00 gives &pound;18.45; subtracting only one price from &pound;50 and forgetting the second item gives &pound;25.40.'},
+  {q:'Using a mental strategy, work out <span class="big">298 + 156</span>.',
+   opts:['456','454','448','452'], a:1,
+   why:'A quick way: round 298 up to 300 (that is +2), add 156 to get 456, then take the 2 back off: 454. Forgetting to adjust back down after rounding gives 456; partitioning 156 into 150 and 6 but stopping before adding the final 6 gives 448; adjusting by the wrong amount gives 452.'},
+  {q:'<b>Share</b> &pound;96 equally between 6 people. How much does <b>each</b> person get?',
+   opts:['£11','£15','£16','£12'], a:2,
+   why:'96 &divide; 6 = 16, since 6 &times; 16 = 96. In short division, 9&divide;6=1 remainder 3; carry the 3 to make 36; 36&divide;6=6, giving 16. Dropping that carried remainder instead of carrying it gives 11; misremembering the 6-times table gives 15; splitting by 2 three times instead of by 6 (6 is 2&times;3, not 2&times;2&times;2) gives 12.'},
+  {q:'A baker makes 8 trays of buns, with 15 buns on each tray. She sells 43 buns. How many buns are left <b>altogether</b>?',
+   opts:['163','105','112','77'], a:3,
+   why:'First find the total: 8 &times; 15 = 120. Then subtract the ones sold: 120 &minus; 43 = 77 left altogether. Adding instead of subtracting at the last step gives 163; misreading 8 trays as 7 gives 105 (7&times;15=105); subtracting the wrong number, 8 instead of 43, gives 112.'}
+]);
+
+mcQuiz('bod',[
+  {q:'Work out <span class="big">6 + 3 &times; 4</span>.',
+   opts:['18','36','19','30'], a:0,
+   why:'Multiplication happens before addition: 3&times;4=12, then 6+12=18. Working strictly left to right instead (6+3=9, then &times;4) gives 36. 19 and 30 come from small slips in the multiplication or the final addition.'},
+  {q:'Work out <span class="big">(6 + 3) &times; 4</span>.',
+   opts:['18','36','40','27'], a:1,
+   why:'Brackets are done first: 6+3=9, then 9&times;4=36. Ignoring the brackets and doing the multiplication before the addition instead gives 18 &mdash; the same digits as the last question, but a different answer, because the brackets change the order. 40 and 27 come from slips in the &times;4.'},
+  {q:'Work out <span class="big">20 &minus; 8 &divide; 4</span>.',
+   opts:['3','22','18','12'], a:2,
+   why:'Division happens before subtraction: 8&divide;4=2, then 20&minus;2=18. Working left to right instead (20&minus;8=12, then &divide;4) gives 3. Adding instead of subtracting at the last step gives 22; stopping after 20&minus;8 and never applying the &divide;4 gives 12.'},
+  {q:'Work out <span class="big">(20 &minus; 8) &divide; 4</span>.',
+   opts:['18','5','8','3'], a:3,
+   why:'Brackets first: 20&minus;8=12, then 12&divide;4=3. Ignoring the brackets and dividing before subtracting instead gives 18 &mdash; again, same digits as the last question, different answer, because of the brackets. 5 and 8 come from slips in the final &divide;4.'},
+  {q:'Work out <span class="big">60 &divide; (2 + 3)</span>.',
+   opts:['12','33','5','15'], a:0,
+   why:'Brackets first: 2+3=5. Then 60&divide;5=12. Dividing before working out the bracket &mdash; treating it as 60&divide;2, then +3 &mdash; gives 33 instead; that skips grouping the 2 and 3 together as the bracket asks. Stopping after just the bracket, forgetting to divide at all, gives 5; a division-fact slip gives 15.'},
+  {q:'Work out <span class="big">7 &minus; 2 &times; 3</span>.',
+   opts:['15','1','21','4'], a:1,
+   why:'Multiplication first: 2&times;3=6, then 7&minus;6=1. Working left to right instead (7&minus;2=5, then &times;3) gives 15. 21 comes from multiplying the 7 and the 3 and losing the 2 altogether; 4 comes from a slip in the 2&times;3.'},
+  {q:'Work out <span class="big">(7 &minus; 2) &times; 3</span>.',
+   opts:['1','18','15','21'], a:2,
+   why:'Brackets first: 7&minus;2=5, then 5&times;3=15. Doing the multiplication before the bracket instead gives 1 &mdash; the same digits, opposite order, different answer again. 18 comes from a slip in the 5&times;3; 21 comes from multiplying the 7 and 3 and losing the 2.'}
+]);
+
+mcQuiz('fm',[
+  {q:'A machine does <b>&times;4</b> then <b>+5</b>. What is the <b>output</b> when the <b>input</b> is 6?',
+   opts:['44','29','19','30'], a:1,
+   why:'Apply the operations in order: 6&times;4=24, then 24+5=29. Doing the +5 first instead &mdash; working in the wrong order &mdash; gives 44. Using &minus;5 instead of +5 gives 19; a slip in the final addition gives 30.'},
+  {q:'A machine does <b>&minus;3</b> then <b>&times;5</b>. What is the <b>output</b> when the <b>input</b> is 9?',
+   opts:['42','60','30','35'], a:2,
+   why:'Apply in order: 9&minus;3=6, then 6&times;5=30. Doing the &times;5 first instead gives 42 (9&times;5=45, then &minus;3=42) &mdash; the wrong order changes the answer. Using +3 instead of &minus;3 gives 60; a slip in the final &times;5 gives 35.'},
+  {q:'A machine does <b>&times;2</b> then <b>+7</b>. The <b>output</b> is 23. What was the <b>input</b>?',
+   opts:['53','32','9','8'], a:3,
+   why:'Reverse the machine, in reverse order, using inverses: undo the +7 first (23&minus;7=16), then undo the &times;2 (16&divide;2=8). Running the same operations forward again instead of reversing gives 53. Using &times;2 instead of its inverse &divide;2 for the last step gives 32; a slip in the division gives 9.'},
+  {q:'A machine does <b>+6</b> then <b>&times;2</b>. The <b>output</b> is 26. What was the <b>input</b>?',
+   opts:['7','10','19','6'], a:0,
+   why:'Reverse in reverse order: undo the &times;2 first (26&divide;2=13), then undo the +6 (13&minus;6=7). Undoing them in the same order as the forward machine instead (26&minus;6=20, then &divide;2=10) gives 10 &mdash; the classic wrong-order mistake. Using +6 instead of its inverse &minus;6 gives 19; an off-by-one slip in the final subtraction gives 6.'},
+  {q:'Amir works out <span class="big">48 &divide; 6 = 8</span>. Which calculation would <b>check</b> his answer is correct?',
+   opts:['8 ÷ 6','8 × 6','48 × 6','8 − 6'], a:1,
+   why:'To check a division, use its inverse: multiplication. 8&times;6=48, which matches the original number, so the division was correct. 8&divide;6 repeats the same operation instead of reversing it; 48&times;6 uses the wrong numbers; 8&minus;6 uses the wrong operation altogether.'},
+  {q:'Priya works out <span class="big">17 + 25 = 42</span>. Which calculation would <b>check</b> her answer is correct?',
+   opts:['42 + 25','17 − 25','42 − 25','25 − 17'], a:2,
+   why:'To check an addition, use its inverse: subtraction. 42&minus;25=17, matching one of the original numbers, so the addition was correct. 42+25 repeats the same operation instead of reversing it; 17&minus;25 and 25&minus;17 subtract the wrong pair of numbers, so neither actually checks the sum.'},
+  {q:'A machine does <b>+9</b>, then <b>&divide;3</b>, then <b>&minus;2</b>. What is the <b>output</b> when the <b>input</b> is 12?',
+   opts:['11','7','9','5'], a:3,
+   why:'Apply the three steps in order: 12+9=21, then 21&divide;3=7, then 7&minus;2=5. Doing the steps in the wrong order &mdash; dividing before adding &mdash; gives 11 instead. Stopping one step early, before the final &minus;2, gives 7; a slip in the last subtraction gives 9.'}
+]);
+
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var id=a.getAttribute('href');
+    if(id.length>1){var el=document.querySelector(id);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}}
+  });
+});
+</script>
+</body>
+</html>

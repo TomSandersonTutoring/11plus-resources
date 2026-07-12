@@ -1,0 +1,342 @@
+<!doctype html>
+<!-- Tom Sanderson Tutoring — 11+ Resource Hub · Maths. All content original and © Tom Sanderson Tutoring. -->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maths | Tom Sanderson Tutoring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#1E647C;--teal-deep:#174E61;--sky:#9FD3E8;--sky-soft:#E4F1F7;--amber:#F5BA18;--white:#FFFFFF;
+  --paper:#F1F7FA;--surface:#FFFFFF;--ink:#15323D;--muted:#5E7A84;--line:#D8E7EE;--line-soft:#E8F1F5;
+  --radius:18px;--radius-s:12px;
+  --shadow:0 1px 2px rgba(21,50,61,.05), 0 10px 30px rgba(21,50,61,.07);
+  --shadow-lift:0 4px 10px rgba(21,50,61,.08), 0 20px 44px rgba(21,50,61,.12);
+  --maxw:1040px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Raleway",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+body.comfort{letter-spacing:.02em;word-spacing:.06em;line-height:1.88}
+body.comfort p{margin-bottom:1.1em}
+h1,h2,h3{font-family:"Montserrat",sans-serif;margin:0;line-height:1.2;letter-spacing:-.01em;color:var(--teal-deep)}
+p{margin:0 0 1em}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+button{font-family:inherit}
+
+.top{position:sticky;top:0;z-index:30;background:rgba(241,247,250,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{display:inline-flex;align-items:stretch;border-radius:8px;overflow:hidden;text-decoration:none;box-shadow:0 1px 2px rgba(21,50,61,.12);flex:0 0 auto}
+.logo .a{background:var(--teal);color:var(--amber);font-family:"Montserrat";font-weight:800;font-size:.9rem;padding:8px 11px;display:flex;align-items:center;line-height:1}
+.logo .b{background:var(--white);color:var(--teal);font-family:"Montserrat";font-weight:600;font-size:.9rem;padding:8px 12px;display:flex;align-items:center;line-height:1;border:1px solid var(--line);border-left:0}
+.back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--muted);font-weight:600;font-size:.88rem}
+.back:hover{color:var(--teal)}
+.back svg{width:16px;height:16px}
+.top-right{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.site-link{font-family:"Raleway",sans-serif;font-size:.85rem;font-weight:600;color:var(--muted);text-decoration:none;white-space:nowrap}
+.site-link:hover{color:var(--teal);text-decoration:underline}
+.free-pill{font-family:"Montserrat";font-weight:700;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--white);border:1px solid var(--line);padding:6px 11px;border-radius:999px}
+.comfort-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--white);color:var(--muted);border-radius:999px;padding:6px 12px;font-weight:600;font-size:.82rem;cursor:pointer;transition:.14s}
+.comfort-btn:hover{border-color:var(--teal);color:var(--teal)}
+.comfort-btn[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.comfort-btn svg{width:15px;height:15px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px 90px}
+
+.hero{padding:46px 0 6px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:"Montserrat";font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:var(--sky-soft);border:1px solid var(--sky);padding:6px 13px;border-radius:999px;margin-bottom:18px}
+.hero h1{font-size:clamp(2rem,4.8vw,2.9rem);font-weight:800}
+.hero .sub{font-size:clamp(1.05rem,2.2vw,1.2rem);margin-top:14px;max-width:62ch}
+
+.intro{margin-top:22px;max-width:64ch}
+.intro p{color:var(--ink)}
+
+.callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:0 var(--radius-s) var(--radius-s) 0;padding:15px 19px;margin:22px 0 0;box-shadow:var(--shadow)}
+.callout p{margin:0;color:var(--ink);max-width:64ch}
+.callout b{font-weight:700}
+
+.featured{display:block;text-decoration:none;color:inherit;background:linear-gradient(135deg,var(--teal),var(--teal-deep));border-radius:var(--radius);padding:26px 30px;margin-top:24px;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:.16s}
+.featured:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}
+.featured::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;background:rgba(159,211,232,.16)}
+.featured .lab{font-family:"Montserrat";font-weight:700;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sky)}
+.featured h2{color:#fff;font-size:1.4rem;margin:8px 0 6px}
+.featured p{color:#D9ECF3;margin:0;max-width:58ch;font-size:1.02rem}
+.featured .go{display:inline-flex;align-items:center;gap:8px;margin-top:15px;font-family:"Montserrat";font-weight:700;color:#fff;font-size:.95rem}
+.featured .go svg{width:17px;height:17px}
+
+.sec-h{margin:44px 0 4px}
+.sec-h h2{font-size:1.4rem;font-weight:700}
+.sec-lead{color:var(--muted);max-width:62ch;margin:0 0 22px}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{display:flex;flex-direction:column;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);transition:.16s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift);border-color:var(--sky)}
+.card .ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;margin-bottom:14px;background:var(--sky-soft);border:1px solid var(--sky)}
+.card .ic svg{width:24px;height:24px;stroke:var(--teal);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.18rem;font-weight:700;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.96rem;margin:0 0 14px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+.tags span{font-size:.77rem;color:var(--teal);background:var(--sky-soft);border:1px solid var(--line-soft);border-radius:999px;padding:4px 10px}
+.tags .ct{background:var(--teal);color:#fff;border-color:var(--teal);font-weight:700;font-family:"Montserrat";letter-spacing:.02em}
+.card .enter{display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-family:"Montserrat";font-weight:700;font-size:.9rem;color:var(--teal)}
+.card .enter svg{width:15px;height:15px;transition:transform .16s}
+.card:hover .enter svg{transform:translateX(4px)}
+
+.howto{margin-top:44px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 30px;box-shadow:var(--shadow)}
+.howto h2{font-size:1.25rem;margin-bottom:16px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{display:flex;flex-direction:column;gap:6px}
+.step .n{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--sky-soft);border:1px solid var(--sky);font-family:"Montserrat";font-weight:800;color:var(--teal-deep)}
+.step h3{font-size:1rem;font-weight:700}
+.step p{color:var(--muted);font-size:.92rem;margin:0}
+.howto .note{margin:16px 0 0;color:var(--muted);font-size:.92rem}
+
+/* every-topic reference */
+.qref{margin-top:34px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 30px;box-shadow:var(--shadow)}
+.qref h2{font-size:1.25rem;margin-bottom:8px}
+.qref .lead{color:var(--muted);max-width:66ch;margin:0 0 16px;font-size:.95rem}
+.qref .lead b{color:var(--ink)}
+.qgroup{padding:15px 0;border-top:1px solid var(--line-soft)}
+.qgroup:first-of-type{border-top:0;padding-top:4px}
+.qgroup h3{font-size:1rem;font-weight:700;margin-bottom:10px;color:var(--ink);display:flex;align-items:center;gap:9px}
+.qgroup h3 .dot{width:9px;height:9px;border-radius:3px;background:var(--teal);flex:0 0 auto}
+.qgroup .chips{display:flex;flex-wrap:wrap;gap:7px}
+.qgroup .chips span{font-size:.82rem;color:var(--teal-deep);background:var(--sky-soft);border:1px solid var(--line-soft);border-radius:999px;padding:5px 11px}
+
+.foot{border-top:1px solid var(--line);margin-top:54px;padding-top:24px;color:var(--muted);font-size:.9rem}
+.foot b{color:var(--ink);font-family:"Montserrat";font-weight:700}
+.foot a{color:var(--teal);font-weight:600;text-decoration:none}
+.foot a:hover{text-decoration:underline}
+
+@media (max-width:760px){
+  body{font-size:17px}
+  .grid,.steps{grid-template-columns:1fr}
+  .hero{padding:34px 0 4px}
+  .featured,.howto,.qref{padding:24px 22px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/" aria-label="Tom Sanderson Tutoring home"><span class="a">Tom&nbsp;Sanderson</span><span class="b">Tutoring</span></a>
+    <a class="back" href="/11-resource-hub/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>All resources</a>
+    <div class="top-right">
+      <a class="site-link" href="https://tomsandersontutoring.com">&larr; Tom&rsquo;s tutoring site</a>
+      <span class="free-pill">Free &middot; no sign-up</span>
+      <button class="comfort-btn" id="comfort" aria-pressed="false" onclick="toggleComfort()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg>
+        Reading comfort
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <span class="eyebrow">Subject &middot; Maths</span>
+    <h1>Maths</h1>
+    <p class="sub">The maths itself is the maths you already meet at school. What the 11+ really tests is how carefully you read the question, choose the right step, and set out your working.</p>
+    <div class="intro">
+      <p>Of the four subjects, maths is the most familiar, because it&rsquo;s taught in class from the very start. That&rsquo;s reassuring. The difference in the 11+ is that it asks for the same maths a little faster, and often tucks it inside a word problem, so the skill becomes as much about reading closely and picking the right method as about the sums themselves.</p>
+      <p>Number is by far the biggest part of the paper, so it&rsquo;s worth feeling really sure there before anything else. Nothing below has to be done in order, though. Each topic explains itself from scratch, so start wherever you like.</p>
+    </div>
+    <div class="callout">
+      <p><b>Worth knowing:</b> number does most of the work. In a typical paper there are far more number questions than any other kind, often around five times as many. So time spent getting quick and confident with the four operations, fractions, decimals, percentages and ratio is time very well spent.</p>
+    </div>
+  </section>
+
+  <!-- recommended start -->
+  <a class="featured" href="maths-numbers-place-value.html">
+    <span class="lab">A friendly place to start</span>
+    <h2>Numbers &amp; place value</h2>
+    <p>What each digit is worth, reading and writing large numbers, rounding, estimating, and negative numbers. It sits underneath every other topic, so getting comfortable here makes everything that follows easier.</p>
+    <span class="go">Start here
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </span>
+  </a>
+
+  <!-- the rest -->
+  <div class="sec-h"><h2>The other topics</h2></div>
+  <p class="sec-lead">Each one stands on its own, so there&rsquo;s no set order. Explore whatever looks interesting, or follow them roughly top to bottom if you&rsquo;d rather build up.</p>
+
+  <div class="grid">
+
+    <a class="card" href="maths-four-operations.html">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6.5h5M6.5 4v5"/><path d="M15 6.5h5"/><path d="M4.6 15.6l3.8 3.8M8.4 15.6l-3.8 3.8"/><path d="M15 19.5h5M17.5 16.5h.01M17.5 22.5h.01"/></svg></span>
+      <h3>The four operations</h3>
+      <p>Adding, subtracting, multiplying and dividing, including the longer written methods, doing them in the right order, and checking your answer with the inverse.</p>
+      <div class="tags"><span class="ct">10 skills</span><span>Long methods</span><span>Order of operations</span><span>Function machines</span></div>
+      <span class="enter">Explore
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </a>
+
+    <a class="card" href="#">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="18.5" r="2"/><circle cx="18" cy="18.5" r="2"/><path d="M10.7 6.4 7.3 17M13.3 6.4 16.7 17"/></svg></span>
+      <h3>Factors, multiples &amp; special numbers</h3>
+      <p>The building blocks of numbers: what divides into what, primes, square and cube numbers, and the quick tricks for spotting them.</p>
+      <div class="tags"><span class="ct">14 skills</span><span>Primes</span><span>HCF &amp; LCM</span><span>Square &amp; cube numbers</span></div>
+      <span class="enter">Explore
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </a>
+
+    <a class="card" href="#">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M12 12 19 9.5"/></svg></span>
+      <h3>Fractions, decimals &amp; percentages</h3>
+      <p>Three ways of writing the same idea, a part of a whole. How to handle each one, and how to switch smoothly between them.</p>
+      <div class="tags"><span class="ct">13 skills</span><span>Fractions of an amount</span><span>Percentages</span><span>Converting</span></div>
+      <span class="enter">Explore
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </a>
+
+    <a class="card" href="#">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v17"/><path d="M7 20h10"/><path d="M4 8h16"/><path d="M4 8v1.6M20 8v1.6"/><path d="M1.8 10a2.4 2.4 0 0 0 4.4 0"/><path d="M17.8 10a2.4 2.4 0 0 0 4.4 0"/></svg></span>
+      <h3>Ratio &amp; proportion</h3>
+      <p>Sharing things out fairly and scaling them up or down. Once you read it as &ldquo;for every&hellip; there are&hellip;&rdquo;, it tends to click into place.</p>
+      <div class="tags"><span class="ct">5 skills</span><span>Sharing in a ratio</span><span>Scaling</span><span>Proportion</span></div>
+      <span class="enter">Explore
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </a>
+
+    <a class="card" href="#">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6l6 8M10 6l-6 8"/><path d="M14 8.5h6M14 12.5h6"/></svg></span>
+      <h3>Algebra &amp; sequences</h3>
+      <p>Letters standing in for numbers, missing values to find, and number patterns that follow a rule you can work out and carry on.</p>
+      <div class="tags"><span class="ct">7 skills</span><span>Simple equations</span><span>Substitution</span><span>The nth term</span></div>
+      <span class="enter">Explore
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </a>
+
+    <a class="card" href="#">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="8" rx="1.5"/><path d="M7 8v3M11 8v4M15 8v3M19 8v4"/></svg></span>
+      <h3>Measures: money, time &amp; units</h3>
+      <p>The everyday maths of amounts and reading scales: money and change, length, weight and capacity, converting units, and telling the time.</p>
+      <div class="tags"><span class="ct">12 skills</span><span>Money &amp; change</span><span>Converting units</span><span>Timetables</span></div>
+      <span class="enter">Explore
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </a>
+
+    <a class="card" href="#">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="12" width="8" height="8" rx="1"/><path d="M16.5 3.5l5.5 9h-11z"/></svg></span>
+      <h3>Shape, space &amp; position</h3>
+      <p>Everything to do with shapes: their properties and angles, area and perimeter, symmetry, and moving them around a grid.</p>
+      <div class="tags"><span class="ct">15 skills</span><span>Angles</span><span>Area &amp; perimeter</span><span>Coordinates</span></div>
+      <span class="enter">Explore
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </a>
+
+    <a class="card" href="#">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4v16h16"/><rect x="7" y="12" width="3" height="6" rx=".5"/><rect x="12" y="9" width="3" height="9" rx=".5"/><rect x="17" y="6" width="3" height="12" rx=".5"/></svg></span>
+      <h3>Handling data</h3>
+      <p>Making sense of information: averages and range, and reading charts, tables and diagrams to pull out what they&rsquo;re telling you.</p>
+      <div class="tags"><span class="ct">11 skills</span><span>Averages</span><span>Charts &amp; graphs</span><span>Venn diagrams</span></div>
+      <span class="enter">Explore
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </a>
+
+  </div>
+
+  <!-- how each topic works -->
+  <section class="howto">
+    <h2>How each topic works</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="n">1</span>
+        <h3>Explanation</h3>
+        <p>A plain, jargon-free description of the idea and the trick to it.</p>
+      </div>
+      <div class="step">
+        <span class="n">2</span>
+        <h3>Worked example</h3>
+        <p>One question taken slowly, step by step, so you can see the thinking.</p>
+      </div>
+      <div class="step">
+        <span class="n">3</span>
+        <h3>Your go</h3>
+        <p>A set to try yourself, with instant feedback that explains each answer.</p>
+      </div>
+    </div>
+    <p class="note">Nothing here is timed, scored or saved. Get it wrong as many times as you like, that&rsquo;s how it&rsquo;s meant to work.</p>
+  </section>
+
+  <!-- every topic, covered -->
+  <section class="qref">
+    <h2>Every topic, covered</h2>
+    <p class="lead">Maths in the 11+ follows the Key Stage 2 curriculum, stretched into Year 6 and a little beyond. Here is everything it covers, grouped into the areas above. Not every paper reaches every corner of this, so treat it as the full map rather than a to-do list.</p>
+
+    <div class="qgroup">
+      <h3><span class="dot"></span>Numbers &amp; place value</h3>
+      <div class="chips"><span>Place value</span><span>Reading &amp; writing large numbers</span><span>Rounding</span><span>Estimation</span><span>Ordering &amp; comparing</span><span>Negative numbers</span></div>
+    </div>
+    <div class="qgroup">
+      <h3><span class="dot"></span>The four operations</h3>
+      <div class="chips"><span>Addition</span><span>Subtraction</span><span>Multiplication</span><span>Division</span><span>Long multiplication &amp; division</span><span>Mental strategies</span><span>Order of operations (BODMAS)</span><span>Brackets</span><span>Function machines</span><span>Inverse operations</span></div>
+    </div>
+    <div class="qgroup">
+      <h3><span class="dot"></span>Factors, multiples &amp; special numbers</h3>
+      <div class="chips"><span>Factors</span><span>Multiples</span><span>Common factors</span><span>HCF</span><span>LCM</span><span>Primes &amp; prime factors</span><span>Divisibility rules</span><span>Square &amp; cube numbers</span><span>Square &amp; cube roots</span><span>Triangular numbers</span><span>Indices</span><span>Roman numerals</span><span>Odd &amp; even</span><span>Consecutive numbers</span></div>
+    </div>
+    <div class="qgroup">
+      <h3><span class="dot"></span>Fractions, decimals &amp; percentages</h3>
+      <div class="chips"><span>Equivalent fractions</span><span>Simplifying fractions</span><span>Adding &amp; subtracting fractions</span><span>Multiplying &amp; dividing fractions</span><span>Ordering fractions</span><span>Fractions of an amount</span><span>Mixed &amp; improper numbers</span><span>Decimals &amp; the four operations</span><span>Ordering decimals</span><span>Percentages of an amount</span><span>Increase &amp; decrease</span><span>Reverse percentages</span><span>Converting between the three</span></div>
+    </div>
+    <div class="qgroup">
+      <h3><span class="dot"></span>Ratio &amp; proportion</h3>
+      <div class="chips"><span>Simplifying ratios</span><span>Sharing in a ratio</span><span>Direct proportion</span><span>Inverse proportion</span><span>Scale &amp; scaling</span></div>
+    </div>
+    <div class="qgroup">
+      <h3><span class="dot"></span>Algebra &amp; sequences</h3>
+      <div class="chips"><span>Simple equations</span><span>Finding missing values</span><span>Substitution</span><span>Forming expressions</span><span>Number sequences &amp; patterns</span><span>The nth term</span><span>Arithmetic &amp; geometric sequences</span></div>
+    </div>
+    <div class="qgroup">
+      <h3><span class="dot"></span>Measures: money, time &amp; units</h3>
+      <div class="chips"><span>Money &amp; change</span><span>Best value</span><span>Length, mass, volume &amp; capacity</span><span>Metric &amp; imperial units</span><span>Converting units</span><span>Reading scales</span><span>Number lines</span><span>Telling the time</span><span>Durations</span><span>12- &amp; 24-hour clock</span><span>Timetables</span><span>Time zones</span></div>
+    </div>
+    <div class="qgroup">
+      <h3><span class="dot"></span>Shape, space &amp; position</h3>
+      <div class="chips"><span>Properties of 2D shapes</span><span>Properties of 3D shapes</span><span>Nets</span><span>Angles &amp; angle rules</span><span>Angles in parallel lines</span><span>Symmetry</span><span>Rotational symmetry</span><span>Perimeter</span><span>Area</span><span>Compound areas</span><span>Volume</span><span>Coordinates (four quadrants)</span><span>Translation</span><span>Reflection</span><span>Rotation</span></div>
+    </div>
+    <div class="qgroup">
+      <h3><span class="dot"></span>Handling data</h3>
+      <div class="chips"><span>Mean</span><span>Median</span><span>Mode</span><span>Range</span><span>Tables</span><span>Bar charts</span><span>Pictograms</span><span>Line graphs</span><span>Pie charts</span><span>Venn diagrams</span><span>Carroll diagrams</span></div>
+    </div>
+
+    <p class="lead" style="margin:16px 0 0">One more thread runs through all of it: <b>problem solving</b>, the multi-step word problems, choosing the right operation, logic puzzles, and speed&ndash;distance&ndash;time. Rather than sit in a topic of its own, it&rsquo;s built into the practice everywhere, because that&rsquo;s exactly how the exam uses it.</p>
+  </section>
+
+  <footer class="foot">
+    <p style="margin:0 0 6px"><b>Tom Sanderson Tutoring</b> &middot; Milton Keynes</p>
+    <p style="margin:0;max-width:62ch">A free resource for families preparing for the 11+. If you&rsquo;d like a hand beyond the page, you can <a href="https://tomsandersontutoring.com">find out about tutoring here</a>.</p>
+  </footer>
+
+</main>
+
+<script>
+function toggleComfort(){
+  var on=document.body.classList.toggle('comfort');
+  document.getElementById('comfort').setAttribute('aria-pressed',on?'true':'false');
+}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var id=a.getAttribute('href');
+    if(id.length>1){var el=document.querySelector(id);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}}
+  });
+});
+</script>
+</body>
+</html>
